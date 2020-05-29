@@ -12,6 +12,11 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
+    <!--youome hint theme -->
+    <style name="youome_hint_Style">
+        <item name="android:textColor">@color/youome_hintColor</item>
+        <item name="android:textSize">12sp</item>
+    </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 

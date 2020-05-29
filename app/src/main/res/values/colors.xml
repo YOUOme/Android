@@ -3,4 +3,7 @@
     <color name="colorPrimary">#878e9f</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+
+    <color name="youome_hintColor">#a0a7ba</color>
+    <color name="youome_background">#878e9f</color>
 </resources>

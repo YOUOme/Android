@@ -16,11 +16,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        bt_login = (TextView)findViewById(R.id.google_login);
+        bt_login = (TextView)findViewById(R.id.kakao_login);
         bt_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), YouomeActivity.class);
+                Intent intent = new Intent(getApplicationContext(), signupActivity.class);
                 startActivity(intent);
             }
         });

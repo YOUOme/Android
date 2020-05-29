@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#878e9f"
+    android:background="@color/youome_background"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -40,31 +40,17 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/google_login"
+        android:id="@+id/kakao_login"
         android:layout_width="250dp"
         android:layout_height="50dp"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="112dp"
         android:background="@drawable/bt_style_lightgray"
         android:gravity="center"
-        android:text="Login with Google"
+        android:text="Login with Kakao"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
-
-    <TextView
-        android:id="@+id/kakao_login"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="48dp"
-        android:text="Login with Kakao"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:background="@drawable/bt_style_lightgray"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/google_login" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
