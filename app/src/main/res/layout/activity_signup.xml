@@ -111,7 +111,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="#000"
                 android:maxLines="10"
-                android:layout_margin="20dp"
+                android:layout_margin="22dp"
                 android:hint="전화번호"
                 android:background="@null"
                 android:inputType="textPersonName"
