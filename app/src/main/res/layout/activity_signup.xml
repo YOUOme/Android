@@ -61,6 +61,7 @@
             android:layout_marginLeft="15dp"
             android:layout_marginTop="20dp"
             android:layout_marginRight="15dp"
+            android:paddingTop="5dp"
             android:background="@drawable/edit_style_lightgray"
             app:hintEnabled="true"
             app:hintAnimationEnabled="false"
@@ -69,15 +70,16 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_name"
-                android:layout_width="100dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#000"
                 android:maxLines="10"
-                android:layout_margin="22dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="10dp"
                 android:hint="이름"
                 android:background="@null"
                 android:inputType="textPersonName"
-                android:textSize="16sp" />
+                android:textSize="20dp" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -87,6 +89,7 @@
             android:layout_marginLeft="15dp"
             android:layout_marginTop="20dp"
             android:layout_marginRight="15dp"
+            android:paddingTop="5dp"
             android:background="@drawable/edit_style_lightgray"
             app:hintEnabled="true"
             app:hintAnimationEnabled="false"
@@ -95,15 +98,16 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_inum"
-                android:layout_width="100dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#000"
                 android:maxLines="10"
-                android:layout_margin="22dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="10dp"
                 android:hint="주민등록번호"
                 android:background="@null"
                 android:inputType="textPersonName"
-                android:textSize="16sp" />
+                android:textSize="20dp" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -113,6 +117,7 @@
             android:layout_marginLeft="15dp"
             android:layout_marginTop="20dp"
             android:layout_marginRight="15dp"
+            android:paddingTop="5dp"
             android:background="@drawable/edit_style_lightgray"
             app:hintEnabled="true"
             app:hintAnimationEnabled="false"
@@ -120,16 +125,17 @@
             app:hintTextAppearance="@style/youome_hint_Style">
 
             <com.google.android.material.textfield.TextInputEditText
-
-                android:layout_width="100dp"
+                android:id="@+id/et_phone"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#000"
                 android:maxLines="10"
-                android:layout_margin="22dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="10dp"
                 android:hint="전화번호"
                 android:background="@null"
                 android:inputType="textPersonName"
-                android:textSize="16sp" />
+                android:textSize="20dp" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
