@@ -3,10 +3,12 @@ package com.example.youome;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.ImageView;
 
 import com.google.android.material.tabs.TabLayout;
 
@@ -35,7 +37,6 @@ public class YouomeActivity extends AppCompatActivity {
             }
         });
 
-
         YouomePageAdapter pageAdapter = new YouomePageAdapter(getSupportFragmentManager(),tabLayout.getTabCount());
 
         viewPager.setAdapter(pageAdapter);
@@ -43,15 +44,11 @@ public class YouomeActivity extends AppCompatActivity {
 
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener(){
             @Override
-            public void onTabSelected(TabLayout.Tab tab) {
-                viewPager.setCurrentItem(tab.getPosition(),false); // smoothScroll : disable swipe animation
-            }
+            public void onTabSelected(TabLayout.Tab tab) { viewPager.setCurrentItem(tab.getPosition(),false);} // smoothScroll : disable swipe animation
             @Override
             public void onTabUnselected(TabLayout.Tab tab) {}
             @Override
             public void onTabReselected(TabLayout.Tab tab) {}
         });
-
-
     }
 }

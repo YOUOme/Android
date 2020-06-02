@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".signupActivity"></activity>
+        <activity android:name=".ActivityOmypay"></activity>
+        <activity android:name=".ActivitySignUp" />
         <activity android:name=".YouomeActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

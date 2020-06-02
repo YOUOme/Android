@@ -1,15 +1,18 @@
 package com.example.youome;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-public class FragmentRepay extends Fragment {
+public class Fragment1MyAccount extends Fragment {
+    private ImageView bt_omypay;
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,8 +20,17 @@ public class FragmentRepay extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_repay,null);
+        View view = inflater.inflate(R.layout.fragment_myaccount,null);
 
+
+        bt_omypay = (ImageView)view.findViewById(R.id.bt_omypay);
+        bt_omypay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getContext(),ActivityOmypay.class);
+                startActivity(intent);
+            }
+        });
 
         return view;
     }
