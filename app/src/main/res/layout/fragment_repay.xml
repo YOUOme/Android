@@ -20,6 +20,7 @@
         app:layout_constraintVertical_bias="0.0">
 
         <LinearLayout
+            android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -28,7 +29,6 @@
                 android:background="@drawable/edit_style_search"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
                 android:paddingLeft="30dp"
                 android:paddingTop="5dp"
                 android:paddingBottom="5dp"
@@ -41,7 +41,6 @@
                 android:text="" />
 
             <ImageView
-                android:layout_marginTop="20dp"
                 android:paddingVertical="5dp"
                 android:paddingHorizontal="10dp"
                 android:layout_marginLeft="15dp"
@@ -52,13 +51,12 @@
                 app:srcCompat="@drawable/search_icon" />
 
             <ImageView
-                android:layout_marginTop="20dp"
-                android:padding="5dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="20dp"
+                android:id="@+id/bt_addlend"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0"
+                android:layout_marginHorizontal="10dp"
+                android:layout_gravity="center_vertical"
                 app:srcCompat="@drawable/white_plus" />
         </LinearLayout>
 
