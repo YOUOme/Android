@@ -55,6 +55,7 @@
         <TextView
             android:id="@+id/good"
             android:gravity="right"
+            android:textColor="#666"
             android:layout_gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
