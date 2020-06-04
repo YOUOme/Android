@@ -22,7 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="15dp"
             android:orientation="vertical">
 
             <LinearLayout
@@ -120,6 +120,7 @@
                 android:textColor="#fff"
                 android:textSize="20dp"
                 android:layout_marginLeft="20dp"
+                android:paddingBottom="25dp"
                 android:layout_marginVertical="7dp"
                 android:text="LG U+ 알뜰폰" />
         </LinearLayout>

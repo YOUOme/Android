@@ -1,5 +1,7 @@
 package com.example.youome;
 
+import android.app.Dialog;
+import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +16,16 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.FragmentManager;
 
 public class FragmentSignUp2Tele extends BottomSheetDialogFragment {
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+    }
+
+    @Override
+    public Dialog onCreateDialog(Bundle savedInstanceState) {
+        return super.onCreateDialog(savedInstanceState);
+    }
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
