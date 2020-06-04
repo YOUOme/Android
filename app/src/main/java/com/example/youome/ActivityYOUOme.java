@@ -9,13 +9,15 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.google.android.material.tabs.TabLayout;
 
-public class YouomeActivity extends AppCompatActivity {
+public class ActivityYOUOme extends AppCompatActivity {
 
     private TabLayout tabLayout;
     private ViewPager viewPager;
+    private TextView bt_alarm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,5 +52,20 @@ public class YouomeActivity extends AppCompatActivity {
             @Override
             public void onTabReselected(TabLayout.Tab tab) {}
         });
+
+        bt_alarm = (TextView)findViewById(R.id.bt_alarm);
+        bt_alarm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),ActivityAlarm.class);
+                startActivity(intent);
+            }
+        });
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
     }
 }

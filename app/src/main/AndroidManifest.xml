@@ -12,7 +12,7 @@
         <activity android:name=".ActivityAlarm"></activity>
         <activity android:name=".ActivityOmypay" />
         <activity android:name=".ActivitySignUp" />
-        <activity android:name=".YouomeActivity" />
+        <activity android:name=".ActivityYOUOme" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

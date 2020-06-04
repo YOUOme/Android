@@ -27,7 +27,7 @@ public class ActivitySignUp extends AppCompatActivity {
         et_phone.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
-                Intent intent = new Intent(getApplicationContext(),YouomeActivity.class);
+                Intent intent = new Intent(getApplicationContext(), ActivityYOUOme.class);
                 startActivity(intent);
                 return false;
             }
