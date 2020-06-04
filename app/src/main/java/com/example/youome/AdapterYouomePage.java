@@ -4,10 +4,10 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 
-public class YouomePageAdapter extends FragmentStatePagerAdapter {
+public class AdapterYouomePage extends FragmentStatePagerAdapter {
 
     private int tabCount;
-    public YouomePageAdapter(FragmentManager fm,int tabCount) {
+    public AdapterYouomePage(FragmentManager fm, int tabCount) {
         super(fm);
         this.tabCount = tabCount;
     }

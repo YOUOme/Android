@@ -1,15 +1,22 @@
 package com.example.youome;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.ListView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 public class Fragment2Lending extends Fragment {
+    ImageView bt_addlend;
+    ListView lendListView, completeLendListView;
+    AdapterFragItem adapter1,adapter2;
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,7 +25,33 @@ public class Fragment2Lending extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_lending,null);
+        bt_addlend = (ImageView)view.findViewById(R.id.bt_addlend);
+        bt_addlend.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getContext(),ActivityAddLending.class);
+                startActivity(intent);
+            }
+        });
+        adapter1 = new AdapterFragItem(R.color.youome_background);
+        adapter2 = new AdapterFragItem();
 
+        //dummy data
+        adapter1.addItem("김오미","20.01.04 토","20000원");
+        adapter1.addItem("김오미","20.01.04 토","20000원");
+
+        adapter2.addItem("김오미","20.01.04 토","10000원");
+        adapter2.addItem("김오미","20.01.04 토","10000원");
+        adapter2.addItem("김오미","20.01.04 토","10000원");
+        adapter2.addItem("김오미","20.01.04 토","10000원");
+        adapter2.addItem("김오미","20.01.04 토","10000원");
+        adapter2.addItem("김오미","20.01.04 토","10000원");
+        adapter2.addItem("김오미","20.01.04 토","10000원");
+
+        lendListView = (ListView)view.findViewById(R.id.lend_list);
+        lendListView.setAdapter(adapter1);
+        completeLendListView = (ListView)view.findViewById(R.id.complete_lend_list);
+        completeLendListView.setAdapter(adapter2);
 
         return view;
     }

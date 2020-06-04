@@ -9,7 +9,7 @@
     <LinearLayout
         android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
-        android:layout_height="230dp"
+        android:layout_height="275dp"
         android:background="@drawable/style_lightgray2"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -51,10 +51,10 @@
                 app:srcCompat="@drawable/search_icon" />
 
             <ImageView
-                android:id="@+id/bt_addlend"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0"
+                android:visibility="invisible"
                 android:layout_marginHorizontal="10dp"
                 android:layout_gravity="center_vertical"
                 app:srcCompat="@drawable/white_plus" />
@@ -64,16 +64,27 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:text="대출 내역"
             android:textColor="#fff"
             android:textSize="25dp"/>
+
+        <ListView
+            android:id="@+id/repay_list"
+            android:divider="@null"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="35dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="vertical"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -83,9 +94,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="25dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginBottom="30dp"
             android:textColor="#000"
-            android:text="대출 상환 내역" />
+            android:text="상환 완료 내역" />
+
+        <ListView
+            android:id="@+id/complete_repay_list"
+            android:divider="@null"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

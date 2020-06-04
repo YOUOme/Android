@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.android.material.tabs.TabLayout;
@@ -39,7 +38,7 @@ public class ActivityYOUOme extends AppCompatActivity {
             }
         });
 
-        YouomePageAdapter pageAdapter = new YouomePageAdapter(getSupportFragmentManager(),tabLayout.getTabCount());
+        AdapterYouomePage pageAdapter = new AdapterYouomePage(getSupportFragmentManager(),tabLayout.getTabCount());
 
         viewPager.setAdapter(pageAdapter);
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
