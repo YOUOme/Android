@@ -13,7 +13,10 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.FragmentManager;
 
-public class FragmentLending extends BottomSheetDialogFragment {
+public class FragmentAddLending extends BottomSheetDialogFragment {
+
+    public int money;   // 부모 액티비티로부터 정보를 받아야한다.
+    public int name;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -24,7 +27,7 @@ public class FragmentLending extends BottomSheetDialogFragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        final View view = inflater.inflate(R.layout.fragment_signuptele, container, false);
+        final View view = inflater.inflate(R.layout.fragment_bottomsheet_lending, container, false);
 
 
         return view;

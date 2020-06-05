@@ -9,6 +9,10 @@ import android.widget.ListView;
 public class ActivityAddLending extends AppCompatActivity {
     ListView recentLendListView;
     AdapterLendItem adapter;
+
+    String selectedName;
+    int money; // 잔액을 전달받아야함.
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

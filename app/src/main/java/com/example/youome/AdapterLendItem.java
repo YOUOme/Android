@@ -48,7 +48,8 @@ public class AdapterLendItem extends BaseAdapter {
         bt_lend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //getItem(para);
+                FragmentAddLending faddlend = new FragmentAddLending();
+                //faddlend.show(getSu);
             }
         });
         return view;
