@@ -24,8 +24,8 @@ public class Fragment3Repay extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_repay,null);
 
-        adapter1 = new AdapterFragItem(R.color.youome_background);
-        adapter2 = new AdapterFragItem();
+        adapter1 = new AdapterFragItem(getContext(),R.color.youome_background,2);
+        adapter2 = new AdapterFragItem(getContext(),2);
 
         //dummy data
         adapter1.addItem("김오미","20.01.04 토","20000원");

@@ -33,20 +33,20 @@ public class Fragment2Lending extends Fragment {
                 startActivity(intent);
             }
         });
-        adapter1 = new AdapterFragItem(R.color.youome_background);
-        adapter2 = new AdapterFragItem();
+        adapter1 = new AdapterFragItem(getContext(),R.color.youome_background,1);
+        adapter2 = new AdapterFragItem(getContext(),1);
 
         //dummy data
         adapter1.addItem("김오미","20.01.04 토","20000원");
-        adapter1.addItem("김오미","20.01.04 토","20000원");
+        adapter1.addItem("박오미","20.01.04 토","20000원");
 
-        adapter2.addItem("김오미","20.01.04 토","10000원");
-        adapter2.addItem("김오미","20.01.04 토","10000원");
-        adapter2.addItem("김오미","20.01.04 토","10000원");
-        adapter2.addItem("김오미","20.01.04 토","10000원");
-        adapter2.addItem("김오미","20.01.04 토","10000원");
-        adapter2.addItem("김오미","20.01.04 토","10000원");
-        adapter2.addItem("김오미","20.01.04 토","10000원");
+        adapter2.addItem("조오미","20.01.04 토","10000원");
+        adapter2.addItem("나오미","20.01.04 토","10000원");
+        adapter2.addItem("이오미","20.01.04 토","10000원");
+        adapter2.addItem("최오미","20.01.04 토","10000원");
+        adapter2.addItem("윤오미","20.01.04 토","10000원");
+        adapter2.addItem("배오미","20.01.04 토","10000원");
+        adapter2.addItem("고오미","20.01.04 토","10000원");
 
         lendListView = (ListView)view.findViewById(R.id.lend_list);
         lendListView.setAdapter(adapter1);

@@ -26,8 +26,9 @@ public class ActivityAddLending extends AppCompatActivity {
         adapter.addItem("박오미","010-1111-1111","신용도 AAA");
         adapter.addItem("이오미","010-1111-1111","신용도 AAA");
         adapter.addItem("조오미","010-1111-1111","신용도 AAA");
-
-
+        adapter.addItem("윤오미","010-1111-1111","신용도 AAA");
+        adapter.addItem("최오미","010-1111-1111","신용도 AAA");
+        adapter.addItem("고오미","010-1111-1111","신용도 AAA");
 
         recentLendListView = (ListView)findViewById(R.id.recent_lend);
         recentLendListView.setAdapter(adapter);

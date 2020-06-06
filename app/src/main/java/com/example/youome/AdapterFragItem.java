@@ -1,6 +1,7 @@
 package com.example.youome;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,12 +16,17 @@ import java.util.ArrayList;
 
 public class AdapterFragItem extends BaseAdapter {
     private ArrayList<ItemData> mItems = new ArrayList<>();
-    private int backgroundColorID = 0;
+    private int backgroundColorID = 0, mode;  // mode=1 : lend , mode=2 : repay
+    private Context context;
 
-    public AdapterFragItem(){}
+    public AdapterFragItem(Context context, int mode){
+        this.mode = mode;
+        this.context = context;
+    }
 
-    public AdapterFragItem(int colorID) {
+    public AdapterFragItem(Context context,int colorID,int mode) {
         backgroundColorID = colorID;
+        this.mode = mode;
     }
 
     @Override
@@ -40,7 +46,7 @@ public class AdapterFragItem extends BaseAdapter {
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
-        Context context = viewGroup.getContext();
+        final Context context = viewGroup.getContext();
         if(view == null){
             LayoutInflater inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             view = inflater.inflate(R.layout.item_trade,viewGroup,false);
@@ -68,7 +74,9 @@ public class AdapterFragItem extends BaseAdapter {
         bt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //getItem(para);
+                Intent intent = new Intent(context,ActivityIOU.class);
+                intent.putExtra("mode",mode);
+                context.startActivity(intent);
             }
         });
         return view;
