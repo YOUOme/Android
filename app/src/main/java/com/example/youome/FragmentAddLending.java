@@ -2,11 +2,13 @@ package com.example.youome;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.DragEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
@@ -21,6 +23,7 @@ public class FragmentAddLending extends BottomSheetDialogFragment {
     public String name;
     SeekBar seekBar;
     TextView tName, tMoney;
+    Button bt_lend;
     int selectedMoney;
 
     public FragmentAddLending(String name) {
@@ -54,7 +57,6 @@ public class FragmentAddLending extends BottomSheetDialogFragment {
                 tMoney.setText(i+" 원");
                 selectedMoney = i;
             }
-
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) { }
 
@@ -64,8 +66,20 @@ public class FragmentAddLending extends BottomSheetDialogFragment {
             }
         });
 
+        bt_lend = (Button)view.findViewById(R.id.bt_setlend);
+        bt_lend.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getContext(),ActivityLend.class);
+                intent.putExtra("name",name);
+                intent.putExtra("money",selectedMoney);
+                startActivity(intent);
+            }
+        });
+
         return view;
     }
+
 
     @Override
     public void show(FragmentManager manager, String tag) {

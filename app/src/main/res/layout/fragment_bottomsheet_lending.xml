@@ -93,7 +93,7 @@
                 android:text="빌려줄 금액을 설정하세요" />
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/bt_setlend"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingVertical="15dp"
