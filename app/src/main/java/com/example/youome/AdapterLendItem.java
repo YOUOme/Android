@@ -9,8 +9,17 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import androidx.fragment.app.FragmentManager;
+
 public class AdapterLendItem extends BaseAdapter {
     private ArrayList<ItemData> mItems = new ArrayList<>();
+    private FragmentManager parentFm;
+    //private int money;
+
+    public AdapterLendItem(FragmentManager pfm) {
+        this.parentFm = pfm;
+        //this.money = pMoney;
+    }
 
     @Override
     public int getCount() {
@@ -48,8 +57,8 @@ public class AdapterLendItem extends BaseAdapter {
         bt_lend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FragmentAddLending faddlend = new FragmentAddLending();
-                //faddlend.show(getSu);
+                FragmentAddLending faddlend = new FragmentAddLending(getItem(para).getName());
+                faddlend.show(parentFm,faddlend.getTag());
             }
         });
         return view;

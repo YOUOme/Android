@@ -11,7 +11,7 @@ public class ActivityAddLending extends AppCompatActivity {
     AdapterLendItem adapter;
 
     String selectedName;
-    int money; // 잔액을 전달받아야함.
+    int money = 40000; // 잔액을 전달받아야함.
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,13 +19,15 @@ public class ActivityAddLending extends AppCompatActivity {
         setContentView(R.layout.activity_add_lending);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        adapter = new AdapterLendItem();
+        adapter = new AdapterLendItem(getSupportFragmentManager());
         //dummy data
         adapter.addItem("김오미","010-1111-1111","신용도 AAA");
         adapter.addItem("나오미","010-1111-1111","신용도 AAA");
         adapter.addItem("박오미","010-1111-1111","신용도 AAA");
         adapter.addItem("이오미","010-1111-1111","신용도 AAA");
         adapter.addItem("조오미","010-1111-1111","신용도 AAA");
+
+
 
         recentLendListView = (ListView)findViewById(R.id.recent_lend);
         recentLendListView.setAdapter(adapter);

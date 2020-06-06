@@ -41,7 +41,7 @@
                     app:srcCompat="@drawable/down_image" />
 
                 <TextView
-                    android:id="@+id/textView21"
+                    android:id="@+id/lend_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -63,7 +63,7 @@
             </LinearLayout>
 
             <TextView
-                android:id="@+id/textView25"
+                android:id="@+id/lend_money"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#333"
@@ -75,6 +75,7 @@
 
             <SeekBar
                 android:id="@+id/seekBar"
+                android:progress="50"
                 android:progressBackgroundTint="#aaa"
                 android:progressTint="#333"
                 android:thumbTint="#fff"
@@ -96,6 +97,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingVertical="15dp"
+                android:layout_marginBottom="20dp"
                 android:layout_marginHorizontal="30dp"
                 android:textSize="19dp"
                 android:background="@drawable/style_lightgray1"
