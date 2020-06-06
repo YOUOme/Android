@@ -91,7 +91,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/down_image" />
+                app:srcCompat="@drawable/bt_down" />
 
             <TextView
                 android:id="@+id/textView11"

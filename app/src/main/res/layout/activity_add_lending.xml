@@ -25,7 +25,7 @@
             android:layout_gravity="bottom"
             android:layout_marginLeft="25dp"
             android:layout_weight="0"
-            app:srcCompat="@drawable/down_image" />
+            app:srcCompat="@drawable/bt_left" />
     </LinearLayout>
 
     <LinearLayout
@@ -97,7 +97,7 @@
             android:layout_gravity="center"
             android:layout_marginRight="10dp"
             android:layout_weight="0"
-            app:srcCompat="@drawable/white_plus" />
+            app:srcCompat="@drawable/bt_threedot" />
     </LinearLayout>
 
     <ListView

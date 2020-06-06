@@ -54,6 +54,6 @@
         android:layout_weight="0"
         android:background="@drawable/bt_style_lightgray2"
         android:backgroundTint="@color/youome_subColor"
-        app:srcCompat="@drawable/down_image" />
+        app:srcCompat="@drawable/bt_right" />
 
 </LinearLayout>

@@ -38,7 +38,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_gravity="center_vertical"
-                    app:srcCompat="@drawable/down_image" />
+                    app:srcCompat="@drawable/bt_down" />
 
                 <TextView
                     android:id="@+id/lend_name"
