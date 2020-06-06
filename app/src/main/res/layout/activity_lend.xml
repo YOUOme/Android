@@ -27,6 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
             android:textSize="15dp"
+            android:onClick="onCompleteClick"
             android:gravity="right"
             android:layout_marginRight="30dp"
             android:layout_marginLeft="280dp"
