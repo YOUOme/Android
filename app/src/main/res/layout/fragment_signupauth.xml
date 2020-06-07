@@ -64,7 +64,8 @@
                     android:layout_gravity="center_vertical"
                     android:layout_weight="0"
                     android:layout_marginRight="15dp"
-                    app:srcCompat="@drawable/white_plus" />
+                    android:tint="#fff"
+                    app:srcCompat="@drawable/a_arrow" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -87,7 +88,7 @@
                     android:layout_gravity="center_vertical"
                     android:layout_weight="0"
                     android:layout_marginRight="15dp"
-                    app:srcCompat="@drawable/white_plus" />
+                    app:srcCompat="@drawable/a_arrow" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -110,7 +111,7 @@
                     android:layout_gravity="center_vertical"
                     android:layout_weight="0"
                     android:layout_marginRight="15dp"
-                    app:srcCompat="@drawable/white_plus" />
+                    app:srcCompat="@drawable/a_arrow" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -134,7 +135,7 @@
                     android:layout_gravity="center_vertical"
                     android:layout_weight="0"
                     android:layout_marginRight="15dp"
-                    app:srcCompat="@drawable/white_plus" />
+                    app:srcCompat="@drawable/a_arrow" />
             </LinearLayout>
         </LinearLayout>
     </com.google.android.material.navigation.NavigationView>
