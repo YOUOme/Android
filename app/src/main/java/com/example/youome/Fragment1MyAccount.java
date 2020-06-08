@@ -13,7 +13,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 public class Fragment1MyAccount extends Fragment {
-    private TextView bt_omypay;
+    private TextView bt_omypay,tx_myMoney;
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

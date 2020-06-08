@@ -80,6 +80,7 @@
                 android:hint="이름"
                 android:background="@null"
                 android:inputType="textPersonName"
+                android:privateImeOptions="defaultInputmode=korean"
                 android:textSize="20dp" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -107,12 +108,13 @@
                 android:layout_marginBottom="10dp"
                 android:hint="주민등록번호"
                 android:background="@null"
-                android:inputType="numberSigned"
+                android:inputType="phone"
                 android:textSize="20dp" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textinputlayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
@@ -121,6 +123,8 @@
             android:paddingTop="5dp"
             android:background="@drawable/edit_style_lightgray"
             app:hintEnabled="true"
+            app:prefixTextColor="#000"
+            app:prefixTextAppearance="@style/TextAppearance.AppCompat.Medium"
             app:hintAnimationEnabled="false"
             android:textColorHint="@color/youome_hintColor"
             app:hintTextAppearance="@style/youome_hint_Style">
@@ -130,13 +134,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#000"
-                android:maxLines="10"
+                android:ems="11"
                 android:layout_marginLeft="20dp"
                 android:layout_marginBottom="10dp"
                 android:hint="전화번호"
-                app:prefixText="hi"
                 android:background="@null"
-                android:inputType="numberSigned"
+                android:inputType="phone"
                 android:textSize="20dp" />
 
         </com.google.android.material.textfield.TextInputLayout>
