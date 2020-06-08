@@ -13,9 +13,9 @@
         <activity android:name=".ActivityLoan" />
         <activity android:name=".ActivityAddLoan" />
         <activity android:name=".ActivityAlarm" />
-        <activity android:name=".ActivityOmypay" />
-        <activity android:name=".ActivitySignUp"
-                  android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".ActivityOmypay"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".ActivitySignUp" />
         <activity android:name=".ActivityYOUOme" />
         <activity android:name=".MainActivity">
             <intent-filter>

@@ -58,6 +58,7 @@ public class ActivitySignUp extends AppCompatActivity {
 
         auth = new FragmentSignUp1Auth();
         tele = new FragmentSignUp2Tele();
+        tele.setCancelable(false);
         auth.setCancelable(false);
     }
 

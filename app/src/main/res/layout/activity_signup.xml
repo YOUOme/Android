@@ -107,8 +107,9 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginBottom="10dp"
                 android:hint="주민등록번호"
+                android:inputType="numberDecimal"
+                android:digits="0123456789-"
                 android:background="@null"
-                android:inputType="phone"
                 android:textSize="20dp" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -139,7 +140,8 @@
                 android:layout_marginBottom="10dp"
                 android:hint="전화번호"
                 android:background="@null"
-                android:inputType="phone"
+                android:inputType="numberDecimal"
+                android:digits="0123456789-"
                 android:textSize="20dp" />
 
         </com.google.android.material.textfield.TextInputLayout>

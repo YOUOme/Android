@@ -58,7 +58,7 @@
             android:text="충전 후" />
 
         <TextView
-            android:id="@+id/textView10"
+            android:id="@+id/tx_aftermoney"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -138,9 +138,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint=""
-                android:text="20,000"
-                android:ems="3"
-                android:inputType="numberSigned"
+                android:text="0"
+                android:maxLength="10"
+                android:inputType="numberDecimal"
+                android:digits="0123456789.,"
                 android:textColor="#000"
                 android:textSize="30dp" />
 
@@ -162,7 +163,7 @@
         android:orientation="vertical"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="40dp"
-        android:gravity="top"
+        android:gravity="bottom"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

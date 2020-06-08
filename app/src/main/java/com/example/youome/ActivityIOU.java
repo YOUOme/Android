@@ -7,7 +7,7 @@ import android.widget.TextView;
 
 public class ActivityIOU extends AppCompatActivity {
 
-    TextView transText;
+    TextView transText,bt_complete;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,5 +18,7 @@ public class ActivityIOU extends AppCompatActivity {
             transText.setText("알림");
         else
             transText.setText("상환하기");
+        bt_complete = (TextView)findViewById(R.id.bt_complete);
+        //bt_complete.
     }
 }

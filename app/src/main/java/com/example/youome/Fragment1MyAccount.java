@@ -13,7 +13,8 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 public class Fragment1MyAccount extends Fragment {
-    private TextView bt_omypay,tx_myMoney;
+    private TextView bt_omypay,tx_OmyPay;
+    private int myMoney = 47870;        // db get
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,17 +22,23 @@ public class Fragment1MyAccount extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_myaccount,null);
+        View view = inflater.inflate(R.layout.fragment_myaccount, null);
 
-
-        bt_omypay = (TextView)view.findViewById(R.id.bt_omypay);
+        bt_omypay = (TextView) view.findViewById(R.id.bt_omypay);
         bt_omypay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getContext(),ActivityOmypay.class);
+                Intent intent = new Intent(getContext(), ActivityOmypay.class);
+                intent.putExtra("money",myMoney);
                 startActivity(intent);
             }
         });
+
+        tx_OmyPay = (TextView) view.findViewById(R.id.tx_omypay);
+        String s = null;
+        try { s = String.format("%,d", myMoney); } catch (NumberFormatException e) { }
+        tx_OmyPay.setText(s);
+
 
         return view;
     }
