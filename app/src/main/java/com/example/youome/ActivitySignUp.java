@@ -48,8 +48,11 @@ public class ActivitySignUp extends AppCompatActivity {
             }
         });
 
+        //et_phone.setPr
+
         et_name = (TextInputEditText)findViewById(R.id.et_name);
         et_id = (TextInputEditText)findViewById(R.id.et_inum);
+
 
         auth = new FragmentSignUp1Auth();
         tele = new FragmentSignUp2Tele();

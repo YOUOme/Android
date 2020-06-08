@@ -6,13 +6,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 public class Fragment1MyAccount extends Fragment {
-    private ImageView bt_omypay;
+    private TextView bt_omypay;
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,7 +24,7 @@ public class Fragment1MyAccount extends Fragment {
         View view = inflater.inflate(R.layout.fragment_myaccount,null);
 
 
-        bt_omypay = (ImageView)view.findViewById(R.id.bt_omypay);
+        bt_omypay = (TextView)view.findViewById(R.id.bt_omypay);
         bt_omypay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
