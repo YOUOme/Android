@@ -19,8 +19,14 @@ import android.widget.Toast;
 
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
 public class ActivityLoan extends AppCompatActivity {
-    TextView tName, tMoney, tAccount, tInterest;
+    TextView tName, tMoney, tAccount, tInterest,tDate;
     EditText et_interest;
     CalendarView cv;
     BottomSheetBehavior mBottomSheetBehavior;
@@ -40,6 +46,7 @@ public class ActivityLoan extends AppCompatActivity {
         tMoney.setText(getIntent().getIntExtra("money", 0) + "원");
         tAccount = (TextView) findViewById(R.id.tx_account);
         tInterest = (TextView)findViewById(R.id.tx_interest);
+        tDate = (TextView)findViewById(R.id.tx_pickdate) ;
 
         et_interest = (EditText)findViewById(R.id.et_interest);
         et_interest.addTextChangedListener(new TextWatcher() {
@@ -82,13 +89,32 @@ public class ActivityLoan extends AppCompatActivity {
             public void onSlide(@NonNull View view, float v) {
             }
         });
-        /*cv.findViewById(R.id.cv);
+
+        cv = (CalendarView)findViewById(R.id.cv);
         cv.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
-            public void onSelectedDayChange(@NonNull CalendarView calendarView, int i, int i1, int i2) {
-                Toast.makeText(getApplicationContext(),cv.getDate()+"",Toast.LENGTH_SHORT).show();
+            public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
+                String tmp = year+"."+(month+1)+"."+dayOfMonth+".";
+                DateFormat format = new SimpleDateFormat("yyyyMMdd");
+                try {
+                    Date date = format.parse(year + "" + (month + 1) + "" + dayOfMonth);
+                    Calendar c = Calendar.getInstance();
+                    c.setTime(date);
+                    switch (c.get(Calendar.DAY_OF_WEEK)){   // 에러 존재.
+                        case 1:tmp+="월";break;
+                        case 2:tmp+="화";break;
+                        case 3:tmp+="수";break;
+                        case 4:tmp+="목";break;
+                        case 5:tmp+="금";break;
+                        case 6:tmp+="토";break;
+                        case 7:tmp+="일";break;
+                    }
+                    tDate.setText(tmp);
+                }catch (ParseException e){
+                    tDate.setText(tmp);
+                };
             }
-        });*/
+        });
 
     }
 

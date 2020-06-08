@@ -241,7 +241,7 @@
                     android:textSize="27dp" />
 
                 <TextView
-                    android:id="@+id/textView33"
+                    android:id="@+id/tx_pickdate"
                     android:textSize="25dp"
                     android:textColor="#222"
                     android:gravity="right"
