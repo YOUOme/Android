@@ -1,18 +1,16 @@
 package com.example.youome;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.ListView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-public class Fragment3Repay extends Fragment {
+public class Fragment3Payback extends Fragment {
     ListView repayListView, completeRepayListView;
     AdapterFragItem adapter1,adapter2;
     @Override
@@ -22,7 +20,7 @@ public class Fragment3Repay extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_repay,null);
+        View view = inflater.inflate(R.layout.fragment_payback,null);
 
         adapter1 = new AdapterFragItem(getContext(),R.color.youome_background,2);
         adapter2 = new AdapterFragItem(getContext(),2);

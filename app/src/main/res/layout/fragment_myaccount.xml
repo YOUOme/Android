@@ -37,20 +37,37 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginRight="10dp"
+            android:layout_marginRight="30dp"
             android:layout_weight="1"
-            android:gravity="right"
+            android:gravity="left"
             android:text="47,870 원"
             android:textSize="20dp"
             android:textStyle="bold" />
 
-        <ImageView
+        <TextView
+            android:id="@+id/bt_loan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="20dp"
+            android:textColor="#777"
+            android:text="송금"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="20dp"
+            android:textColor="#777"
+            android:text="|"/>
+        <TextView
             android:id="@+id/bt_omypay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginRight="20dp"
-            app:srcCompat="@drawable/add_new_image" />
+            android:textSize="20dp"
+            android:textColor="#777"
+            android:text="충전"/>
 
     </LinearLayout>
 

@@ -15,7 +15,7 @@ import android.widget.TextView;
 
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 
-public class ActivityLend extends AppCompatActivity {
+public class ActivityLoan extends AppCompatActivity {
     TextView tName, tMoney, tAccount, tAccountNum, bt_complete;
     CalendarView cv;
     BottomSheetBehavior mBottomSheetBehavior;
@@ -24,7 +24,7 @@ public class ActivityLend extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lend);
+        setContentView(R.layout.activity_loan);
 
         tName = (TextView) findViewById(R.id.tx_name);
         tName.setText(getIntent().getStringExtra("name"));

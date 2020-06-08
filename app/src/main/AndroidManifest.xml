@@ -10,8 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity android:name=".ActivityIOU"></activity>
-        <activity android:name=".ActivityLend" />
-        <activity android:name=".ActivityAddLending" />
+        <activity android:name=".ActivityLoan" />
+        <activity android:name=".ActivityAddLoan" />
         <activity android:name=".ActivityAlarm" />
         <activity android:name=".ActivityOmypay" />
         <activity android:name=".ActivitySignUp" />

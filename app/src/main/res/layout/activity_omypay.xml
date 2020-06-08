@@ -138,6 +138,8 @@
                 android:layout_height="wrap_content"
                 android:hint=""
                 android:text="20,000"
+                android:ems="3"
+                android:inputType="numberSigned"
                 android:textColor="#000"
                 android:textSize="30dp" />
 
@@ -152,21 +154,30 @@
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/button"
+    <LinearLayout
+        android:id="@+id/react_button"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="70dp"
-        android:background="@drawable/bt_style_lightgray"
-        android:backgroundTint="@color/youome_hintColor"
-        android:paddingVertical="5dp"
-        android:text="충전하기"
-        android:textSize="17dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="40dp"
+        android:gravity="bottom"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout5"
-        app:layout_constraintVertical_bias="0.104" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
+
+        <Button
+            android:id="@+id/bt_charge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="70dp"
+            android:background="@drawable/bt_style_lightgray"
+            android:backgroundTint="@color/youome_hintColor"
+            android:paddingVertical="5dp"
+            android:text="충전하기"
+            android:textSize="17dp" />
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

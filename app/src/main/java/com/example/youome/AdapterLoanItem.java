@@ -11,12 +11,12 @@ import java.util.ArrayList;
 
 import androidx.fragment.app.FragmentManager;
 
-public class AdapterLendItem extends BaseAdapter {
+public class AdapterLoanItem extends BaseAdapter {
     private ArrayList<ItemData> mItems = new ArrayList<>();
     private FragmentManager parentFm;
     //private int money;
 
-    public AdapterLendItem(FragmentManager pfm) {
+    public AdapterLoanItem(FragmentManager pfm) {
         this.parentFm = pfm;
         //this.money = pMoney;
     }
@@ -57,7 +57,7 @@ public class AdapterLendItem extends BaseAdapter {
         bt_lend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FragmentAddLending faddlend = new FragmentAddLending(getItem(para).getName());
+                FragmentAddLoan faddlend = new FragmentAddLoan(getItem(para).getName());
                 faddlend.show(parentFm,faddlend.getTag());
             }
         });

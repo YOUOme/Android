@@ -6,9 +6,9 @@ import android.os.Bundle;
 import android.view.WindowManager;
 import android.widget.ListView;
 
-public class ActivityAddLending extends AppCompatActivity {
+public class ActivityAddLoan extends AppCompatActivity {
     ListView recentLendListView;
-    AdapterLendItem adapter;
+    AdapterLoanItem adapter;
 
     String selectedName;
     int money = 40000; // 잔액을 전달받아야함.
@@ -16,10 +16,10 @@ public class ActivityAddLending extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_lending);
+        setContentView(R.layout.activity_add_loan);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        adapter = new AdapterLendItem(getSupportFragmentManager());
+        adapter = new AdapterLoanItem(getSupportFragmentManager());
         //dummy data
         adapter.addItem("김오미","010-1111-1111","신용도 AAA");
         adapter.addItem("나오미","010-1111-1111","신용도 AAA");

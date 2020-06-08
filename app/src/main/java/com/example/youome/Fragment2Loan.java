@@ -12,7 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-public class Fragment2Lending extends Fragment {
+public class Fragment2Loan extends Fragment {
     ImageView bt_addlend;
     ListView lendListView, completeLendListView;
     AdapterFragItem adapter1,adapter2;
@@ -24,12 +24,12 @@ public class Fragment2Lending extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_lending,null);
+        View view = inflater.inflate(R.layout.fragment_loan,null);
         bt_addlend = (ImageView)view.findViewById(R.id.bt_addlend);
         bt_addlend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getContext(),ActivityAddLending.class);
+                Intent intent = new Intent(getContext(), ActivityAddLoan.class);
                 startActivity(intent);
             }
         });

@@ -1,10 +1,7 @@
 package com.example.youome;
 
-import android.app.Dialog;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.DragEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,7 +15,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.FragmentManager;
 
-public class FragmentAddLending extends BottomSheetDialogFragment {
+public class FragmentAddLoan extends BottomSheetDialogFragment {
 
     public String name;
     SeekBar seekBar;
@@ -26,7 +23,7 @@ public class FragmentAddLending extends BottomSheetDialogFragment {
     Button bt_lend;
     int selectedMoney;
 
-    public FragmentAddLending(String name) {
+    public FragmentAddLoan(String name) {
         this.name = name;
     }
 
@@ -39,18 +36,18 @@ public class FragmentAddLending extends BottomSheetDialogFragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        final View view = inflater.inflate(R.layout.fragment_bottomsheet_lending, container, false);
+        final View view = inflater.inflate(R.layout.fragment_bottomsheet_loan, container, false);
 
         tName = (TextView)view.findViewById(R.id.lend_name);
         tName.setText(name);
         tMoney = (TextView)view.findViewById(R.id.lend_money);
-        selectedMoney = (int)(((ActivityAddLending)getActivity()).money*0.5);
-        tMoney.setText( (int)(((ActivityAddLending)getActivity()).money*0.5)+" 원");
+        selectedMoney = (int)(((ActivityAddLoan)getActivity()).money*0.5);
+        tMoney.setText( (int)(((ActivityAddLoan)getActivity()).money*0.5)+" 원");
 
         seekBar = (SeekBar)view.findViewById(R.id.seekBar);
         seekBar.setProgress(0);
-        seekBar.setMax(((ActivityAddLending)getActivity()).money);
-        seekBar.setProgress((int)(((ActivityAddLending)getActivity()).money*0.5));
+        seekBar.setMax(((ActivityAddLoan)getActivity()).money);
+        seekBar.setProgress((int)(((ActivityAddLoan)getActivity()).money*0.5));
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
@@ -70,7 +67,7 @@ public class FragmentAddLending extends BottomSheetDialogFragment {
         bt_lend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getContext(),ActivityLend.class);
+                Intent intent = new Intent(getContext(), ActivityLoan.class);
                 intent.putExtra("name",name);
                 intent.putExtra("money",selectedMoney);
                 startActivity(intent);

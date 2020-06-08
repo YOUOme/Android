@@ -19,10 +19,10 @@ public class AdapterYouomePage extends FragmentStatePagerAdapter {
                 Fragment1MyAccount Fragment1 = new Fragment1MyAccount();
                 return Fragment1;
             case 1:
-                Fragment2Lending Fragment2 = new Fragment2Lending();
+                Fragment2Loan Fragment2 = new Fragment2Loan();
                 return Fragment2;
             case 2:
-                Fragment3Repay Fragment3 = new Fragment3Repay();
+                Fragment3Payback Fragment3 = new Fragment3Payback();
                 return Fragment3;
             case 3:
                 YouomeFragment4 Fragment4 = new YouomeFragment4();
