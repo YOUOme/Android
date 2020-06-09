@@ -25,6 +25,7 @@
             android:layout_gravity="bottom"
             android:layout_marginLeft="25dp"
             android:layout_weight="0"
+            android:visibility="invisible"
             app:srcCompat="@drawable/bt_left" />
     </LinearLayout>
 

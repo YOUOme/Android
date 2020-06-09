@@ -45,9 +45,9 @@ public class Fragment2Loan extends Fragment {
         adapter2.addItem("나오미","20.01.04 토","10000원");
         adapter2.addItem("이오미","20.01.04 토","10000원");
         adapter2.addItem("최오미","20.01.04 토","10000원");
-        adapter2.addItem("윤오미","20.01.04 토","10000원");
+        adapter2.addItem("박오미","20.01.04 토","10000원");
         adapter2.addItem("배오미","20.01.04 토","10000원");
-        adapter2.addItem("고오미","20.01.04 토","10000원");
+        adapter2.addItem("박오미","20.01.04 토","10000원");
 
         lendListView = (ListView)view.findViewById(R.id.lend_list);
         lendListView.setAdapter(adapter1);

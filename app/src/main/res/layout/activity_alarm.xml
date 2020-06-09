@@ -25,6 +25,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="0"
             android:layout_marginLeft="25dp"
+            android:visibility="invisible"
             android:layout_gravity="bottom"
             app:srcCompat="@drawable/bt_left" />
 
@@ -43,7 +44,8 @@
     <LinearLayout
         android:id="@+id/linearLayout6"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="wrap_content"
+        android:minHeight="200dp"
         android:background="@drawable/style_lightgray2"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -60,8 +62,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="25dp"
-            android:textStyle="bold"
             android:text="최근 알림" />
+
+        <ListView
+            android:id="@+id/recent_listview"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="25dp"
+            android:divider="@null"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="30dp" />
     </LinearLayout>
 
     <LinearLayout
@@ -81,8 +91,13 @@
             android:textColor="#000"
             android:layout_marginTop="25dp"
             android:textSize="25dp"
-            android:textStyle="bold"
             android:text="이전 알림" />
+
+        <ListView
+            android:id="@+id/past_listview"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

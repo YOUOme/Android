@@ -31,7 +31,9 @@ public class ActivityLoan extends AppCompatActivity {
     CalendarView cv;
     BottomSheetBehavior mBottomSheetBehavior;
     View nestedBottomSheet;
+
     int selectedMoney;
+    String seletedDay;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,8 +52,9 @@ public class ActivityLoan extends AppCompatActivity {
 
         long now = System.currentTimeMillis();
         Date dNow = new Date(now);
-        String s = dNow.getYear()+1900+"."+String.format("%02d",(dNow.getMonth()+1))+"."+String.format("%02d",dNow.getDate())+".";
+        String s= dNow.getYear()+1900+"."+String.format("%02d",(dNow.getMonth()+1))+"."+String.format("%02d",dNow.getDate())+".";
         tDate.setText(printWeekDay(s,dNow.getYear()+1900,dNow.getMonth(),dNow.getDate()));
+        seletedDay = s;
 
         et_interest = (EditText)findViewById(R.id.et_interest);
         et_interest.addTextChangedListener(new TextWatcher() {
@@ -94,6 +97,7 @@ public class ActivityLoan extends AppCompatActivity {
             @Override
             public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
                 String tmp = year + "." + String.format("%02d", (month + 1)) + "." + String.format("%02d", dayOfMonth) + ".";
+                seletedDay = tmp;
                 tDate.setText(printWeekDay(tmp,year,month,dayOfMonth));
             }
         });
@@ -123,6 +127,14 @@ public class ActivityLoan extends AppCompatActivity {
         final Dialog dlg = new Dialog(this);
         dlg.setContentView(dlgView);
         dlg.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
+
+        TextView name,date,money;
+        name = (TextView)dlgView.findViewById(R.id.dl_name);
+        name.setText(getIntent().getStringExtra("name"));
+        date = (TextView)dlgView.findViewById(R.id.dl_date);
+        date.setText(seletedDay);
+        money = (TextView)dlgView.findViewById(R.id.dl_money);
+        money.setText(selectedMoney+"원");
 
         Button ok = (Button) dlgView.findViewById(R.id.bt_ok);
         ok.setOnClickListener(new View.OnClickListener() {

@@ -27,6 +27,7 @@ public class ActivitySignUp extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         et_phone = (TextInputEditText)findViewById(R.id.et_phone);
         et_phone.setOnEditorActionListener(new TextView.OnEditorActionListener() {

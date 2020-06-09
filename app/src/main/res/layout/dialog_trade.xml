@@ -31,7 +31,7 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/textView47"
+                android:id="@+id/dl_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -55,7 +55,7 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/textView49"
+                android:id="@+id/dl_date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -78,7 +78,7 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/textView51"
+                android:id="@+id/dl_money"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
