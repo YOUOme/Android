@@ -71,6 +71,7 @@ public class FragmentAddLoan extends BottomSheetDialogFragment {
                 intent.putExtra("name",name);
                 intent.putExtra("money",selectedMoney);
                 startActivity(intent);
+                getActivity().finish();
             }
         });
 

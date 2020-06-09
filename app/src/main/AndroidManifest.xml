@@ -9,12 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".ActivityIOU"></activity>
+        <activity android:name=".ActivityChangeAccount"></activity>
+        <activity android:name=".ActivityIOU" />
         <activity android:name=".ActivityLoan" />
         <activity android:name=".ActivityAddLoan" />
         <activity android:name=".ActivityAlarm" />
-        <activity android:name=".ActivityOmypay"
-            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name=".ActivityOmypay"
+            android:windowSoftInputMode="adjustResize" />
         <activity android:name=".ActivitySignUp" />
         <activity android:name=".ActivityYOUOme" />
         <activity android:name=".ActivityMainLogo">

@@ -81,9 +81,15 @@ public class ActivityLoan extends AppCompatActivity {
             @Override
             public void onStateChanged(@NonNull View view, int i) {
                 if (i == BottomSheetBehavior.STATE_EXPANDED) {
-
+                    if(!et_interest.getText().toString().isEmpty()) {
+                        tAccount.setText("매달 말일    연 " + et_interest.getText().toString() + "% (월 " + tInterest.getText().toString());
+                        tAccount.setScaleX(0.9f);
+                        tAccount.setScaleY(0.9f);
+                    }
                 } else if (i == BottomSheetBehavior.STATE_COLLAPSED) {
                     tAccount.setText("이자율 설정");
+                    tAccount.setScaleX(1.0f);
+                    tAccount.setScaleY(1.0f);
                 }
             }
 
@@ -143,6 +149,7 @@ public class ActivityLoan extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), ActivityIOU.class);
                 intent.putExtra("mode",3);
                 startActivity(intent);
+                finish();
             }
         });
 

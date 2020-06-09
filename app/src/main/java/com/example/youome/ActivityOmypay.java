@@ -3,6 +3,7 @@ package com.example.youome;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -22,7 +23,7 @@ import java.text.DecimalFormat;
 public class ActivityOmypay extends AppCompatActivity {
     LinearLayout react_button;
     EditText et_money;
-    TextView tx_aftermoney;
+    TextView tx_aftermoney, bt_account_change, bt_alarm;
     private int myMoney;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,6 +73,24 @@ public class ActivityOmypay extends AppCompatActivity {
                 try { s = String.format("%,d", myMoney+addMoney); } catch (NumberFormatException e) { }
                 tx_aftermoney.setText(s);
                 //react_button.setGravity(Gravity.TOP);
+            }
+        });
+
+        bt_account_change = (TextView)findViewById(R.id.bt_account_change);
+        bt_account_change.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),ActivityChangeAccount.class);
+                startActivity(intent);
+            }
+        });
+
+        bt_alarm = (TextView)findViewById(R.id.bt_alarm);
+        bt_alarm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),ActivityAlarm.class);
+                startActivity(intent);
             }
         });
     }

@@ -8,7 +8,7 @@
     tools:context=".ActivityYOUOme">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/bt_alarm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
@@ -115,7 +115,7 @@
                 android:textColor="#000" />
 
             <TextView
-                android:id="@+id/textView13"
+                android:id="@+id/bt_account_change"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
