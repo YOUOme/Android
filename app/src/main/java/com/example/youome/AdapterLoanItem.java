@@ -14,12 +14,14 @@ import androidx.fragment.app.FragmentManager;
 public class AdapterLoanItem extends BaseAdapter {
     private ArrayList<ItemData> mItems = new ArrayList<>();
     private FragmentManager parentFm;
-    //private int money;
 
     public AdapterLoanItem(FragmentManager pfm) {
         this.parentFm = pfm;
         //this.money = pMoney;
     }
+
+    public ArrayList<ItemData> getArrayList(){ return mItems; }
+    public void setArrayList(ArrayList<ItemData> a){ mItems =a; }
 
     @Override
     public int getCount() {
@@ -39,6 +41,7 @@ public class AdapterLoanItem extends BaseAdapter {
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
         Context context = viewGroup.getContext();
+
         if(view == null){
             LayoutInflater inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             view = inflater.inflate(R.layout.item_trade2,viewGroup,false);
@@ -72,7 +75,7 @@ public class AdapterLoanItem extends BaseAdapter {
         mItems.add(mItem);
     }
 
-    class ItemData{
+    public class ItemData{
         private String name, phone, credit;
         public String getName() { return name; }
         public void setName(String name) { this.name = name; }

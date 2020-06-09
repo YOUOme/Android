@@ -41,6 +41,7 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout7">
 
         <EditText
+            android:id="@+id/et_recent_search"
             android:layout_width="304dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -56,6 +57,7 @@
             android:textSize="17dp" />
 
         <ImageView
+            android:onClick="onRecentSearchClick"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginLeft="15dp"
@@ -82,7 +84,7 @@
         app:layout_constraintVertical_bias="0.0">
 
         <TextView
-            android:id="@+id/textView23"
+            android:id="@+id/tx_recent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"

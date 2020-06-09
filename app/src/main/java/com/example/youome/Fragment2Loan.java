@@ -7,13 +7,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 public class Fragment2Loan extends Fragment {
-    ImageView bt_addlend;
+    TextView bt_addlend;
     ListView lendListView, completeLendListView;
     AdapterFragItem adapter1,adapter2;
 
@@ -25,7 +26,7 @@ public class Fragment2Loan extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_loan,null);
-        bt_addlend = (ImageView)view.findViewById(R.id.bt_addlend);
+        bt_addlend = (TextView)view.findViewById(R.id.bt_addlend);
         bt_addlend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

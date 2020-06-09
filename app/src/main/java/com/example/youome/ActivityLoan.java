@@ -48,6 +48,11 @@ public class ActivityLoan extends AppCompatActivity {
         tInterest = (TextView)findViewById(R.id.tx_interest);
         tDate = (TextView)findViewById(R.id.tx_pickdate) ;
 
+        long now = System.currentTimeMillis();
+        Date dNow = new Date(now);
+        String s = dNow.getYear()+1900+"."+String.format("%02d",(dNow.getMonth()+1))+"."+String.format("%02d",dNow.getDate())+".";
+        tDate.setText(printWeekDay(s,dNow.getYear()+1900,dNow.getMonth(),dNow.getDate()));
+
         et_interest = (EditText)findViewById(R.id.et_interest);
         et_interest.addTextChangedListener(new TextWatcher() {
             @Override
@@ -73,13 +78,7 @@ public class ActivityLoan extends AppCompatActivity {
             @Override
             public void onStateChanged(@NonNull View view, int i) {
                 if (i == BottomSheetBehavior.STATE_EXPANDED) {
-                    if(!et_interest.getText().toString().isEmpty()) {
-                        double interest = Double.parseDouble(et_interest.getText().toString());
-                        int month = (int) (((selectedMoney/100) * interest)) / 12;
-                        tAccount.setText("매달 말일 연 " + et_interest.getText() + "% (월 " + month + "원)");
-                    }
-                    else
-                        tAccount.setText("매달 말일 연 " + "0" + "% (월 " + "0" + "원)");
+
                 } else if (i == BottomSheetBehavior.STATE_COLLAPSED) {
                     tAccount.setText("이자율 설정");
                 }
@@ -94,28 +93,29 @@ public class ActivityLoan extends AppCompatActivity {
         cv.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
             public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
-                String tmp = year+"."+(month+1)+"."+dayOfMonth+".";
-                DateFormat format = new SimpleDateFormat("yyyyMMdd");
-                try {
-                    Date date = format.parse(year + "" + (month + 1) + "" + dayOfMonth);
-                    Calendar c = Calendar.getInstance();
-                    c.setTime(date);
-                    switch (c.get(Calendar.DAY_OF_WEEK)){   // 에러 존재.
-                        case 1:tmp+="월";break;
-                        case 2:tmp+="화";break;
-                        case 3:tmp+="수";break;
-                        case 4:tmp+="목";break;
-                        case 5:tmp+="금";break;
-                        case 6:tmp+="토";break;
-                        case 7:tmp+="일";break;
-                    }
-                    tDate.setText(tmp);
-                }catch (ParseException e){
-                    tDate.setText(tmp);
-                };
+                String tmp = year + "." + String.format("%02d", (month + 1)) + "." + String.format("%02d", dayOfMonth) + ".";
+                tDate.setText(printWeekDay(tmp,year,month,dayOfMonth));
             }
         });
+    }
 
+    private String printWeekDay(String tmp,int year, int month, int day){
+        DateFormat format = new SimpleDateFormat("yyyyMMdd");
+        try {
+            Date date = format.parse(year + "" + String.format("%02d",(month+1)) + "" + String.format("%02d",day));
+            Calendar c = Calendar.getInstance();
+            c.setTime(date);
+            switch (c.get(Calendar.DAY_OF_WEEK)){
+                case 1:tmp+="월";break;
+                case 2:tmp+="화";break;
+                case 3:tmp+="수";break;
+                case 4:tmp+="목";break;
+                case 5:tmp+="금";break;
+                case 6:tmp+="토";break;
+                case 7:tmp+="일";break;
+            }
+        }catch (ParseException e){}
+        return tmp;
     }
 
     public void onCompleteClick(View view) {
