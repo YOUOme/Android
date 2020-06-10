@@ -21,21 +21,6 @@
 
     </androidx.viewpager.widget.ViewPager>
 
-    <TextView
-        android:id="@+id/bt_alarm"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="알림"
-        android:textColor="#fff"
-        android:textSize="20dp"
-        android:paddingRight="18dp"
-        android:paddingBottom="12dp"
-        android:paddingTop="12dp"
-        android:paddingLeft="30dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
         android:layout_width="match_parent"
