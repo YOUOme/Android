@@ -9,6 +9,8 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -17,6 +19,8 @@ public class Fragment2Loan extends Fragment {
     TextView bt_addlend;
     ListView lendListView, completeLendListView;
     AdapterFragItem adapter1,adapter2;
+
+    ArrayList<AdapterLoanItem.ItemData> saveArrayList;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
