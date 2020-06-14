@@ -63,10 +63,11 @@ public class ActivityAddLoan extends AppCompatActivity {
             searchText = et_recent_search.getText().toString();
             length = searchText.length();
 
-            for(int i=0;i<originalData.size();i++) {                  // 매우 리소스 비효율적.(수정요망)
-                if (searchText.equals(originalData.get(i).getName().substring(0, length)))
-                    searchedData.add(originalData.get(i));
+            for(AdapterLoanItem.ItemData data : originalData){
+                if(searchText.equals(data.getName().substring(0,length)))
+                    searchedData.add(data);
             }
+
             adapter.setArrayList(searchedData);
             adapter.notifyDataSetChanged();
         }

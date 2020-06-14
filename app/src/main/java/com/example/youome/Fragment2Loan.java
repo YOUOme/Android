@@ -23,7 +23,7 @@ public class Fragment2Loan extends Fragment{
     EditText et_search;
     ImageView bt_loan_search;
 
-    ArrayList<AdapterFragItem.ItemData> originalData1,saveArrayList2;
+    ArrayList<AdapterFragItem.ItemData> originalData1,originalData2;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -45,7 +45,7 @@ public class Fragment2Loan extends Fragment{
         adapter2 = new AdapterFragItem(getContext(),1);
 
         originalData1 = new ArrayList<AdapterFragItem.ItemData>();
-        saveArrayList2 = new ArrayList<AdapterFragItem.ItemData>();
+        originalData2 = new ArrayList<AdapterFragItem.ItemData>();
 
         bt_loan_search = (ImageView)view.findViewById(R.id.bt_loan_search);
         bt_loan_search.setOnClickListener(new searchClickListener());
@@ -70,6 +70,7 @@ public class Fragment2Loan extends Fragment{
         et_search = (EditText)view.findViewById(R.id.loan_search);
 
         originalData1.addAll(adapter1.getArrayList());
+        originalData2.addAll(adapter2.getArrayList());
         return view;
     }
 
@@ -77,23 +78,35 @@ public class Fragment2Loan extends Fragment{
         @Override
         public void onClick(View view) {
             String searchText;
-            ArrayList<AdapterFragItem.ItemData> searchedData = new ArrayList<AdapterFragItem.ItemData>();
+            ArrayList<AdapterFragItem.ItemData> searchedData1,searchedData2;
+            searchedData1 = new ArrayList<AdapterFragItem.ItemData>();
+            searchedData2 = new ArrayList<AdapterFragItem.ItemData>();
             int length;
 
             if(!et_search.getText().toString().isEmpty()) {
                 searchText = et_search.getText().toString();
                 length = searchText.length();
 
-                for(int i=0;i<originalData1.size();i++)                // 매우 리소스 비효율적.(수정요망)
-                    if (searchText.equals(originalData1.get(i).getName().substring(0, length)))
-                        searchedData.add(originalData1.get(i));
+                for(AdapterFragItem.ItemData data : originalData1){
+                    if(searchText.equals(data.getName().substring(0,length)))
+                        searchedData1.add(data);
+                }
 
-                adapter1.setArrayList(searchedData);
+                for(AdapterFragItem.ItemData data : originalData2){
+                    if(searchText.equals(data.getName().substring(0,length)))
+                        searchedData2.add(data);
+                }
+
+                adapter1.setArrayList(searchedData1);
                 adapter1.notifyDataSetChanged();
+                adapter2.setArrayList(searchedData2);
+                adapter2.notifyDataSetChanged();
             }
             else {
                 adapter1.setArrayList(originalData1);
                 adapter1.notifyDataSetChanged();
+                adapter2.setArrayList(originalData2);
+                adapter2.notifyDataSetChanged();
             }
         }
     }
