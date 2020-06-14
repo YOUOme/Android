@@ -21,7 +21,10 @@ public class AdapterLoanItem extends BaseAdapter {
     }
 
     public ArrayList<ItemData> getArrayList(){ return mItems; }
-    public void setArrayList(ArrayList<ItemData> a){ mItems =a; }
+    public void setArrayList(ArrayList<ItemData> a){
+        mItems.clear();
+        mItems.addAll(a);
+    }
 
     @Override
     public int getCount() {

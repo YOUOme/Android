@@ -19,6 +19,12 @@ public class AdapterFragItem extends BaseAdapter {
     private int backgroundColorID = 0, mode;  // mode=1 : lend , mode=2 : repay
     private Context context;
 
+    public ArrayList<ItemData> getArrayList(){ return mItems; }
+    public void setArrayList(ArrayList<ItemData> a){
+        mItems.clear();
+        mItems.addAll(a);
+    }
+
     public AdapterFragItem(Context context, int mode){
         this.mode = mode;
         this.context = context;

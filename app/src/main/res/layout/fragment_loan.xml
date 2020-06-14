@@ -27,6 +27,7 @@
             android:orientation="horizontal">
 
             <EditText
+                android:id="@+id/loan_search"
                 android:background="@drawable/edit_style_search"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -42,6 +43,7 @@
                 android:text="" />
 
             <ImageView
+                android:id="@+id/bt_loan_search"
                 android:paddingVertical="5dp"
                 android:paddingHorizontal="10dp"
                 android:layout_marginLeft="15dp"
