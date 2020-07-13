@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/youome_background"
-    tools:context=".ActivityYOUOme">
+    tools:context=".ActivityTransfer">
 
     <TextView
         android:id="@+id/bt_alarm"
@@ -27,7 +27,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingBottom="10dp"
-        android:text="OmyPAY 충전"
+        android:text="OmyPAY 송금"
         android:textColor="#fff"
         android:textSize="27dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -101,7 +101,7 @@
                 android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:paddingRight="100dp"
-                android:text="충전금액"
+                android:text="송금금액"
                 android:textColor="#000"
                 android:textSize="17dp" />
 
@@ -177,8 +177,8 @@
             android:background="@drawable/bt_style_lightgray"
             android:backgroundTint="@color/youome_hintColor"
             android:paddingVertical="5dp"
-            android:text="충전하기"
-            android:onClick="onChargeClick"
+            android:text="송금하기"
+            android:onClick="onTranseferClick"
             android:textSize="17dp" />
     </LinearLayout>
 

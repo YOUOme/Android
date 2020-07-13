@@ -49,26 +49,50 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:textSize="20dp"
+            android:text="송금"
             android:textColor="#777"
-            android:text="송금"/>
+            android:textSize="20dp" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:textSize="20dp"
+            android:text=" | "
             android:textColor="#777"
-            android:text=" | "/>
+            android:textSize="20dp" />
+
         <TextView
             android:id="@+id/bt_omypay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginRight="20dp"
-            android:textSize="20dp"
+            android:text="충전"
             android:textColor="#777"
-            android:text="충전"/>
+            android:textSize="20dp" />
 
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/sync_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="연동계좌 농협 0000"
+        android:textColor="#fff"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.85"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="변경"
+        android:textColor="#444"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/sync_account" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

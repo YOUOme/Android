@@ -3,7 +3,9 @@ package com.example.youome;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.app.Dialog;
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -14,6 +16,7 @@ import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -93,5 +96,50 @@ public class ActivityOmypay extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    public void onChargeClick(View v){
+        View dlgView = View.inflate(this, R.layout.dialog_omypay, null);
+        final Dialog dlg = new Dialog(this);
+        dlg.setContentView(dlgView);
+        dlg.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
+
+        TextView react,hide,result,remain,fail;
+        react = (TextView)dlgView.findViewById(R.id.react_messsage);
+        hide = (TextView)dlgView.findViewById(R.id.react_message2);
+        result = (TextView)dlgView.findViewById(R.id.result_message);
+        remain = (TextView)dlgView.findViewById(R.id.remain_money);
+        fail = (TextView)dlgView.findViewById(R.id.fail_message);
+
+        if(true){           //   REST API ( 등록 계좌 잔액 검증 부)
+            fail.setVisibility(View.GONE);
+            react.setText("20,000");
+            hide.setVisibility(View.VISIBLE);
+            hide.setText("원");
+            result.setText("충전이 완료되었습니다.");
+        }else{
+            fail.setVisibility(View.VISIBLE);
+            react.setText("농협 0000");
+            hide.setVisibility(View.VISIBLE);
+            hide.setText("계좌에");
+            result.setText("잔액이 부족합니다.");
+        }
+        remain.setText("47,870");
+
+        Button ok = (Button) dlgView.findViewById(R.id.bt_ok);
+        ok.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dlg.cancel();
+            }
+        });
+        ImageView cancel = (ImageView) dlgView.findViewById(R.id.bt_cancel);
+        cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dlg.cancel();
+            }
+        });
+        dlg.show();
     }
 }
