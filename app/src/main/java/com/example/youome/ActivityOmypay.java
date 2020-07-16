@@ -26,8 +26,8 @@ import java.text.DecimalFormat;
 public class ActivityOmypay extends AppCompatActivity {
     LinearLayout react_button;
     EditText et_money;
-    TextView tx_aftermoney, bt_account_change, bt_alarm;
-    private int myMoney;
+    TextView tx_aftermoney, bt_account_change, bt_alarm,tx_sel_account;
+    private int myMoney, addMoney=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +36,7 @@ public class ActivityOmypay extends AppCompatActivity {
 
         myMoney = getIntent().getIntExtra("money",0);
         tx_aftermoney = (TextView)findViewById(R.id.tx_aftermoney);
+        tx_sel_account = (TextView)findViewById(R.id.tx_sel_account);
         String s = null;
         try { s = String.format("%,d", myMoney); } catch (NumberFormatException e) { }
         tx_aftermoney.setText(s);
@@ -70,7 +71,6 @@ public class ActivityOmypay extends AppCompatActivity {
             @Override
             public void afterTextChanged(Editable editable) {
                 String s = null;
-                int addMoney=0;
                 if(!NumberTextWatcherForThousand.trimCommaOfString(et_money.getText().toString()).isEmpty())
                     addMoney = Integer.parseInt(NumberTextWatcherForThousand.trimCommaOfString(et_money.getText().toString()));
                 try { s = String.format("%,d", myMoney+addMoney); } catch (NumberFormatException e) { }
@@ -113,18 +113,23 @@ public class ActivityOmypay extends AppCompatActivity {
 
         if(true){           //   REST API ( 등록 계좌 잔액 검증 부)
             fail.setVisibility(View.GONE);
-            react.setText("20,000");
+            react.setText(et_money.getText());
             hide.setVisibility(View.VISIBLE);
             hide.setText("원");
             result.setText("충전이 완료되었습니다.");
+
+            //String s = null;
+            //try { s = String.format("%,d", myMoney); } catch (NumberFormatException e) { }
+            remain.setText(String.format("%,d", myMoney+addMoney));
+            et_money.setText("0");
         }else{
             fail.setVisibility(View.VISIBLE);
-            react.setText("농협 0000");
+            react.setText(tx_sel_account.getText());
             hide.setVisibility(View.VISIBLE);
             hide.setText("계좌에");
             result.setText("잔액이 부족합니다.");
+            remain.setText(myMoney+"");
         }
-        remain.setText("47,870");
 
         Button ok = (Button) dlgView.findViewById(R.id.bt_ok);
         ok.setOnClickListener(new View.OnClickListener() {
