@@ -91,6 +91,15 @@
             android:text="연동 계좌"
             android:textSize="25dp"
             android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/bt_account_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:text="추가" />
     </LinearLayout>
 
     <ListView

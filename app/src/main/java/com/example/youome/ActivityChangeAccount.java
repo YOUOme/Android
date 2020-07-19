@@ -3,13 +3,16 @@ package com.example.youome;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.view.WindowManager;
 import android.widget.ListView;
+import android.widget.TextView;
 
 public class ActivityChangeAccount extends AppCompatActivity {
 
     ListView accountListView;
     AdapterAccountItem adpater;
+    TextView bt_account_add;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,6 +21,14 @@ public class ActivityChangeAccount extends AppCompatActivity {
 
         accountListView = (ListView)findViewById(R.id.account_list);
         adpater = new AdapterAccountItem();
+
+        bt_account_add = (TextView)findViewById(R.id.bt_account_add);
+        bt_account_add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                
+            }
+        });
 
         //dummy
         adpater.addItem("[농협은행] 유오미","0000000000000");

@@ -13,7 +13,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 public class Fragment1MyAccount extends Fragment {
-    private TextView bt_omypay,tx_OmyPay;
+    private TextView bt_omypay,tx_OmyPay,bt_loan;
     private int myMoney = 47870;        // db get
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -29,6 +29,15 @@ public class Fragment1MyAccount extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getContext(), ActivityOmypay.class);
+                intent.putExtra("money",myMoney);
+                startActivity(intent);
+            }
+        });
+        bt_loan = (TextView)view.findViewById(R.id.bt_loan);
+        bt_loan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getContext(), ActivityTransfer.class);
                 intent.putExtra("money",myMoney);
                 startActivity(intent);
             }

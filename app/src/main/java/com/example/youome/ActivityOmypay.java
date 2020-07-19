@@ -11,6 +11,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.Gravity;
 import android.view.KeyEvent;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
@@ -63,6 +64,15 @@ public class ActivityOmypay extends AppCompatActivity {
             }
         });
 
+
+        et_money.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                react_button.setGravity(Gravity.TOP);
+                return false;
+            }
+        });
+
         et_money.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {react_button.setGravity(Gravity.TOP);}
@@ -75,7 +85,6 @@ public class ActivityOmypay extends AppCompatActivity {
                     addMoney = Integer.parseInt(NumberTextWatcherForThousand.trimCommaOfString(et_money.getText().toString()));
                 try { s = String.format("%,d", myMoney+addMoney); } catch (NumberFormatException e) { }
                 tx_aftermoney.setText(s);
-                //react_button.setGravity(Gravity.TOP);
             }
         });
 
@@ -99,6 +108,11 @@ public class ActivityOmypay extends AppCompatActivity {
     }
 
     public void onChargeClick(View v){
+        if(et_money.getText().toString().isEmpty()){
+            Toast.makeText(getApplicationContext(),"금액을 입력하십시오",Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         View dlgView = View.inflate(this, R.layout.dialog_omypay, null);
         final Dialog dlg = new Dialog(this);
         dlg.setContentView(dlgView);
@@ -117,18 +131,16 @@ public class ActivityOmypay extends AppCompatActivity {
             hide.setVisibility(View.VISIBLE);
             hide.setText("원");
             result.setText("충전이 완료되었습니다.");
-
-            //String s = null;
-            //try { s = String.format("%,d", myMoney); } catch (NumberFormatException e) { }
             remain.setText(String.format("%,d", myMoney+addMoney));
-            et_money.setText("0");
+            et_money.setText("");
         }else{
             fail.setVisibility(View.VISIBLE);
             react.setText(tx_sel_account.getText());
             hide.setVisibility(View.VISIBLE);
             hide.setText("계좌에");
             result.setText("잔액이 부족합니다.");
-            remain.setText(myMoney+"");
+            remain.setText(String.format("%,d", myMoney));
+            et_money.setText("");
         }
 
         Button ok = (Button) dlgView.findViewById(R.id.bt_ok);
@@ -145,6 +157,7 @@ public class ActivityOmypay extends AppCompatActivity {
                 dlg.cancel();
             }
         });
+        react_button.setGravity(Gravity.BOTTOM);
         dlg.show();
     }
 }
