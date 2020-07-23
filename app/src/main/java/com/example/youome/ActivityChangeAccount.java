@@ -26,7 +26,7 @@ public class ActivityChangeAccount extends AppCompatActivity {
         bt_account_add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                
+
             }
         });
 

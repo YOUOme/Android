@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".ActivityTransfer"></activity>
+        <activity android:name=".ActivityAddAccount"></activity>
+        <activity android:name=".ActivityTransfer" />
         <activity android:name=".ActivityChangeAccount" />
         <activity android:name=".ActivityIOU" />
         <activity android:name=".ActivityLoan" />
