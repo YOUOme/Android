@@ -1,0 +1,97 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--서브타이틀-->
+    <LinearLayout android:id="@+id/llSubTitle" style="@style/SubTitleLayout">
+        <TextView android:id="@+id/tvSubTitle" style="@style/SubTitleText"
+            android:text="토큰발급(3-legged)"/>
+    </LinearLayout>
+
+    <!--메인-->
+    <ScrollView android:id="@+id/svMainScroll" style="@style/MainScrollView">
+        <LinearLayout android:id="@+id/llMainLayout" style="@style/MainLayout">
+
+            <TableLayout
+                android:id="@+id/tableLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TableRow android:padding="5dip">
+
+                    <me.grantland.widget.AutofitTextView
+                        style="@style/FormLabel02"
+                        android:text="@string/code" />
+
+                    <EditText
+                        android:id="@+id/etAuthorizationCode"
+                        style="@style/FormValue02"
+                        android:textIsSelectable="true"
+                        android:singleLine="true" />
+                </TableRow>
+
+                <TableRow android:padding="5dip">
+
+                    <me.grantland.widget.AutofitTextView
+                        style="@style/FormLabel02"
+                        android:text="@string/client_id" />
+
+                    <EditText
+                        android:id="@+id/tvClientId"
+                        style="@style/FormValue02"
+                        android:textIsSelectable="true"
+                        android:singleLine="true" />
+                </TableRow>
+
+                <TableRow android:padding="5dip">
+
+                    <me.grantland.widget.AutofitTextView
+                        style="@style/FormLabel02"
+                        android:text="@string/client_secret" />
+
+                    <EditText
+                        android:id="@+id/tvClientSecret"
+                        style="@style/FormValue02"
+                        android:textIsSelectable="true"
+                        android:singleLine="true" />
+                </TableRow>
+
+                <TableRow android:padding="5dip">
+
+                    <me.grantland.widget.AutofitTextView
+                        style="@style/FormLabel02"
+                        android:text="@string/redirect_uri" />
+
+                    <EditText
+                        android:id="@+id/tvRedirectUri"
+                        style="@style/FormValue02"
+                        android:textIsSelectable="true"
+                        android:singleLine="true" />
+                </TableRow>
+
+                <TableRow android:padding="5dip">
+
+                    <me.grantland.widget.AutofitTextView
+                        style="@style/FormLabel02"
+                        android:text="@string/scope" />
+
+                    <EditText
+                        android:id="@+id/etScope"
+                        style="@style/FormValue02" />
+                </TableRow>
+
+            </TableLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!--하단버튼-->
+    <LinearLayout android:id="@+id/llBottomButton" style="@style/BottomButtonLayout">
+        <Button android:id="@+id/btnCancel" style="@style/BottomCancelButton"/>
+        <Button android:id="@+id/btnNext" style="@style/BottomNextButton"/>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android = "http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="자체인증 접속환경">
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="SELF_AUTH_IS_REAL"
+            android:switchTextOn="리얼서버 사용중"
+            android:switchTextOff="테스트서버 사용중"
+            android:title="리얼서버 접속여부"/>
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="IS_DEV_LANG"
+            android:switchTextOn="필드명을 전문설계서의 영문으로 표시중"
+            android:switchTextOff="필드명을 한글로 표시중"
+            android:title="개발자언어(필드명) 사용여부"/>
+        <Preference
+            android:summary="개발자언어 사용여부는 센터인증/자체인증 상관없이 모두 동일하게 적용됩니다."/>
+        <Preference
+            android:key="INIT_BUTTON"
+            android:title="초기화"
+            android:summary="설정을 초기화 하려면 여기를 누르세요"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="자체인증 테스트서버 접속정보">
+        <EditTextPreference
+            android:key="SELF_AUTH_BASE_URI_TEST"
+            android:title="BASE URI"
+            android:defaultValue="https://testapi.openbanking.or.kr"/>
+
+        <!--자체인증 키 : kftc.and@gmail.com-->
+        <EditTextPreference
+            android:key="SELF_AUTH_CLIENT_ID_TEST"
+            android:title="CLIENT ID"
+            android:defaultValue="GMm1nqNxJDZIXzcGwq6QqWpVJA7YIk273xyCgEKp"/>
+        <EditTextPreference
+            android:key="SELF_AUTH_CLIENT_SECRET_TEST"
+            android:title="CLIENT SECRET"
+            android:defaultValue="SJjFDMxb8l6l4y576nd5hHgBsnLdbuuO2PeMBqdu"/>
+        <EditTextPreference
+            android:key="SELF_AUTH_CLIENT_USE_CODE_TEST"
+            android:title="이용기관코드"
+            android:defaultValue="T991589210"/>
+        <Preference
+            android:summary="이용기관코드는 '개발자사이트'->'마이페이지'->'회원정보 변경'에서 확인이 가능합니다."/>
+        <EditTextPreference
+            android:key="SELF_AUTH_REDIRECT_URI_TEST"
+            android:title="REDIRECT URI"
+            android:defaultValue="https://220.70.46.145:8000/authResult"/>
+        <Preference
+            android:summary="콜백 주소는 '개발자사이트'->'마이페이지'->'내 앱 관리'에서 설정하신 콜백 주소와 일치하여야 합니다."/>
+        <EditTextPreference
+            android:key="SELF_AUTH_CONTRACT_WITHDRAW_ACCOUNT_NUM_TEST"
+            android:title="이용기관 약정계좌번호(출금이체)"
+            android:inputType="numberDecimal"
+            android:defaultValue="@string/self_auth_contract_withdraw_account_num_test"/>
+        <EditTextPreference
+            android:key="SELF_AUTH_CONTRACT_DEPOSIT_ACCOUNT_NUM_TEST"
+            android:title="이용기관 약정계좌번호(입금이체)"
+            android:inputType="numberDecimal"
+            android:defaultValue="@string/self_auth_contract_deposit_account_num_test"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="자체인증 리얼서버 접속정보">
+        <EditTextPreference
+            android:key="SELF_AUTH_BASE_URI_REAL"
+            android:title="BASE URI"
+            android:defaultValue="https://openapi.openbanking.or.kr"/>
+
+        <EditTextPreference
+            android:key="SELF_AUTH_CLIENT_ID_REAL"
+            android:title="CLIENT ID"
+            android:defaultValue="GMm1nqNxJDZIXzcGwq6QqWpVJA7YIk273xyCgEKp"/>
+        <EditTextPreference
+            android:key="SELF_AUTH_CLIENT_SECRET_REAL"
+            android:title="CLIENT SECRET"
+            android:defaultValue="SJjFDMxb8l6l4y576nd5hHgBsnLdbuuO2PeMBqdu"/>
+        <EditTextPreference
+            android:key="SELF_AUTH_CLIENT_USE_CODE_REAL"
+            android:title="이용기관코드"
+            android:defaultValue="T991589210"/>
+        <EditTextPreference
+            android:key="SELF_AUTH_REDIRECT_URI_REAL"
+            android:title="REDIRECT URI"
+            android:defaultValue="https://220.70.46.145:8000/authResult"/>
+        <EditTextPreference
+            android:key="SELF_AUTH_CONTRACT_WITHDRAW_ACCOUNT_NUM_REAL"
+            android:title="이용기관 약정계좌번호(출금이체)"
+            android:inputType="numberDecimal"
+            android:defaultValue="@string/self_auth_contract_withdraw_account_num_real"/>
+        <EditTextPreference
+            android:key="SELF_AUTH_CONTRACT_DEPOSIT_ACCOUNT_NUM_REAL"
+            android:title="이용기관 약정계좌번호(입금이체)"
+            android:inputType="numberDecimal"
+            android:defaultValue="@string/self_auth_contract_deposit_account_num_real"/>
+    </PreferenceCategory>
+
+</PreferenceScreen>

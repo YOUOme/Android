@@ -1,0 +1,87 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--서브타이틀-->
+    <LinearLayout android:id="@+id/llSubTitle" style="@style/SubTitleLayout">
+        <TextView android:id="@+id/tvSubTitle" style="@style/SubTitleText"
+            android:text="등록계좌조회(/account/list)\n- 사용자의 등록/해지된 계좌목록을 조회"/>
+    </LinearLayout>
+
+    <!--메인-->
+    <ScrollView android:id="@+id/svMainScroll" style="@style/MainScrollView">
+        <LinearLayout android:id="@+id/llMainLayout" style="@style/MainLayout">
+
+            <TableLayout
+                android:id="@+id/tableLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp">
+
+                <TableRow
+                    android:padding="5dip">
+                    <me.grantland.widget.AutofitTextView
+                        style="@style/FormLabel02"
+                        android:layout_height="match_parent"
+                        android:text="@string/token_sa" />
+                    <LinearLayout
+                        style="@style/FormValue02">
+                        <EditText
+                            android:id="@+id/etToken"
+                            style="@style/FormValue02"
+                            android:inputType="text"
+                            android:maxLines="1" />
+                        <Button
+                            android:id="@+id/btnSelectToken"
+                            style="@style/ButtonFold"
+                            android:layout_width="50dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="1dp"
+                            android:layout_marginRight="3dp"
+                            android:text="선택" />
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow
+                    android:padding="5dip">
+                    <me.grantland.widget.AutofitTextView
+                        style="@style/FormLabel02"
+                        android:text="@string/user_seq_no" />
+                    <EditText
+                        android:id="@+id/etUserSeqNo"
+                        style="@style/FormValue02" />
+                </TableRow>
+
+                <TableRow android:padding="5dip">
+                    <me.grantland.widget.AutofitTextView
+                        style="@style/FormLabel02"
+                        android:layout_height="match_parent"
+                        android:text="@string/include_cancel_yn" />
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spIncludeCancelYn"
+                        style="@style/FormValue02" />
+                </TableRow>
+
+                <TableRow android:padding="5dip">
+                    <me.grantland.widget.AutofitTextView
+                        style="@style/FormLabel02"
+                        android:text="@string/sort_order" />
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spSortOrder"
+                        style="@style/FormValue02" />
+                </TableRow>
+
+            </TableLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!--하단버튼-->
+    <LinearLayout android:id="@+id/llBottomButton" style="@style/BottomButtonLayout">
+        <Button android:id="@+id/btnCancel" style="@style/BottomCancelButton"/>
+        <Button android:id="@+id/btnNext" style="@style/BottomNextButton"/>
+    </LinearLayout>
+
+</RelativeLayout>

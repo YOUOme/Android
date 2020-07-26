@@ -1,0 +1,211 @@
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp">
+
+    <TableRow
+        android:padding="5dip">
+        <me.grantland.widget.AutofitTextView
+            style="@style/FormLabel01"
+            android:text="@string/response_type" />
+        <TextView
+            android:id="@+id/tvResponseType"
+            style="@style/FormValue01" />
+    </TableRow>
+
+    <TableRow
+        android:padding="5dip">
+        <me.grantland.widget.AutofitTextView
+            style="@style/FormLabel01"
+            android:layout_width="0dp"
+            android:text="@string/client_id" />
+        <TextView
+            style="@style/FormValue01"
+            android:id="@+id/tvClientId"
+            android:textIsSelectable="true"
+            android:singleLine="true" />
+    </TableRow>
+
+    <TableRow
+        android:padding="5dip">
+        <me.grantland.widget.AutofitTextView
+            style="@style/FormLabel01"
+            android:text="@string/redirect_uri" />
+        <TextView
+            style="@style/FormValue01"
+            android:id="@+id/tvRedirectUri"
+            android:singleLine="true" />
+    </TableRow>
+
+    <TableRow
+        android:padding="5dip">
+        <me.grantland.widget.AutofitTextView
+            style="@style/FormLabel01"
+            android:layout_height="match_parent"
+            android:text="@string/scope" />
+        <LinearLayout style="@style/FormValue01">
+            <EditText
+                style="@style/FormValue01"
+                android:singleLine="true"
+                android:id="@+id/et_ANW_SCOPE"/>
+            <Button
+                android:id="@+id/btnScope"
+                style="@style/ButtonFold"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginEnd="3dp"
+                android:text="선택" />
+        </LinearLayout>
+
+    </TableRow>
+
+    <TableRow
+        android:padding="5dip">
+        <me.grantland.widget.AutofitTextView
+            style="@style/FormLabel01"
+            android:text="@string/client_info" />
+        <EditText
+            style="@style/FormValue01"
+            android:id="@+id/et_ANW_CLIENT_INFO" />
+    </TableRow>
+
+    <TableRow
+        android:padding="5dip">
+        <me.grantland.widget.AutofitTextView
+            style="@style/FormLabel01"
+            android:text="@string/state" />
+        <EditText
+            style="@style/FormValue01"
+            android:singleLine="true"
+            android:id="@+id/et_ANW_STATE" />
+    </TableRow>
+
+    <TableRow
+        android:padding="5dip">
+        <me.grantland.widget.AutofitTextView
+            style="@style/FormLabel01"
+            android:text="@string/auth_type" />
+        <TextView
+            android:id="@+id/tvAuthType"
+            style="@style/FormValue01" />
+    </TableRow>
+
+    <TableRow
+        android:padding="5dip">
+        <me.grantland.widget.AutofitTextView
+            style="@style/FormLabel01"
+            android:text="@string/lang" />
+        <EditText
+            style="@style/FormValue01"
+            android:inputType="text"
+            android:id="@+id/et_ANW_LANG"/>
+    </TableRow>
+
+    <TableRow
+        android:padding="5dip">
+        <me.grantland.widget.AutofitTextView
+            style="@style/FormLabel01"
+            android:text="@string/account_hold_auth_yn" />
+        <EditText
+            style="@style/FormValue01"
+            android:id="@+id/et_ANW_ACCOUNT_HOLD_AUTH_YN"/>
+    </TableRow>
+
+    <!--<TableRow
+        android:padding="5dip">
+        <me.grantland.widget.AutofitTextView
+            style="@style/FormLabel01"
+            android:text="@string/edit_option" />
+        <EditText
+            style="@style/FormValue01"
+            android:id="@+id/et_ANW_EDIT_OPTION" />
+    </TableRow>
+
+    <TableRow
+        android:padding="5dip">
+        <me.grantland.widget.AutofitTextView
+            style="@style/FormLabel01"
+            android:layout_height="match_parent"
+            android:text="@string/bg_color" />
+        <LinearLayout
+            style="@style/FormValue01"
+            android:orientation="horizontal">
+            <EditText
+                style="@style/FormValue01"
+                android:id="@+id/et_ANW_BG_COLOR" />
+            <Button
+                android:id="@+id/btnBackgroundColor"
+                style="@style/ButtonFold"
+                android:text="선택"
+                android:layout_width="50dp"
+                android:layout_height="30dp"/>
+        </LinearLayout>
+
+    </TableRow>
+
+    <TableRow
+        android:padding="5dip">
+        <me.grantland.widget.AutofitTextView
+            android:layout_height="match_parent"
+            style="@style/FormLabel01"
+            android:text="@string/txt_color" />
+        <LinearLayout
+            style="@style/FormValue01"
+            android:orientation="horizontal">
+            <EditText
+                style="@style/FormValue01"
+                android:id="@+id/et_ANW_TXT_COLOR" />
+            <Button
+                android:id="@+id/btnTextColor"
+                style="@style/ButtonFold"
+                android:text="선택"
+                android:layout_width="50dp"
+                android:layout_height="30dp"/>
+        </LinearLayout>
+    </TableRow>
+
+    <TableRow
+        android:padding="5dip">
+        <me.grantland.widget.AutofitTextView
+            style="@style/FormLabel01"
+            android:layout_height="match_parent"
+            android:text="@string/btn1_color" />
+        <LinearLayout
+            style="@style/FormValue01"
+            android:orientation="horizontal">
+            <EditText
+                style="@style/FormValue01"
+                android:id="@+id/et_ANW_BTN1_COLOR" />
+            <Button
+                android:id="@+id/btnBtn1Color"
+                style="@style/ButtonFold"
+                android:text="선택"
+                android:layout_width="50dp"
+                android:layout_height="30dp"/>
+        </LinearLayout>
+    </TableRow>
+
+    <TableRow
+        android:padding="5dip">
+        <me.grantland.widget.AutofitTextView
+            android:layout_height="match_parent"
+            style="@style/FormLabel01"
+            android:text="@string/btn2_color" />
+        <LinearLayout
+            style="@style/FormValue01"
+            android:orientation="horizontal">
+            <EditText
+                style="@style/FormValue01"
+                android:id="@+id/et_ANW_BTN2_COLOR" />
+            <Button
+                android:id="@+id/btnBtn2Color"
+                style="@style/ButtonFold"
+                android:text="선택"
+                android:layout_width="50dp"
+                android:layout_height="30dp"/>
+        </LinearLayout>
+    </TableRow>-->
+
+</TableLayout>

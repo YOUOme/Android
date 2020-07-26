@@ -1,0 +1,202 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--서브타이틀-->
+    <LinearLayout android:id="@+id/llSubTitle" style="@style/SubTitleLayout">
+        <TextView android:id="@+id/tvSubTitle" style="@style/SubTitleText"
+            android:text="송금인정보조회(inquiry/remit_list)\n- 소액해외송금업자를 위한 입금내역 확인"/>
+    </LinearLayout>
+
+    <!--메인-->
+    <ScrollView android:id="@+id/svMainScroll" style="@style/MainScrollView">
+        <LinearLayout android:id="@+id/llMainLayout" style="@style/MainLayout">
+
+            <TableLayout
+                android:id="@+id/tableLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
+
+                <TableRow
+                    android:id="@+id/tableRow2"
+                    android:padding="5dip">
+
+                    <me.grantland.widget.AutofitTextView
+                        style="@style/FormLabel02"
+                        android:layout_height="match_parent"
+                        android:text="@string/token_sa" />
+
+                    <LinearLayout
+                        style="@style/FormValue02">
+
+                        <EditText
+                            android:id="@+id/etToken"
+                            style="@style/FormValue02"
+                            android:inputType="text"
+                            android:maxLines="1" />
+
+                        <Button
+                            android:id="@+id/btnSelectToken"
+                            style="@style/ButtonFold"
+                            android:layout_width="50dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="1dp"
+                            android:layout_marginRight="3dp"
+                            android:text="선택" />
+
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow android:padding="5dip">
+                    <me.grantland.widget.AutofitTextView
+                        style="@style/FormLabel02"
+                        android:text="@string/bank_tran_id" />
+                    <LinearLayout style="@style/FormValue02">
+                        <EditText
+                            android:id="@+id/etBankTranId"
+                            style="@style/FormValue02"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"/>
+                        <Button
+                            android:id="@+id/btnGenBankTranId"
+                            style="@style/ButtonFold"
+                            android:layout_width="50dp"
+                            android:layout_height="30dp"
+                            android:layout_marginStart="1dp"
+                            android:layout_marginEnd="3dp"
+                            android:text="생성" />
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/trBankCode"
+                    android:padding="5dip">
+                    <me.grantland.widget.AutofitTextView
+                        style="@style/FormLabel02"
+                        android:textColor="@color/md_red_400"
+                        android:text="@string/bank_code_std" />
+                    <EditText
+                        android:id="@+id/etBankCode"
+                        android:inputType="numberDecimal"
+                        style="@style/FormValue02" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/trAccountNum"
+                    android:padding="5dip">
+                    <me.grantland.widget.AutofitTextView
+                        style="@style/FormLabel02"
+                        android:textColor="@color/md_red_400"
+                        android:layout_height="match_parent"
+                        android:text="@string/account_num" />
+                    <LinearLayout
+                        style="@style/FormValue02">
+
+                        <EditText
+                            android:id="@+id/etAccountNum"
+                            style="@style/FormValue02"
+                            android:inputType="number"
+                            android:maxLines="1" />
+
+                        <Button
+                            android:id="@+id/btnSelectBankAccount"
+                            style="@style/ButtonFold"
+                            android:layout_width="50dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="1dp"
+                            android:layout_marginRight="3dp"
+                            android:text="선택" />
+
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow android:padding="5dp" android:gravity="end" android:layout_marginBottom="5dp">
+                    <TextView
+                        android:text="* 마스킹을 제거하고 계좌번호 전체를 입력해야 합니다."/>
+                </TableRow>
+
+                <TableRow
+                    android:padding="5dip">
+                    <me.grantland.widget.AutofitTextView
+                        style="@style/FormLabel02"
+                        android:text="@string/from_date" />
+                    <EditText
+                        android:id="@+id/etFromDate"
+                        style="@style/FormValue02" />
+                </TableRow>
+
+                <TableRow
+                    android:padding="5dip">
+                    <me.grantland.widget.AutofitTextView
+                        style="@style/FormLabel02"
+                        android:text="@string/from_time" />
+                    <EditText
+                        android:id="@+id/etFromTime"
+                        style="@style/FormValue02" />
+                </TableRow>
+
+                <TableRow
+                    android:padding="5dip">
+                    <me.grantland.widget.AutofitTextView
+                        style="@style/FormLabel02"
+                        android:text="@string/to_date" />
+                    <EditText
+                        android:id="@+id/etToDate"
+                        style="@style/FormValue02" />
+                </TableRow>
+
+                <TableRow
+                    android:padding="5dip">
+                    <me.grantland.widget.AutofitTextView
+                        style="@style/FormLabel02"
+                        android:text="@string/to_time" />
+                    <EditText
+                        android:id="@+id/etToTime"
+                        style="@style/FormValue02" />
+                </TableRow>
+
+                <TableRow android:padding="5dip">
+                    <me.grantland.widget.AutofitTextView
+                        android:layout_height="match_parent"
+                        style="@style/FormLabel02"
+                        android:text="@string/sort_order" />
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spSortOrder"
+                        style="@style/FormValue02" />
+                </TableRow>
+
+                <TableRow android:padding="5dip">
+                    <me.grantland.widget.AutofitTextView
+                        style="@style/FormLabel02"
+                        android:text="@string/befor_inquiry_trace_info" />
+                    <EditText
+                        android:id="@+id/etBeforInquiryTraceInfo"
+                        style="@style/FormValue02" />
+                </TableRow>
+
+                <TableRow android:padding="5dip">
+                    <me.grantland.widget.AutofitTextView
+                        style="@style/FormLabel02"
+                        android:text="@string/tran_dtime" />
+                    <EditText
+                        android:id="@+id/etTranDtime"
+                        style="@style/FormValue02" />
+                </TableRow>
+
+            </TableLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!--하단버튼-->
+    <LinearLayout android:id="@+id/llBottomButton" style="@style/BottomButtonLayout">
+        <Button android:id="@+id/btnCancel" style="@style/BottomCancelButton"/>
+        <Button android:id="@+id/btnNext" style="@style/BottomNextButton"/>
+    </LinearLayout>
+
+</RelativeLayout>

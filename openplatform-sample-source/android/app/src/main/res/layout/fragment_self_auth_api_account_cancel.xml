@@ -1,0 +1,131 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--서브타이틀-->
+    <LinearLayout android:id="@+id/llSubTitle" style="@style/SubTitleLayout">
+        <TextView android:id="@+id/tvSubTitle" style="@style/SubTitleText"
+            android:text="계좌해지(account/cancel)\n- 오픈뱅킹에 등록된 계좌를 등록삭제 및 동의해지"/>
+    </LinearLayout>
+
+    <!--메인-->
+    <ScrollView android:id="@+id/svMainScroll" style="@style/MainScrollView">
+        <LinearLayout android:id="@+id/llMainLayout" style="@style/MainLayout">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
+
+                <TableRow
+                    android:padding="5dip">
+                    <me.grantland.widget.AutofitTextView
+                        style="@style/FormLabel02"
+                        android:layout_height="match_parent"
+                        android:text="@string/token_sa" />
+                    <LinearLayout
+                        style="@style/FormValue02">
+                        <EditText
+                            android:id="@+id/etToken"
+                            style="@style/FormValue02"
+                            android:inputType="text"
+                            android:maxLines="1" />
+                        <Button
+                            android:id="@+id/btnSelectToken"
+                            style="@style/ButtonFold"
+                            android:layout_width="50dp"
+                            android:layout_height="30dp"
+                            android:layout_marginStart="1dp"
+                            android:layout_marginEnd="3dp"
+                            android:text="선택" />
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow android:padding="5dip">
+                    <me.grantland.widget.AutofitTextView
+                        style="@style/FormLabel02"
+                        android:text="@string/bank_tran_id" />
+                    <LinearLayout style="@style/FormValue02">
+                        <EditText
+                            android:id="@+id/etBankTranId"
+                            style="@style/FormValue02"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"/>
+                        <Button
+                            android:id="@+id/btnGenBankTranId"
+                            style="@style/ButtonFold"
+                            android:layout_width="50dp"
+                            android:layout_height="30dp"
+                            android:layout_marginStart="1dp"
+                            android:layout_marginEnd="3dp"
+                            android:text="생성" />
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow
+                    android:padding="5dip">
+                    <me.grantland.widget.AutofitTextView
+                        style="@style/FormLabel02"
+                        android:textColor="@color/md_red_400"
+                        android:layout_height="match_parent"
+                        android:text="@string/scope" />
+                    <LinearLayout
+                        style="@style/FormValue02">
+                        <EditText
+                            android:id="@+id/etScope"
+                            style="@style/FormValue02"
+                            android:text="inquiry"
+                            android:inputType="text"
+                            android:maxLines="1" />
+                        <Button
+                            android:id="@+id/btnScope"
+                            style="@style/ButtonFold"
+                            android:layout_width="50dp"
+                            android:layout_height="30dp"
+                            android:layout_marginStart="1dp"
+                            android:layout_marginEnd="3dp"
+                            android:text="선택" />
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow
+                    android:padding="5dip">
+                    <me.grantland.widget.AutofitTextView
+                        style="@style/FormLabel02"
+                        android:textColor="@color/md_red_400"
+                        android:layout_height="match_parent"
+                        android:text="@string/fintech_use_num" />
+                    <LinearLayout
+                        style="@style/FormValue02">
+                        <EditText
+                            android:id="@+id/etFintechUseNum"
+                            style="@style/FormValue02"
+                            android:inputType="number"
+                            android:maxLines="1" />
+                        <Button
+                            android:id="@+id/btnSelectFintechUseNum"
+                            style="@style/ButtonFold"
+                            android:layout_width="50dp"
+                            android:layout_height="30dp"
+                            android:layout_marginStart="1dp"
+                            android:layout_marginEnd="3dp"
+                            android:text="선택" />
+                    </LinearLayout>
+                </TableRow>
+
+            </TableLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!--하단버튼-->
+    <LinearLayout android:id="@+id/llBottomButton" style="@style/BottomButtonLayout">
+        <Button android:id="@+id/btnCancel" style="@style/BottomCancelButton"/>
+        <Button android:id="@+id/btnNext" style="@style/BottomNextButton"/>
+    </LinearLayout>
+
+</RelativeLayout>

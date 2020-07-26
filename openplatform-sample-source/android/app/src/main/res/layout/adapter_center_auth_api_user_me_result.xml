@@ -1,0 +1,94 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@drawable/border_result_info"
+    android:layout_marginBottom="10dp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout android:id="@+id/llMainLayout" style="@style/MainLayout">
+
+        <TextView
+            android:id="@+id/tvBankInfo"
+            android:textStyle="bold"
+            android:layout_marginStart="30dp"
+            android:layout_gravity="center_vertical"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:text="XX은행"
+            android:textColor="@color/md_black_1000"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"  />
+
+        <View
+            android:background="#D9D9D9"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+        <TableLayout
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow>
+                <TextView
+                    android:layout_marginBottom="5dp"
+                    style="@style/TextViewAPIResult"
+                    android:text="핀테크이용번호" />
+                <TextView
+                    android:id="@+id/tvFintechUseNum"
+                    style="@style/TextViewAPIResultValue" />
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_marginBottom="5dp"
+                    style="@style/TextViewAPIResult"
+                    android:text="계좌정보" />
+                <TextView
+                    android:id="@+id/tvAccountInfo"
+                    style="@style/TextViewAPIResultValue" />
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:layout_marginBottom="5dp"
+                    style="@style/TextViewAPIResult"
+                    android:text="동의여부" />
+                <TextView
+                    android:id="@+id/tvAgree"
+                    style="@style/TextViewAPIResultValue" />
+            </TableRow>
+
+            <TableRow android:id="@+id/trPayerNum">
+                <TextView
+                    android:layout_marginBottom="5dp"
+                    style="@style/TextViewAPIResult"
+                    android:text="납부자번호" />
+                <TextView
+                    android:id="@+id/tvPayerNum"
+                    style="@style/TextViewAPIResultValue" />
+            </TableRow>
+
+            <TableRow android:id="@+id/trAccountState">
+                <TextView
+                    android:layout_marginBottom="5dp"
+                    style="@style/TextViewAPIResult"
+                    android:text="계좌상태" />
+                <TextView
+                    android:id="@+id/tvAccountState"
+                    style="@style/TextViewAPIResultValue" />
+            </TableRow>
+
+        </TableLayout>
+
+    </LinearLayout>
+</RelativeLayout>
+
+
+
+
+
+

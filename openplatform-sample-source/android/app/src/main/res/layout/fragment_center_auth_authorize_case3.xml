@@ -1,0 +1,100 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<!--서브타이틀-->
+<LinearLayout android:id="@+id/llSubTitle" style="@style/SubTitleLayout">
+    <TextView android:id="@+id/tvSubTitle" style="@style/SubTitleText"
+        android:text="(2)인증생략(CASE3) : 유효한 접속토큰을 이용하여 본인인증 절차 생략(본인인증생략 + ARS 조회/출금동의)."/>
+    <TextView android:id="@+id/tvSubTitle2" style="@style/SubTitleText" android:visibility="gone"
+        android:text="(2)최초인증(CASE3) : 기 등록된 계좌를 재확인하고 토클재발급. 유효한 접속토큰을 이용하여 본인인증생략"/>
+</LinearLayout>
+
+<!--메인-->
+<ScrollView android:id="@+id/svMainScroll" style="@style/MainScrollView">
+    <LinearLayout android:id="@+id/llMainLayout" style="@style/MainLayout">
+
+        <include layout="@layout/common_auth_authorize_case" android:id="@+id/auth2Case3_1FormTable"/>
+
+        <TableLayout
+            android:id="@+id/auth2Case3_2FormTable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                 android:padding="5dip">
+                <TextView
+                    android:layout_column="2"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="15sp"
+                    android:textColor="#222222"
+                    android:gravity="center_vertical"
+                    android:text="[아래는 Header 설정값] prefix : Kftc-Bfop-" />
+            </TableRow>
+
+            <TableRow
+                android:padding="5dip">
+                <me.grantland.widget.AutofitTextView
+                    style="@style/FormLabel01"
+                    android:text="@string/UserSeqNo" />
+                <EditText
+                    style="@style/FormValue01"
+                    android:id="@+id/et_ANW_USER_SEQ_NO" />
+            </TableRow>
+
+            <TableRow
+                android:padding="5dip">
+                <me.grantland.widget.AutofitTextView
+                    style="@style/FormLabel01"
+                    android:text="@string/UserCI" />
+                <EditText
+                    style="@style/FormValue01"
+                    android:singleLine="true"
+                    android:id="@+id/et_ANW_USER_CI" />
+            </TableRow>
+
+            <TableRow android:padding="5dp" android:gravity="end" android:layout_marginBottom="5dp">
+                <TextView
+                    android:layout_column="2"
+                    android:text="* 센터인증 -> 자체인증 사용자정보조회 -> CI값 자동입력"/>
+            </TableRow>
+
+            <TableRow android:padding="5dip">
+                <me.grantland.widget.AutofitTextView
+                    style="@style/FormLabel01"
+                    android:layout_height="match_parent"
+                    android:text="@string/token_login" />
+
+                <LinearLayout style="@style/FormValue01">
+                    <EditText
+                        style="@style/FormValue01"
+                        android:singleLine="true"
+                        android:id="@+id/et_ANW_ACCESS_TOKEN"/>
+                    <Button
+                        android:id="@+id/btnSelectToken"
+                        style="@style/ButtonFold"
+                        android:layout_width="50dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="1dp"
+                        android:layout_marginEnd="3dp"
+                        android:text="선택" />
+                </LinearLayout>
+            </TableRow>
+
+        </TableLayout>
+
+    </LinearLayout>
+</ScrollView>
+
+<!--하단버튼-->
+<LinearLayout android:id="@+id/llBottomButton" style="@style/BottomButtonLayout">
+    <Button android:id="@+id/btnCancel" style="@style/BottomCancelButton" android:visibility="gone"/>
+    <Button android:id="@+id/btnNext" style="@style/BottomNextButton"/>
+</LinearLayout>
+
+</RelativeLayout>

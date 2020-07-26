@@ -1,0 +1,158 @@
+<resources>
+    <string name="app_name" translatable="false">오픈뱅킹샘플</string>
+
+    <string name="fragment_id_navi" translatable="false">navigation</string>
+    <string name="fragment_id_main" translatable="false">오픈뱅킹샘플</string>
+    <string name="fragment_id_home" translatable="false">오픈뱅킹샘플</string>
+    <string name="fragment_id_center" translatable="false">센터인증 메인홈</string>
+    <string name="fragment_id_self" translatable="false">자체인증 메인홈</string>
+    <string name="fragment_id_center_auth" translatable="false">센터인증 계좌등록 및 토큰발급</string>
+    <string name="fragment_id_self_auth" translatable="false">자체인증 계좌등록 및 토큰발급</string>
+    <string name="fragment_id_auth_authorize" translatable="false">사용자인증</string>
+    <string name="fragment_id_auth_authorize_account" translatable="false">계좌등록확인</string>
+    <string name="fragment_id_token" translatable="false">토큰발급</string>
+    <string name="fragment_id_center_api_call" translatable="false">센터인증 API호출</string>
+    <string name="fragment_id_self_api_call" translatable="false">자체인증 API호출</string>
+    <string name="fragment_id_api_call_userme" translatable="false">사용자정보조회</string>
+    <string name="fragment_id_api_call_balance" translatable="false">잔액조회</string>
+    <string name="fragment_id_api_call_transaction" translatable="false">거래내역조회</string>
+    <string name="fragment_id_api_call_withdraw" translatable="false">출금이체</string>
+    <string name="fragment_id_api_call_realname" translatable="false">계좌실명조회</string>
+    <string name="fragment_id_api_call_deposit" translatable="false">입금이체</string>
+    <string name="fragment_id_api_call_account" translatable="false">등록계좌조회</string>
+    <string name="fragment_id_api_call_account_cancel" translatable="false">계좌해지</string>
+    <string name="fragment_id_center_auth_setting" translatable="false">센터인증기관 설정</string>
+    <string name="fragment_id_self_auth_setting" translatable="false">자체인증기관 설정</string>
+    <string name="fragment_id_license" translatable="false">오픈라이선스</string>
+    <string name="fragment_id_api_call_user_register" translatable="false">계좌등록(자체인증)</string>
+    <string name="fragment_id_api_call_transfer_result" translatable="false">이체결과조회</string>
+    <string name="fragment_id_api_call_inquiry_remitlist" translatable="false">송금인정보조회</string>
+    <string name="fragment_id_api_call_inquiry_receive" translatable="false">수취조회</string>
+    <string name="fragment_id_api_call_return_claim" translatable="false">자금반환청구</string>
+    <string name="fragment_id_api_call_return_result" translatable="false">자금반환결과조회</string>
+    <string name="fragment_id_api_call_inquiry_fdsdetect" translatable="false">이상금융거래 탐지내역 조회</string>
+
+    <string name="fragment_subtitle_home" translatable="false">메인화면</string>
+    <string name="fragment_subtitle_auth_authorize_case1" translatable="false">CASE1</string>
+    <string name="fragment_subtitle_auth_authorize_case2" translatable="false">CASE2</string>
+    <string name="fragment_subtitle_auth_authorize_case3" translatable="false">CASE3</string>
+
+
+    <!--설정값 기본(이용기관 약정계좌. 센터인증/자체인증, 리얼/테스트, 출금이체/입금이체용 구분)-->
+    <string name="center_auth_contract_withdraw_account_num_test" translatable="false">7459380406</string>
+    <string name="center_auth_contract_deposit_account_num_test" translatable="false">4499466634</string>
+    <string name="center_auth_contract_withdraw_account_num_real" translatable="false">8068562969</string>
+    <string name="center_auth_contract_deposit_account_num_real" translatable="false">5977154383</string>
+    <string name="self_auth_contract_withdraw_account_num_test" translatable="false">5974118343</string>
+    <string name="self_auth_contract_deposit_account_num_test" translatable="false">5936575479</string>
+    <string name="self_auth_contract_withdraw_account_num_real" translatable="false">7459380406</string>
+    <string name="self_auth_contract_deposit_account_num_real" translatable="false">4499466634</string>
+
+    <!--영문/한글 변환 시작-->
+    <string name="token_inquiry">토큰(조회) :</string>
+    <string name="token_transfer">토큰(이체) : </string>
+    <string name="token_login">토큰(로그인) : </string>
+    <string name="token_oob">토큰(2자인증) : </string>
+    <string name="token_sa">토큰(자체인증) : </string>
+    <string name="bank_tran_id">은행거래고유번호 : </string>
+    <string name="org_bank_tran_id">원거래 거래고유번호 : </string>
+    <string name="claim_bank_tran_id">청구요청 거래고유번호 : </string>
+    <string name="org_bank_tran_date">원거래 거래일자 : </string>
+    <string name="claim_bank_tran_date">청구요청 거래일자 : </string>
+    <string name="inquiry_date">조회일자 : </string>
+    <string name="org_tran_amt">원거래 거래금액 : </string>
+    <string name="org_tran_amt2">거래금액(청구금액) : </string>
+    <string name="fintech_use_num">핀테크 이용번호 : </string>
+    <string name="tran_dtime">요청일시 : </string>
+    <string name="user_seq_no">사용자 일련번호 : </string>
+    <string name="dps_print_content">입금계좌 인자내역 : </string>
+    <string name="account_num">계좌번호 : </string>
+    <string name="register_account_num">등록계좌번호 : </string>
+    <string name="include_cancel_yn">해지계좌 포함여부 : </string>
+    <string name="tran_amt">거래금액 : </string>
+    <string name="wd_pass_phrase">입금이체용 암호문구 : </string>
+    <string name="wd_bank_code_std">출금은행 표준코드 : </string>
+    <string name="wd_account_num">출금계좌번호 : </string>
+    <string name="wd_print_content">출금계좌 인자내역 : </string>
+    <string name="name_check_option">수취인성명 검증여부 : </string>
+    <string name="req_cnt">요청건수 : </string>
+    <string name="tran_no">거래순번 : </string>
+    <string name="account_name">계좌번호 : </string>
+    <string name="bank_code_std">은행표준코드 : </string>
+    <string name="account_holder_info_type">예금주 실명번호 구분코드 : </string>
+    <string name="account_holder_info">예금주 실명번호 : </string>
+    <string name="cntr_account_type">약정계좌/계정구분 : </string>
+    <string name="check_type">이체구분 : </string>
+    <string name="cntr_account_num">약정계좌계정번호 : </string>
+    <string name="inquiry_type">조회구분코드 : </string>
+    <string name="inquiry_base">조회기준코드 : </string>
+    <string name="from_date">조회시작일자 : </string>
+    <string name="from_time">조회시작시간 : </string>
+    <string name="to_date">조회종료일자 : </string>
+    <string name="to_time">조회종료시간 : </string>
+    <string name="sort_order">정렬순서 : </string>
+    <string name="page_index">페이지번호 : </string>
+    <string name="befor_inquiry_trace_info">직전조회 추적정보 : </string>
+    <string name="list_tran_seqno">최종거래내역 순번 : </string>
+    <string name="response_type">반환 형태(고정) : </string>
+    <string name="user_info">생년월일(8자리) : </string>
+    <string name="user_name">사용자명 : </string>
+    <string name="user_email">이메일주소 : </string>
+    <string name="info_prvd_agmt_yn">제3자정보제공동의 : </string>
+    <string name="wd_agmt_yn">출금동의 : </string>
+    <string name="agmt_data_type">동의자료구분 : </string>
+    <string name="user_ci">유저CI : </string>
+    <string name="req_client_name">요청고객성명 : </string>
+    <string name="req_client_bank_code">요청고객계좌 표준코드 : </string>
+    <string name="req_client_account_num">요청고객계좌번호 : </string>
+    <string name="req_client_num">요청고객회원번호 : </string>
+    <string name="transfer_purpose">이체용도 : </string>
+    <string name="sub_frnc_name">하위가맹점명 : </string>
+    <string name="sub_frnc_num">하위가맹점번호 : </string>
+    <string name="sub_frnc_business_num">하위가맹점 사업자번호 : </string>
+    <string name="recv_client_name">최종수취고객성명 : </string>
+    <string name="recv_client_bank_code">최종수취고객은행 : </string>
+    <string name="recv_client_account_num">최종수취고객계좌 : </string>
+    <string name="client_id">이용기관 ID : </string>
+    <string name="client_secret">이용기관 Secret : </string>
+    <string name="grant_type">권한부여방식 : </string>
+    <string name="redirect_uri">콜백URL : </string>
+    <string name="scope">토큰권한범위 : </string>
+    <string name="code">인증코드 : </string>
+    <string name="client_info">이용기관 임의정보 : </string>
+    <string name="state">난수값 : </string>
+    <string name="auth_type">사용자인증 타입구분 : </string>
+    <string name="lang">언어 : </string>
+    <string name="account_hold_auth_yn">계좌소유인증 사용여부 : </string>
+    <!--<string name="edit_option">입력란 수정 가능여부 : </string>
+    <string name="bg_color">배경색상 : </string>
+    <string name="txt_color">글자색상 : </string>
+    <string name="btn1_color">확인버튼색상 : </string>
+    <string name="btn2_color">취소버튼색상 : </string>-->
+    <string name="UserSeqNo">사용자일련번호 : </string>
+    <string name="UserCI">사용자 CI : </string>
+    <string name="UserName">사용자명 : </string>
+    <string name="UserInfo">생년월일 8자리 : </string>
+    <string name="UserCellNo">휴대폰번호 : </string>
+    <string name="PhoneCarrier">이동통신사 : </string>
+    <string name="UserEmail">이메일주소 : </string>
+    <string name="BankCodeStd">은행코드 : </string>
+    <string name="AccountNum">계좌번호 : </string>
+    <string name="AccessToken">토큰 : </string>
+    <string name="cms_num">CMS 번호 : </string>
+    <string name="org_dps_bank_code_std">원거래 입금기관코드 : </string>
+    <string name="org_dps_account_num">원거래 입금계좌번호 : </string>
+    <string name="org_wd_bank_code_std">원거래 출금기관코드 : </string>
+    <string name="claim_code">청구사유코드 : </string>
+    <string name="claim_message">청구사유 : </string>
+    <string name="total_return_yn">전액반환여부 : </string>
+    <string name="return_account_num">반환금액입금계좌 : </string>
+    <string name="use_org_contact">이용기관연락처 : </string>
+    <string name="use_org_email">담당자이메일주소 : </string>
+    <string name="account_holder_name">예금주명 : </string>
+
+
+    <!--영문/한글 변환 끝-->
+
+
+</resources>

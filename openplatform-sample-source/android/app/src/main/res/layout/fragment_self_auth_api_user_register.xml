@@ -1,0 +1,214 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--서브타이틀-->
+    <LinearLayout android:id="@+id/llSubTitle" style="@style/SubTitleLayout">
+        <TextView android:id="@+id/tvSubTitle" style="@style/SubTitleText"
+            android:text="사용자계좌등록(user/register)\n- 자체인증 이용기관이 사용자의 계좌를 등록"/>
+    </LinearLayout>
+
+    <!--메인-->
+    <ScrollView android:id="@+id/svMainScroll" style="@style/MainScrollView">
+        <LinearLayout android:id="@+id/llMainLayout" style="@style/MainLayout">
+
+            <TableLayout
+                android:id="@+id/tableLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
+
+                <TableRow
+                    android:padding="5dip">
+                    <me.grantland.widget.AutofitTextView
+                        style="@style/FormLabel02"
+                        android:layout_height="match_parent"
+                        android:text="@string/token_sa" />
+                    <LinearLayout
+                        style="@style/FormValue02">
+                        <EditText
+                            android:id="@+id/etToken"
+                            style="@style/FormValue02"
+                            android:inputType="text"
+                            android:maxLines="1" />
+                        <Button
+                            android:id="@+id/btnSelectToken"
+                            style="@style/ButtonFold"
+                            android:layout_width="50dp"
+                            android:layout_height="30dp"
+                            android:layout_marginStart="1dp"
+                            android:layout_marginEnd="3dp"
+                            android:text="선택" />
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow android:padding="5dip">
+                    <me.grantland.widget.AutofitTextView
+                        style="@style/FormLabel02"
+                        android:text="@string/bank_tran_id" />
+                    <LinearLayout style="@style/FormValue02">
+                        <EditText
+                            android:id="@+id/etBankTranId"
+                            style="@style/FormValue02"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"/>
+                        <Button
+                            android:id="@+id/btnGenBankTranId"
+                            style="@style/ButtonFold"
+                            android:layout_width="50dp"
+                            android:layout_height="30dp"
+                            android:layout_marginStart="1dp"
+                            android:layout_marginEnd="3dp"
+                            android:text="생성" />
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow android:padding="5dip">
+                    <me.grantland.widget.AutofitTextView
+                        style="@style/FormLabel02"
+                        android:text="@string/bank_code_std" />
+                    <EditText
+                        android:id="@+id/etBankCode"
+                        android:text="097"
+                        android:inputType="numberDecimal"
+                        style="@style/FormValue02" />
+                </TableRow>
+
+                <TableRow android:padding="5dip">
+                    <me.grantland.widget.AutofitTextView
+                        style="@style/FormLabel02"
+                        android:text="@string/register_account_num" />
+                    <EditText
+                        android:id="@+id/etAccountNum"
+                        android:text="1234567890"
+                        android:inputType="numberDecimal"
+                        style="@style/FormValue02" />
+                </TableRow>
+
+                <TableRow android:padding="5dip">
+                    <me.grantland.widget.AutofitTextView
+                        style="@style/FormLabel02"
+                        android:text="@string/user_info" />
+                    <EditText
+                        android:id="@+id/etUserInfo"
+                        android:text="19770707"
+                        android:inputType="numberDecimal"
+                        style="@style/FormValue02" />
+                </TableRow>
+
+                <TableRow android:padding="5dip">
+                    <me.grantland.widget.AutofitTextView
+                        style="@style/FormLabel02"
+                        android:text="@string/user_name" />
+                    <EditText
+                        android:id="@+id/etUserName"
+                        android:text="김핀텍"
+                        style="@style/FormValue02" />
+                </TableRow>
+
+                <TableRow android:padding="5dip">
+                    <me.grantland.widget.AutofitTextView
+                        style="@style/FormLabel02"
+                        android:text="@string/user_ci" />
+                    <EditText
+                        android:id="@+id/etUserCi"
+                        android:singleLine="true"
+                        style="@style/FormValue02" />
+                </TableRow>
+
+                <TableRow android:padding="5dp" android:gravity="end" android:layout_marginBottom="5dp">
+                    <TextView
+                        android:layout_column="2"
+                        android:text="* 센터인증 -> 자체인증 사용자정보조회 -> CI값 자동입력"/>
+                </TableRow>
+
+                <TableRow android:padding="5dip">
+                    <me.grantland.widget.AutofitTextView
+                        style="@style/FormLabel02"
+                        android:text="@string/user_email" />
+                    <EditText
+                        android:id="@+id/etUserEmail"
+                        android:text="abc@inter.net"
+                        android:inputType="textEmailAddress"
+                        style="@style/FormValue02" />
+                </TableRow>
+
+                <TableRow android:padding="5dip">
+                    <me.grantland.widget.AutofitTextView
+                        style="@style/FormLabel02"
+                        android:layout_height="match_parent"
+                        android:text="@string/scope" />
+                    <LinearLayout
+                        style="@style/FormValue02">
+                        <EditText
+                            android:id="@+id/etScope"
+                            android:text="inquiry"
+                            style="@style/FormValue02"
+                            android:inputType="text"
+                            android:maxLines="1" />
+                        <Button
+                            android:id="@+id/btnScope"
+                            style="@style/ButtonFold"
+                            android:layout_width="50dp"
+                            android:layout_height="30dp"
+                            android:layout_marginStart="1dp"
+                            android:layout_marginEnd="3dp"
+                            android:text="선택" />
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow android:padding="5dip">
+                    <me.grantland.widget.AutofitTextView
+                        style="@style/FormLabel02"
+                        android:text="@string/info_prvd_agmt_yn" />
+                    <EditText
+                        android:text="Y"
+                        android:id="@+id/etInfoPrvdAgmtYn"
+                        style="@style/FormValue02" />
+                </TableRow>
+
+                <TableRow android:padding="5dip">
+                    <me.grantland.widget.AutofitTextView
+                        style="@style/FormLabel02"
+                        android:text="@string/wd_agmt_yn" />
+                    <EditText
+                        android:id="@+id/etWdAgmtYn"
+                        style="@style/FormValue02" />
+                </TableRow>
+
+                <TableRow android:padding="5dip">
+                    <me.grantland.widget.AutofitTextView
+                        style="@style/FormLabel02"
+                        android:layout_height="match_parent"
+                        android:text="@string/agmt_data_type" />
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spAgmtDataType"
+                        style="@style/FormValue02"
+                        android:layout_height="55dp" />
+                </TableRow>
+
+                <TableRow android:padding="5dip">
+                    <me.grantland.widget.AutofitTextView
+                        style="@style/FormLabel02"
+                        android:text="@string/tran_dtime" />
+                    <EditText
+                        android:id="@+id/etTranDtime"
+                        style="@style/FormValue02" />
+                </TableRow>
+
+            </TableLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!--하단버튼-->
+    <LinearLayout android:id="@+id/llBottomButton" style="@style/BottomButtonLayout">
+        <Button android:id="@+id/btnCancel" style="@style/BottomCancelButton"/>
+        <Button android:id="@+id/btnNext" style="@style/BottomNextButton"/>
+    </LinearLayout>
+
+</RelativeLayout>

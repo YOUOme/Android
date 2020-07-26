@@ -1,0 +1,147 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/km_alert_dialog_default_background">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_gravity="top"
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:text="알림"
+            android:textColor="@color/md_black_1000"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ScrollView
+            android:id="@+id/svContents"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:text="내용"
+                    android:textColor="@color/md_black_1000"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:background="@color/md_blue_grey_50"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/tvDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:text="세부내용"
+                    android:textColor="@color/md_black_1000"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:button="@null"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:id="@+id/cbDetail"
+                    android:textColor="@color/md_amber_800"
+                    android:layout_margin="10dp"
+                    android:padding="10dp"
+                    android:textSize="16dp"
+                    android:layout_gravity="center_horizontal"
+                    android:text="세부내용보기"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <!-- 어댑터를 설정할때만 사용 -->
+        <ListView
+            android:visibility="gone"
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <View
+            android:background="@color/md_grey_500"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+        <LinearLayout
+            android:layout_gravity="bottom"
+            android:id="@+id/twoBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnNegative"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/md_white_1000"
+                android:padding="5dp"
+                android:text="취소"
+                android:textSize="20sp"
+                android:textColor="@color/md_black_1000" />
+
+            <View
+                android:background="@color/md_grey_500"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"/>
+
+            <!-- color에 ?colorPrimaryDark 처럼 변수값을 대입하면 에러가 발생한다. -->
+            <Button
+                android:id="@+id/btnPositive"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/md_white_1000"
+                android:padding="5dp"
+                android:text="확인"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/md_blue_700" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_gravity="bottom"
+            android:id="@+id/singleBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnSingle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/md_white_1000"
+                android:padding="5dp"
+                android:text="확인"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/md_blue_700" />
+        </LinearLayout>
+
+    </LinearLayout>
+</FrameLayout>

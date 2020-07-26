@@ -1,0 +1,104 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--서브타이틀-->
+    <LinearLayout android:id="@+id/llSubTitle" style="@style/SubTitleLayout">
+        <TextView android:id="@+id/tvSubTitle" style="@style/SubTitleText"
+            android:text="거래내역조회(/account/transaction_list)\n- 응답메시지를 출력합니다."/>
+    </LinearLayout>
+
+    <!--메인 : 안에 recyclerview 가 있고, 바닥까지 스크롤되면 또 실행되어야 하므로 scrollview를 사용하지 않는다.-->
+    <LinearLayout android:id="@+id/llMainLayout" style="@style/MainLayout"
+        android:layout_below="@id/llSubTitle">
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/border_result_info_top"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_weight="3"
+                style="@style/FormLabel01"
+                android:textFontWeight="1"
+                android:gravity="center_vertical"
+                android:text="현재 조회건수" />
+            <TextView
+                android:id="@+id/tvTotalRecordCnt"
+                android:ellipsize="marquee"
+                android:layout_weight="7"
+                style="@style/FormValue01"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E1E1E1" />
+
+        <TableLayout
+            android:background="@color/md_white_1000"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+
+            <TableRow>
+                <TextView
+                    style="@style/TextViewAPIResult"
+                    android:gravity="center"
+                    android:layout_width="0dp" android:layout_weight="1"
+                    android:text="거래일자" />
+                <TextView
+                    style="@style/TextViewAPIResult"
+                    android:gravity="center"
+                    android:layout_width="0dp" android:layout_weight="0.5"
+                    android:text="구분" />
+                <TextView
+                    style="@style/TextViewAPIResult"
+                    android:gravity="center"
+                    android:layout_width="0dp" android:layout_weight="1"
+                    android:text="거래금액" />
+                <TextView
+                    style="@style/TextViewAPIResult"
+                    android:gravity="center"
+                    android:layout_width="0dp" android:layout_weight="1"
+                    android:text="거래후잔액" />
+                <TextView
+                    style="@style/TextViewAPIResult"
+                    android:gravity="center"
+                    android:layout_width="0dp" android:layout_weight="1"
+                    android:text="인자내용" />
+            </TableRow>
+
+        </TableLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="80dp"/>
+
+    </LinearLayout>
+
+    <!--하단버튼-->
+    <LinearLayout android:id="@+id/llBottomButton" style="@style/BottomButtonLayout">
+        <Button android:id="@+id/btnCancel" style="@style/BottomCancelButton" android:visibility="gone"/>
+        <Button android:id="@+id/btnNext" style="@style/BottomNextButton"/>
+    </LinearLayout>
+
+</RelativeLayout>
+

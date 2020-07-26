@@ -1,0 +1,217 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#000000</item>
+        <item name="colorPrimaryDark">#000000</item>
+        <item name="colorAccent">#3E7EE7</item>
+        <!--<item name="android:actionBarSize">45dp</item>--><!-- 액션바 높이 -->
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!-- 버튼 스타일 (메인-Deprecated) -->
+    <style name="ButtonMainDeprecated">
+        <item name="android:textColor">#BBBBBB</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:minWidth">200dp</item>
+        <item name="android:minHeight">45dp</item>
+        <item name="android:background">@drawable/button_shape_03</item>
+    </style>
+
+    <!-- 버튼 스타일 (타입 01) -->
+    <style name="Button01">
+        <item name="android:textColor">#F8F8F8</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:minWidth">200dp</item>
+        <item name="android:minHeight">45dp</item>
+        <item name="android:background">@drawable/button_shape_01</item>
+    </style>
+
+    <!-- 버튼 스타일 (타입 02) -->
+    <style name="Button02">
+        <item name="android:textColor">#F8F8F8</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:minWidth">200dp</item>
+        <item name="android:minHeight">45dp</item>
+        <item name="android:background">@drawable/button_shape_02</item>
+    </style>
+
+    <!-- 버튼 스타일 (타입 03) -->
+    <style name="Button03">
+        <item name="android:textColor">#F8F8F8</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:background">@drawable/button_shape_03</item>
+    </style>
+
+    <!-- 버튼 스타일 (주소창 옆 접음/펼침 버튼) -->
+    <style name="ButtonFold">
+        <item name="android:textColor">#F8F8F8</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:background">@drawable/button_shape_fold</item>
+    </style>
+
+    <!-- 네비게이션 메뉴 스타일 -->
+    <style name="NavMenu">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#222222</item>
+    </style>
+
+    <!-- 폼데이터 라벨 (타입 01) -->
+    <style name="FormLabel01">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#222222</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">5</item>
+        <item name="android:gravity">center_vertical|end</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <!-- 폼데이터 값 (타입 01) -->
+    <style name="FormValue01">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#222222</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">7</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <!-- 폼데이터 라벨 (타입 02) -->
+    <style name="FormLabel02">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#222222</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">4</item>
+        <item name="android:gravity">center_vertical|end</item>
+        <item name="android:maxLines">2</item>
+    </style>
+
+    <!-- 폼데이터 값 (타입 02) -->
+    <style name="FormValue02">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#222222</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">7</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <!-- TextView API호출결과 -->
+    <style name="TextViewAPIResult">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#222222</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <!-- TextView API호출결과 -->
+    <style name="TextViewAPIResultValue">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#222222</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">2</item>
+    </style>
+
+    <!-- 버튼 스타일 (메인) -->
+    <style name="ButtonMain">
+        <item name="android:textColor">#F8F8F8</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:minWidth">200dp</item>
+        <item name="android:minHeight">45dp</item>
+        <item name="android:background">@drawable/button_shape_main</item>
+    </style>
+
+    <!-- 서브타이틀 -->
+    <style name="SubTitleLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">50dp</item>
+        <item name="android:background">#F2F2F2</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">12dp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <!-- 서브타이틀 텍스트뷰 -->
+    <style name="SubTitleText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#3E7EE7</item>
+    </style>
+
+    <!-- 메인 스크롤뷰 -->
+    <style name="MainScrollView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_above">@id/llBottomButton</item>
+        <item name="android:layout_below">@id/llSubTitle</item>
+        <item name="android:fillViewport">true</item>
+    </style>
+
+    <!-- 메인 레이아웃(스크롤 하단) -->
+    <style name="MainLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <!-- 하단 버튼 레이아웃 -->
+    <style name="BottomButtonLayout">
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">60dp</item>
+    </style>
+
+    <!-- 하단 확인 버튼 -->
+    <style name="BottomNextButton">
+        <item name="android:layout_weight">1</item>
+        <item name="android:text">확인</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textColor">#3E7EE7</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:background">@drawable/bottom_next_button</item>
+    </style>
+
+    <!-- 하단 취소 버튼 -->
+    <style name="BottomCancelButton">
+        <item name="android:layout_weight">1</item>
+        <item name="android:text">취소</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textColor">#B5B5B5</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:background">@drawable/bottom_cancel_button</item>
+    </style>
+
+</resources>

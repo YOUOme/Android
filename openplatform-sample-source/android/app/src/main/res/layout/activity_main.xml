@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- APP BAR (앱 타이틀 및 네비게이션 아이콘) -->
+        <include
+            android:id="@+id/appBarLayout"
+            layout="@layout/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- 메인컨텐츠 (프레그먼트) -->
+        <FrameLayout
+            android:id="@+id/flContent"
+            android:layout_below="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </RelativeLayout>
+
+    <!-- 햄버거 메뉴 -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navi"
+        android:layout_gravity="end"
+        android:layout_marginStart="-65dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- 햄버거 메뉴 컨텐츠 (프레그먼트)-->
+        <FrameLayout
+            android:id="@+id/naviLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </com.google.android.material.navigation.NavigationView>
+
+</androidx.drawerlayout.widget.DrawerLayout>
