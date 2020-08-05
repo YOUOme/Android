@@ -56,7 +56,6 @@ public class FragmentSignUp2Tele extends BottomSheetDialogFragment {
         lg_e = (TextView)view.findViewById(R.id.t_lg_e);
         lg_e.setOnClickListener(tcl);
 
-
         return view;
     }
 

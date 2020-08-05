@@ -2,6 +2,7 @@ package com.example.youome;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
@@ -26,11 +27,12 @@ public class ActivityChangeAccount extends AppCompatActivity {
         bt_account_add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(getApplicationContext(),ActivityAddAccount.class);
+                startActivity(intent);
             }
         });
 
-        //dummy
+        //dummy (Database 연동 할것)
         adpater.addItem("[농협은행] 유오미","0000000000000");
         adpater.addItem("[카카오뱅크] 유오미","0000000000000");
         adpater.addItem("[국민은행] 유오미","0000000000000");

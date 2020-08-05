@@ -71,7 +71,7 @@ public class ActivitySignUp extends AppCompatActivity {
         super.onStart();
     }
 
-    // ----------------------- Inner Class -----------------------
+    // ----------------------- Network API -----------------------
     public class NetworkJoinReq {
         @SerializedName("memberEmail")
         String memberEmail;

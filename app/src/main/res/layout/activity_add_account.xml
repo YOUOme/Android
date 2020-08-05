@@ -69,7 +69,7 @@
             app:hintTextAppearance="@style/youome_hint_Style">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/et_name"
+                android:id="@+id/et_bank"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#000"
@@ -104,7 +104,7 @@
                 app:hintTextAppearance="@style/youome_hint_Style">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_inum"
+                    android:id="@+id/et_account_num"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
@@ -120,13 +120,14 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/bt_code"
                 android:background="@drawable/edit_style_lightgray"
                 android:backgroundTint="@color/youome_background"
                 android:layout_width="60dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="5dp"
                 android:textColor="#222"
+                android:visibility="gone"
                 android:text="확인코드\n전송" />
 
         </LinearLayout>
@@ -137,6 +138,7 @@
             android:layout_marginLeft="15dp"
             android:layout_marginTop="15dp"
             android:layout_marginRight="15dp"
+            android:visibility="gone"
             android:orientation="horizontal">
 
             <com.google.android.material.textfield.TextInputLayout
@@ -154,7 +156,7 @@
                 app:prefixTextColor="#000">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_phone"
+                    android:id="@+id/et_checknum"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
@@ -170,13 +172,14 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
-                android:id="@+id/button3"
+                android:id="@+id/bt_ok"
                 android:layout_width="60dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="5dp"
                 android:background="@drawable/edit_style_lightgray"
                 android:backgroundTint="@color/youome_background"
                 android:text="확인"
+                android:visibility="gone"
                 android:textColor="#222" />
         </LinearLayout>
 
@@ -187,6 +190,7 @@
             android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:visibility="gone"
             android:text="입력하신 계좌로 1원이 입금되었습니다.\n입금자명의 유오미 뒤 확인코드를 입력하세요." />
 
     </LinearLayout>
