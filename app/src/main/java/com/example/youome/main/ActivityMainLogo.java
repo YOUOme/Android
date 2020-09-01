@@ -1,4 +1,4 @@
-package com.example.youome;
+package com.example.youome.main;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.TextView;
+
+import com.example.youome.ActivitySignUp;
+import com.example.youome.R;
 
 public class ActivityMainLogo extends AppCompatActivity {
 

@@ -24,7 +24,7 @@
             android:windowSoftInputMode="adjustResize" />
         <activity android:name=".ActivitySignUp" />
         <activity android:name=".ActivityYOUOme" />
-        <activity android:name=".ActivityMainLogo">
+        <activity android:name=".main.ActivityMainLogo">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

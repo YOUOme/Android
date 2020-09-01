@@ -6,5 +6,8 @@
 
     <color name="youome_hintColor">#a0a7ba</color>
     <color name="youome_subColor">#cbd0dc</color>
-    <color name="youome_background">#878e9f</color>
+    <color name="youome_background">#14213d</color>
+
+    <color name="youome_gray">#979797</color>
+    <color name="youome_lightblue">#57a7d9</color>
 </resources>
