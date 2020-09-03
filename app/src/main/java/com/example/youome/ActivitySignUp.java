@@ -21,7 +21,7 @@ public class ActivitySignUp extends AppCompatActivity {
     TextInputLayout textInputLayout;
     boolean onetime = true;
 
-    FragmentSignUp1Auth auth;
+    //FragmentSignUp1Auth auth; // 본인인증 약관동의 -> 폐기예정
     FragmentSignUp2Tele tele;
 
     @Override
@@ -58,16 +58,16 @@ public class ActivitySignUp extends AppCompatActivity {
         et_id = (TextInputEditText)findViewById(R.id.et_inum);
         et_id.addTextChangedListener(new PatternedTextWatcher("######-#******"));
 
-        auth = new FragmentSignUp1Auth();
+        //auth = new FragmentSignUp1Auth();
         tele = new FragmentSignUp2Tele();
         tele.setCancelable(false);
-        auth.setCancelable(false);
+        //auth.setCancelable(false);
     }
 
     @Override
     protected void onStart() {
-        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.add(auth,"auth").commit();
+        //FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        //fragmentTransaction.add(auth,"auth").commit();
         super.onStart();
     }
 

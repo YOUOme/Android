@@ -24,10 +24,10 @@ public class ActivityYOUOme extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         tabLayout = (TabLayout)findViewById(R.id.tabLayout);
-        tabLayout.addTab(tabLayout.newTab().setText("tab1")); // newTab().setIcon(R.drawable.)
-        tabLayout.addTab(tabLayout.newTab().setText("tab2"));
-        tabLayout.addTab(tabLayout.newTab().setText("tab3"));
-        tabLayout.addTab(tabLayout.newTab().setText("tab4"));
+        tabLayout.addTab(tabLayout.newTab().setText("홈")); // newTab().setIcon(R.drawable.)
+        tabLayout.addTab(tabLayout.newTab().setText("지인간 대출"));
+        tabLayout.addTab(tabLayout.newTab().setText("P2P 펀딩"));
+        tabLayout.addTab(tabLayout.newTab().setText("1:1 펀딩"));
 
         viewPager = (ViewPager)findViewById(R.id.pager);
         viewPager.setOnTouchListener(new View.OnTouchListener(){

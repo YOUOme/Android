@@ -9,11 +9,13 @@
     tools:context=".ActivitySignUp">
 
     <LinearLayout
+        android:id="@+id/linearLayout11"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:background="@drawable/bt_style_lightgray"
+        android:backgroundTint="#fff"
         android:orientation="vertical"
         android:paddingTop="10dp"
         android:paddingBottom="15dp"
@@ -22,7 +24,7 @@
         app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.205">
+        app:layout_constraintVertical_bias="0.45">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -49,8 +51,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="7dp"
-                android:paddingLeft="10dp"
                 android:layout_weight="1"
+                android:paddingLeft="10dp"
                 android:text="회원가입"
                 android:textColor="#444"
                 android:textSize="20dp" />
@@ -62,25 +64,25 @@
             android:layout_marginLeft="15dp"
             android:layout_marginTop="20dp"
             android:layout_marginRight="15dp"
-            android:paddingTop="5dp"
             android:background="@drawable/edit_style_lightgray"
-            app:hintEnabled="true"
-            app:hintAnimationEnabled="false"
+            android:paddingTop="5dp"
             android:textColorHint="@color/youome_hintColor"
+            app:hintAnimationEnabled="false"
+            app:hintEnabled="true"
             app:hintTextAppearance="@style/youome_hint_Style">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="#000"
-                android:maxLines="10"
                 android:layout_marginLeft="20dp"
                 android:layout_marginBottom="10dp"
-                android:hint="이름"
                 android:background="@null"
+                android:hint="이름"
                 android:inputType="textPersonName"
+                android:maxLines="10"
                 android:privateImeOptions="defaultInputmode=korean"
+                android:textColor="#000"
                 android:textSize="20dp" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -91,25 +93,25 @@
             android:layout_marginLeft="15dp"
             android:layout_marginTop="20dp"
             android:layout_marginRight="15dp"
-            android:paddingTop="5dp"
             android:background="@drawable/edit_style_lightgray"
-            app:hintEnabled="true"
-            app:hintAnimationEnabled="false"
+            android:paddingTop="5dp"
             android:textColorHint="@color/youome_hintColor"
+            app:hintAnimationEnabled="false"
+            app:hintEnabled="true"
             app:hintTextAppearance="@style/youome_hint_Style">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_inum"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="#000"
-                android:maxLines="10"
                 android:layout_marginLeft="20dp"
                 android:layout_marginBottom="10dp"
-                android:hint="주민등록번호"
-                android:inputType="numberDecimal"
-                android:digits="0123456789-*"
                 android:background="@null"
+                android:digits="0123456789-*"
+                android:hint="은행"
+                android:inputType="numberDecimal"
+                android:maxLines="10"
+                android:textColor="#000"
                 android:textSize="20dp" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -121,30 +123,43 @@
             android:layout_marginLeft="15dp"
             android:layout_marginTop="20dp"
             android:layout_marginRight="15dp"
-            android:paddingTop="5dp"
             android:background="@drawable/edit_style_lightgray"
-            app:hintEnabled="true"
-            app:prefixTextColor="#000"
-            app:prefixTextAppearance="@style/TextAppearance.AppCompat.Medium"
-            app:hintAnimationEnabled="false"
+            android:paddingTop="5dp"
             android:textColorHint="@color/youome_hintColor"
-            app:hintTextAppearance="@style/youome_hint_Style">
+            app:hintAnimationEnabled="false"
+            app:hintEnabled="true"
+            app:hintTextAppearance="@style/youome_hint_Style"
+            app:prefixTextAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:prefixTextColor="#000">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_phone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="#000"
-                android:ems="11"
                 android:layout_marginLeft="20dp"
                 android:layout_marginBottom="10dp"
-                android:hint="전화번호"
                 android:background="@null"
-                android:inputType="numberDecimal"
                 android:digits="0123456789-"
+                android:ems="11"
+                android:hint="결제비밀번호"
+                android:inputType="numberDecimal"
+                android:textColor="#000"
                 android:textSize="20dp" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="결제비밀번호를 설정해주세요"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout11"
+        app:layout_constraintVertical_bias="0.113" />
 </androidx.constraintlayout.widget.ConstraintLayout>

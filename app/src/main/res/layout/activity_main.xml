@@ -10,7 +10,7 @@
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="191dp"
-        android:layout_height="58dp"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -25,8 +25,11 @@
             android:layout_weight="1"
             android:gravity="right"
             android:text="YOU"
+            android:layout_marginBottom="10dp"
+            android:scaleY="1.1"
+            android:textScaleX="1.2"
             android:textColor="#fff"
-            android:textSize="33dp"
+            android:textSize="31dp"
             android:textStyle="bold" />
 
         <TextView
@@ -35,8 +38,10 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Ome"
+            android:scaleY="1.1"
+            android:textScaleX="1.25"
             android:textColor="#fff"
-            android:textSize="33dp" />
+            android:textSize="31dp" />
     </LinearLayout>
 
     <TextView
@@ -50,6 +55,7 @@
         android:textColor="@color/youome_gray"
         android:textSize="17dp"
         android:textStyle="bold"
+        android:onClick="onSignupClick"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
@@ -76,5 +82,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/touchme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="touchme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kakao_login" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
