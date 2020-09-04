@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.graphics.Point;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Display;
 import android.view.Gravity;
 import android.view.View;
@@ -67,7 +68,6 @@ public class ActivityMainLogo extends AppCompatActivity {
         int y = (int)(size.y *0.8f);
         window.setLayout(x,y);
         /*~~~~~~~~~~~~~~~~~~~~~~~*/
-
         ImageView back = (ImageView) dlgView.findViewById(R.id.bt_back);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -88,7 +88,7 @@ public class ActivityMainLogo extends AppCompatActivity {
         webSettings.setSaveFormData(true);
 
         webView.addJavascriptInterface(new AndroidBridge(),"BRIDGE");
-        webView.loadUrl("https://testapi.openbanking.or.kr/oauth/2.0/authorize?response_type=code&client_id=JfSpiq1QR1xFqZS3z1yhEL4E2PKYDDcou7DG85Tl&redirect_uri=https://220.70.46.145:8000/authResult&scope=login inquiry transfer&state=abcdefghijklmnopqrstuvwxyz123456&auth_type=0");
+        webView.loadUrl("https://testapi.openbanking.or.kr/oauth/2.0/authorize?response_type=code&client_id=JfSpiq1QR1xFqZS3z1yhEL4E2PKYDDcou7DG85Tl&redirect_uri=https://220.70.46.145:8001/authResult&scope=login inquiry transfer&state=abcdefghijklmnopqrstuvwxyz123456&auth_type=0");
         webView.setWebViewClient(new MyWebViewClient());
         dlg.show();
     }
@@ -96,6 +96,7 @@ public class ActivityMainLogo extends AppCompatActivity {
     final class AndroidBridge{
         public void CallFinishAuth(){
             Intent intent = new Intent(getApplicationContext(),ActivitySignUp.class);
+            Log.d("dddd","~~~~~~~~~~~~~~~~bridge!!!");
             startActivity(intent);
         }
     }

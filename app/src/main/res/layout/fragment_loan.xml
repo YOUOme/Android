@@ -21,7 +21,7 @@
         app:layout_constraintVertical_bias="0.0">
 
         <LinearLayout
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="30dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -31,16 +31,16 @@
                 android:background="@drawable/edit_style_search"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingLeft="30dp"
-                android:paddingTop="5dp"
-                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
                 android:layout_weight="1"
                 android:ems="10"
-                android:hint="이름 혹은 전화번호 검색하기"
+                android:text="빌린돈   |  "
+                android:textColor="#000"
                 android:textSize="17dp"
                 android:textColorHint="@color/youome_hintColor"
-                android:inputType="textPersonName"
-                android:text="" />
+                android:inputType="textPersonName" />
 
             <ImageView
                 android:id="@+id/bt_loan_search"
@@ -49,8 +49,9 @@
                 android:layout_marginLeft="15dp"
                 android:background="@drawable/bt_style_lightgray3"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="0"
+                android:tint="#000"
                 app:srcCompat="@drawable/search_icon" />
 
             <TextView
@@ -61,24 +62,16 @@
                 android:text="거래추가"
                 android:textSize="16dp"
                 android:textStyle="bold"
+                android:textColor="@color/youome_subColor"
                 android:layout_marginHorizontal="10dp"
                 android:layout_gravity="center_vertical" />
         </LinearLayout>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="20dp"
-            android:text="대부 내역"
-            android:textColor="#fff"
-            android:textSize="25dp"/>
-
         <ListView
             android:id="@+id/lend_list"
             android:divider="@null"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="30dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="20dp"
             android:layout_marginBottom="35dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
@@ -94,14 +87,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="25dp"
-            android:layout_marginBottom="30dp"
-            android:textColor="#000"
-            android:text="상환 완료 내역" />
 
         <ListView
             android:id="@+id/complete_lend_list"
