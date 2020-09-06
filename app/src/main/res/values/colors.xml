@@ -10,4 +10,7 @@
 
     <color name="youome_gray">#979797</color>
     <color name="youome_lightblue">#57a7d9</color>
+
+    <color name="youome_red">#d34947</color>
+    <color name="youome_blue">#57A7D9</color>
 </resources>

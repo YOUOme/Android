@@ -1,97 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:background="#fff"
     android:layout_height="match_parent">
 
     <LinearLayout
-        android:id="@+id/linearLayout3"
+        android:id="@+id/linearLayout12"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:minHeight="205dp"
-        android:background="@drawable/style_lightgray2"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        android:orientation="horizontal"
+        android:paddingTop="35dp"
+        android:paddingBottom="18dp"
+        android:background="@color/youome_background">
 
-        <LinearLayout
-            android:layout_marginTop="30dp"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#fff"
+            android:textColor="#000"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="빌린돈 |" />
+
+        <EditText
+            android:id="@+id/loan_search"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_weight="1"
+            android:background="@drawable/edit_style_search"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:paddingLeft="10dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:text="이름 검색하기"
+            android:textColor="#000"
+            android:textColorHint="@color/youome_hintColor"
+            android:textSize="17dp" />
 
-            <EditText
-                android:id="@+id/loan_search"
-                android:background="@drawable/edit_style_search"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="10dp"
-                android:paddingTop="8dp"
-                android:paddingBottom="8dp"
-                android:layout_weight="1"
-                android:ems="10"
-                android:text="빌린돈   |  "
-                android:textColor="#000"
-                android:textSize="17dp"
-                android:textColorHint="@color/youome_hintColor"
-                android:inputType="textPersonName" />
+        <ImageView
+            android:id="@+id/bt_loan_search"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="0"
+            android:background="@drawable/bt_style_lightgray3"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="5dp"
+            android:tint="#000"
+            app:srcCompat="@drawable/search_icon" />
 
-            <ImageView
-                android:id="@+id/bt_loan_search"
-                android:paddingVertical="5dp"
-                android:paddingHorizontal="10dp"
-                android:layout_marginLeft="15dp"
-                android:background="@drawable/bt_style_lightgray3"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="0"
-                android:tint="#000"
-                app:srcCompat="@drawable/search_icon" />
-
-            <TextView
-                android:id="@+id/bt_addlend"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="0"
-                android:text="거래추가"
-                android:textSize="16dp"
-                android:textStyle="bold"
-                android:textColor="@color/youome_subColor"
-                android:layout_marginHorizontal="10dp"
-                android:layout_gravity="center_vertical" />
-        </LinearLayout>
-
-        <ListView
-            android:id="@+id/lend_list"
-            android:divider="@null"
-            android:layout_marginTop="40dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginBottom="35dp"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/bt_addlend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginHorizontal="10dp"
+            android:layout_weight="0"
+            android:text="거래추가"
+            android:textColor="@color/youome_subColor"
+            android:textSize="16dp"
+            android:textStyle="bold" />
     </LinearLayout>
 
-    <LinearLayout
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:orientation="vertical"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+        android:background="#ffffff"
+        android:layout_height="match_parent">
 
-        <ListView
-            android:id="@+id/complete_lend_list"
-            android:divider="@null"
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            android:background="@drawable/style_lightgray2"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-    </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:contentScrim="#fff"
+                app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed"
+                android:background="@drawable/style_lightgray2"
+                app:toolbarId="@+id/toolbar">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler2"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="27dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler1"
+                app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </androidx.core.widget.NestedScrollView>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</LinearLayout>

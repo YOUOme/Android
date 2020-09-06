@@ -28,6 +28,8 @@ public class ActivityYOUOme extends AppCompatActivity {
         tabLayout.addTab(tabLayout.newTab().setText("지인간 대출"));
         tabLayout.addTab(tabLayout.newTab().setText("P2P 펀딩"));
         tabLayout.addTab(tabLayout.newTab().setText("1:1 펀딩"));
+        tabLayout.setHorizontalScrollBarEnabled(false);
+        tabLayout.setVerticalScrollBarEnabled(false);
 
         viewPager = (ViewPager)findViewById(R.id.pager);
         viewPager.setOnTouchListener(new View.OnTouchListener(){
