@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -18,7 +17,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class Fragment2Loan extends Fragment{
+public class FragmentTab2IOU extends Fragment{
     TextView bt_addlend;
     //ListView lendListView, completeLendListView;
     //AdapterFragItem adapter1,adapter2;
@@ -36,7 +35,7 @@ public class Fragment2Loan extends Fragment{
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_loan,null);
+        View view = inflater.inflate(R.layout.fragment_tab2,null);
         bt_addlend = (TextView)view.findViewById(R.id.bt_addlend);
         bt_addlend.setOnClickListener(new View.OnClickListener() {
             @Override

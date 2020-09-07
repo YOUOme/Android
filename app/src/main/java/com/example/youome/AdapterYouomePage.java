@@ -16,16 +16,16 @@ public class AdapterYouomePage extends FragmentStatePagerAdapter {
     public Fragment getItem(int position) {
         switch (position){
             case 0:
-                Fragment1MyAccount Fragment1 = new Fragment1MyAccount();
+                FragmentTab1Home Fragment1 = new FragmentTab1Home();
                 return Fragment1;
             case 1:
-                Fragment2Loan Fragment2 = new Fragment2Loan();
+                FragmentTab2IOU Fragment2 = new FragmentTab2IOU();
                 return Fragment2;
             case 2:
-                Fragment3Payback Fragment3 = new Fragment3Payback();
+                FragmentTab3P2P Fragment3 = new FragmentTab3P2P();
                 return Fragment3;
             case 3:
-                YouomeFragment4 Fragment4 = new YouomeFragment4();
+                FragmentTab4O2O Fragment4 = new FragmentTab4O2O();
                 return Fragment4;
             default:
                 return null;

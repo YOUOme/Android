@@ -34,14 +34,14 @@ public class ActivityAddLoan extends AppCompatActivity {
         originalData = new ArrayList<AdapterLoanItem.ItemData>();
         adapter = new AdapterLoanItem(getSupportFragmentManager());
         //dummy data
-        adapter.addItem("김오미","010-1111-1111","신용도 AAA");
-        adapter.addItem("나오미","010-1111-1111","신용도 AAA");
-        adapter.addItem("박오미","010-1111-1111","신용도 AAA");
-        adapter.addItem("이오미","010-1111-1111","신용도 AAA");
-        adapter.addItem("조오미","010-1111-1111","신용도 AAA");
-        adapter.addItem("윤오미","010-1111-1111","신용도 AAA");
-        adapter.addItem("최오미","010-1111-1111","신용도 AAA");
-        adapter.addItem("고오미","010-1111-1111","신용도 AAA");
+        adapter.addItem("김오미","010-1111-1111","유오미 A등급 | 나이스 3등급");
+        adapter.addItem("나오미","010-1111-1111","유오미 A등급 | 나이스 1등급");
+        adapter.addItem("박오미","010-1111-1111","유오미 C등급 | 나이스 5등급");
+        adapter.addItem("이오미","010-1111-1111","유오미 A등급 | 나이스 3등급");
+        adapter.addItem("조오미","010-1111-1111","유오미 A등급 | 나이스 3등급");
+        adapter.addItem("윤오미","010-1111-1111","유오미 A등급 | 나이스 3등급");
+        adapter.addItem("최오미","010-1111-1111","유오미 A등급 | 나이스 3등급");
+        adapter.addItem("고오미","010-1111-1111","유오미 A등급 | 나이스 3등급");
 
 
         recentLendListView = (ListView)findViewById(R.id.recent_lend);

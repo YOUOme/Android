@@ -25,8 +25,18 @@
             android:layout_gravity="bottom"
             android:layout_marginLeft="25dp"
             android:layout_weight="0"
-            android:visibility="invisible"
+            android:tint="@color/youome_subColor"
             app:srcCompat="@drawable/bt_left" />
+
+        <TextView
+            android:id="@+id/textView58"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:layout_gravity="bottom"
+            android:textSize="18dp"
+            android:layout_marginLeft="5dp"
+            android:text="지인간 대출" />
     </LinearLayout>
 
     <LinearLayout
