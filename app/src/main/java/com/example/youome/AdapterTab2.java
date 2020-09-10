@@ -12,6 +12,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class AdapterTab2 extends RecyclerView.Adapter<AdapterTab2.ViewHolder> {
@@ -66,12 +67,12 @@ public class AdapterTab2 extends RecyclerView.Adapter<AdapterTab2.ViewHolder> {
 
         if(item.getType() == 1){
             holder.type.setText("빌린돈");
-            holder.type.setTextColor(Color.parseColor("#d34947"));
+            holder.type.setTextColor(ContextCompat.getColor(context, R.color.youome_red));
         }
         else{
             holder.type.setText("빌려준돈");
-            holder.type.setTextColor(Color.parseColor("#57A7D9"));
-            holder.bt.getBackground().setTint(Color.parseColor("#57A7D9"));
+            holder.type.setTextColor(ContextCompat.getColor(context, R.color.youome_blue));
+            holder.bt.getBackground().setTint(ContextCompat.getColor(context, R.color.youome_blue));
         }
 
         if(backgroundColorID != 0) {
@@ -81,7 +82,7 @@ public class AdapterTab2 extends RecyclerView.Adapter<AdapterTab2.ViewHolder> {
         }
         else {
             holder.bt.setColorFilter(Color.WHITE);
-            holder.bt.getBackground().setTint(Color.parseColor("#14213d"));
+            holder.bt.getBackground().setTint(ContextCompat.getColor(context, R.color.youome_background));
         }
 
         holder.bt.setOnClickListener(new View.OnClickListener() {

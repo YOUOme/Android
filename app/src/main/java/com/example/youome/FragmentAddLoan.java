@@ -42,7 +42,7 @@ public class FragmentAddLoan extends BottomSheetDialogFragment {
         tName.setText(name);
         tMoney = (TextView)view.findViewById(R.id.lend_money);
         selectedMoney = (int)(((ActivityAddLoan)getActivity()).money*0.5);
-        tMoney.setText( (int)(((ActivityAddLoan)getActivity()).money*0.5)+" 원");
+        tMoney.setText( String.format("%,d",(int)(((ActivityAddLoan)getActivity()).money*0.5))+" 원");
 
         seekBar = (SeekBar)view.findViewById(R.id.seekBar);
         seekBar.setProgress(0);
@@ -51,7 +51,7 @@ public class FragmentAddLoan extends BottomSheetDialogFragment {
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
-                tMoney.setText(i+" 원");
+                tMoney.setText(String.format("%,d",i)+" 원");
                 selectedMoney = i;
             }
             @Override
@@ -59,7 +59,7 @@ public class FragmentAddLoan extends BottomSheetDialogFragment {
 
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
-                tMoney.setText(selectedMoney +" 원");
+                tMoney.setText(String.format("%,d",selectedMoney) +" 원");
             }
         });
 
@@ -67,7 +67,7 @@ public class FragmentAddLoan extends BottomSheetDialogFragment {
         bt_lend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getContext(), ActivityLoan.class);
+                Intent intent = new Intent(getContext(), ActivityLoan_v2.class);
                 intent.putExtra("name",name);
                 intent.putExtra("money",selectedMoney);
                 startActivity(intent);

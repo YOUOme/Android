@@ -58,6 +58,7 @@ public class FragmentTab2IOU extends Fragment{
 
         RecyclerView recyclerView = view.findViewById(R.id.recycler1);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        recyclerView.setHorizontalScrollBarEnabled(false);
 
         AdapterTab2 adapter = new AdapterTab2(getContext(),list,0,1);
         recyclerView.setAdapter(adapter);
@@ -71,6 +72,7 @@ public class FragmentTab2IOU extends Fragment{
 
         RecyclerView recyclerView2 = view.findViewById(R.id.recycler2);
         recyclerView2.setLayoutManager(new LinearLayoutManager(getContext()));
+        recyclerView2.setHorizontalScrollBarEnabled(false);
 
         AdapterTab2 adapter2 = new AdapterTab2(getContext(),list2,R.color.youome_background,1);
         recyclerView2.setAdapter(adapter2);

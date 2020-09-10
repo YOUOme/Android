@@ -81,6 +81,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_margin="25dp"
+                    android:tint="@color/youome_blue"
                     app:srcCompat="@drawable/ic_v_shape" />
 
                 <TextView
@@ -89,7 +90,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:background="@drawable/style_lightgray1"
-                    android:backgroundTint="@color/youome_red"
+                    android:backgroundTint="@color/youome_blue"
                     android:gravity="center"
                     android:paddingVertical="5dp"
                     android:text="펀딩추가"
@@ -99,7 +100,7 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycler1"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+                android:layout_height="match_parent" />
 
         </LinearLayout>
     </ScrollView>

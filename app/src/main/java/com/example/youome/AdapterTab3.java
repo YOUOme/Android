@@ -13,6 +13,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class AdapterTab3 extends RecyclerView.Adapter<AdapterTab3.ViewHolder> {
@@ -62,8 +63,9 @@ public class AdapterTab3 extends RecyclerView.Adapter<AdapterTab3.ViewHolder> {
         holder.tx_current.setText(item.getCurrent());
 
         if(mode == 2) {
-            holder.bt_detail.getBackground().setTint(Color.parseColor("#d34947"));
-            holder.tx_current.setTextColor(Color.parseColor("d34947"));
+            holder.bt_detail.getBackground().setTint(ContextCompat.getColor(context, R.color.youome_red));
+            holder.bt_detail.setText("신청하기");
+            holder.tx_current.setTextColor(ContextCompat.getColor(context, R.color.youome_red));
         }
 
         holder.bt_detail.setOnClickListener(new View.OnClickListener() {

@@ -32,6 +32,7 @@ public class ActivityYOUOme extends AppCompatActivity {
         tabLayout.setVerticalScrollBarEnabled(false);
 
         viewPager = (ViewPager)findViewById(R.id.pager);
+        viewPager.setHorizontalScrollBarEnabled(false);
         viewPager.setOnTouchListener(new View.OnTouchListener(){
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {

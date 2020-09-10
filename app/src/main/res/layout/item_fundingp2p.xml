@@ -7,6 +7,7 @@
     android:orientation="vertical"
     android:background="@drawable/bt_style_lightgray"
     android:padding="10dp"
+    android:layout_marginVertical="10dp"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent">
@@ -32,7 +33,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="연 이자율"
-                android:textSize="15dp"
+                android:textSize="14dp"
                 android:layout_marginVertical="3dp"
                 android:textColor="#000" />
 
@@ -41,7 +42,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:textSize="18dp"
+                android:textSize="17dp"
                 android:text="16 %"
                 android:layout_marginVertical="3dp"
                 android:textColor="@color/youome_blue" />
@@ -66,7 +67,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="상환기간"
-                android:textSize="15dp"
+                android:textSize="14dp"
                 android:layout_marginVertical="3dp"
                 android:textColor="#000" />
 
@@ -76,7 +77,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="5개월"
-                android:textSize="18dp"
+                android:textSize="17dp"
                 android:layout_marginVertical="3dp"
                 android:textColor="@color/youome_blue" />
         </LinearLayout>
@@ -100,7 +101,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="#000"
                 android:gravity="center"
-                android:textSize="15dp"
+                android:textSize="14dp"
                 android:layout_marginVertical="3dp"
                 android:text="모집액" />
 
@@ -110,7 +111,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/youome_red"
                 android:gravity="center"
-                android:textSize="18dp"
+                android:textSize="17dp"
                 android:layout_marginVertical="3dp"
                 android:text="300,000원" />
         </LinearLayout>
@@ -123,6 +124,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_weight="1"
+        android:textSize="13dp"
+        android:layout_marginVertical="2dp"
         android:text="현재 100,000원 투자 완료"
         android:textColor="@color/youome_blue" />
 
@@ -136,6 +139,5 @@
         android:gravity="center"
         android:paddingVertical="5dp"
         android:text="자세히보기"
-        android:textSize="20dp"
-        android:textStyle="bold" />
+        android:textSize="17dp" />
 </LinearLayout>
