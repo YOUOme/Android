@@ -10,18 +10,17 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class AdapterTrade1 extends RecyclerView.Adapter<AdapterTrade1.ViewHolder> {
+public class AdapterTab2 extends RecyclerView.Adapter<AdapterTab2.ViewHolder> {
 
-    private ArrayList<ItemTrade> mData = new ArrayList<>();
+    private ArrayList<ItemTab2> mData;
     private int backgroundColorID = 0, mode;  // mode=1 : lend , mode=2 : repay  // background 1 : 상단, 0 : 하단
     private Context context;
 
-    public AdapterTrade1(Context context, ArrayList<ItemTrade> list,int colorID,int mode) {
+    public AdapterTab2(Context context, ArrayList<ItemTab2> list, int colorID, int mode) {
         mData = list;
         backgroundColorID = colorID;
         this.mode = mode;
@@ -51,13 +50,13 @@ public class AdapterTrade1 extends RecyclerView.Adapter<AdapterTrade1.ViewHolder
         LayoutInflater inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View view = inflater.inflate(R.layout.item_trade,parent,false);
 
-        AdapterTrade1.ViewHolder vh = new AdapterTrade1.ViewHolder(view);
+        AdapterTab2.ViewHolder vh = new AdapterTab2.ViewHolder(view);
         return vh;
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        ItemTrade item = mData.get(position);         // 랜더링하기위한 정보 데이터
+        ItemTab2 item = mData.get(position);         // 랜더링하기위한 정보 데이터
         holder.name.setText(item.getName());
         holder.date.setText(item.getDate());
         holder.money.setText(item.getMoney());

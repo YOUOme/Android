@@ -37,7 +37,7 @@
                 android:textColor="#000" />
 
             <TextView
-                android:id="@+id/textView51"
+                android:id="@+id/tx_margin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -71,7 +71,7 @@
                 android:textColor="#000" />
 
             <TextView
-                android:id="@+id/textView49"
+                android:id="@+id/tx_month"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -105,7 +105,7 @@
                 android:text="모집액" />
 
             <TextView
-                android:id="@+id/textView33"
+                android:id="@+id/tx_money"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/youome_red"
@@ -118,24 +118,24 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/textView54"
+        android:id="@+id/tx_current"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:layout_gravity="center"
-        android:textColor="@color/youome_blue"
-        android:text="현재 100,000원 투자 완료" />
+        android:layout_weight="1"
+        android:text="현재 100,000원 투자 완료"
+        android:textColor="@color/youome_blue" />
 
     <TextView
-        android:id="@+id/button"
-        android:background="@drawable/style_lightgray1"
+        android:id="@+id/bt_detail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/youome_blue"
         android:layout_margin="5dp"
+        android:background="@drawable/style_lightgray1"
+        android:backgroundTint="@color/youome_blue"
         android:gravity="center"
         android:paddingVertical="5dp"
+        android:text="자세히보기"
         android:textSize="20dp"
-        android:textStyle="bold"
-        android:text="자세히보기" />
+        android:textStyle="bold" />
 </LinearLayout>

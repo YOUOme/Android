@@ -1,10 +1,10 @@
 package com.example.youome;
 
-public class ItemTrade {
+public class ItemTab2 {
     private String name, date, money;
     private int type;
 
-    public ItemTrade(int type,String name, String date, String money) {
+    public ItemTab2(int type, String name, String date, String money) {
         this.name = name;
         this.date = date;
         this.money = money;

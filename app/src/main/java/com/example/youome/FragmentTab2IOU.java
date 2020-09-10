@@ -46,33 +46,33 @@ public class FragmentTab2IOU extends Fragment{
         });
 
         //dummy
-        ArrayList<ItemTrade> list = new ArrayList<>();
-        list.add(new ItemTrade(1,"김오미","20.07.29 수","10,000원/20,000원"));
-        list.add(new ItemTrade(1,"김오미","20.07.10 월","상환완료/30,000원"));
-        list.add(new ItemTrade(1,"이오미","20.01.04 토","상환완료/10,000원"));
-        list.add(new ItemTrade(2,"이오미","20.01.04 토","상환완료/10,000원"));
-        list.add(new ItemTrade(2,"최오미","20.01.04 토","상환완료/10,000원"));
-        list.add(new ItemTrade(2,"박오미","20.01.04 토","상환완료/10,000원"));
-        list.add(new ItemTrade(1,"배오미","20.01.04 토","상환완료/10,000원"));
-        list.add(new ItemTrade(1,"박오미","20.01.04 토","상환완료/10,000원"));
+        ArrayList<ItemTab2> list = new ArrayList<>();
+        list.add(new ItemTab2(1,"김오미","20.07.29 수","10,000원/20,000원"));
+        list.add(new ItemTab2(1,"김오미","20.07.10 월","상환완료/30,000원"));
+        list.add(new ItemTab2(1,"이오미","20.01.04 토","상환완료/10,000원"));
+        list.add(new ItemTab2(2,"이오미","20.01.04 토","상환완료/10,000원"));
+        list.add(new ItemTab2(2,"최오미","20.01.04 토","상환완료/10,000원"));
+        list.add(new ItemTab2(2,"박오미","20.01.04 토","상환완료/10,000원"));
+        list.add(new ItemTab2(1,"배오미","20.01.04 토","상환완료/10,000원"));
+        list.add(new ItemTab2(1,"박오미","20.01.04 토","상환완료/10,000원"));
 
         RecyclerView recyclerView = view.findViewById(R.id.recycler1);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        AdapterTrade1 adapter = new AdapterTrade1(getContext(),list,0,1);
+        AdapterTab2 adapter = new AdapterTab2(getContext(),list,0,1);
         recyclerView.setAdapter(adapter);
 
-        ArrayList<ItemTrade> list2 = new ArrayList<>();
-        list2.add(new ItemTrade(1,"김오미","20.07.29 수","10,000원/20,000원"));
-        list2.add(new ItemTrade(1,"이오미","20.08.30 일","100,000원/200,000원"));
-        list2.add(new ItemTrade(2,"박오미","20.09.01 화","10,000원/20,000원"));
-        list2.add(new ItemTrade(2,"윤오미","20.09.23 수","10,000원/20,000원"));
-        list2.add(new ItemTrade(2,"서오미","20.10.01 목","100,000원/20,000원"));
+        ArrayList<ItemTab2> list2 = new ArrayList<>();
+        list2.add(new ItemTab2(1,"김오미","20.07.29 수","10,000원/20,000원"));
+        list2.add(new ItemTab2(1,"이오미","20.08.30 일","100,000원/200,000원"));
+        list2.add(new ItemTab2(2,"박오미","20.09.01 화","10,000원/20,000원"));
+        list2.add(new ItemTab2(2,"윤오미","20.09.23 수","10,000원/20,000원"));
+        list2.add(new ItemTab2(2,"서오미","20.10.01 목","100,000원/20,000원"));
 
         RecyclerView recyclerView2 = view.findViewById(R.id.recycler2);
         recyclerView2.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        AdapterTrade1 adapter2 = new AdapterTrade1(getContext(),list2,R.color.youome_background,1);
+        AdapterTab2 adapter2 = new AdapterTab2(getContext(),list2,R.color.youome_background,1);
         recyclerView2.setAdapter(adapter2);
 
 
