@@ -21,10 +21,12 @@ public class FragmentAddLoan extends BottomSheetDialogFragment {
     SeekBar seekBar;
     TextView tName, tMoney;
     Button bt_lend;
-    int selectedMoney;
+    int parentMoney;
+    int selectedMoney,type; // type : 1 = 최초 호출, 2 = 수정시 호출
 
-    public FragmentAddLoan(String name) {
+    public FragmentAddLoan(String name,int type) {
         this.name = name;
+        this.type = type;
     }
 
     @Override
@@ -41,13 +43,17 @@ public class FragmentAddLoan extends BottomSheetDialogFragment {
         tName = (TextView)view.findViewById(R.id.lend_name);
         tName.setText(name);
         tMoney = (TextView)view.findViewById(R.id.lend_money);
+
+        if(type == 1) parentMoney = ((ActivityAddLoan)getActivity()).money;
+        else parentMoney = ((ActivityLoan_v2)getActivity()).money;
+
         selectedMoney = (int)(((ActivityAddLoan)getActivity()).money*0.5);
-        tMoney.setText( String.format("%,d",(int)(((ActivityAddLoan)getActivity()).money*0.5))+" 원");
+        tMoney.setText( String.format("%,d",(int)(parentMoney*0.5))+" 원");
 
         seekBar = (SeekBar)view.findViewById(R.id.seekBar);
         seekBar.setProgress(0);
-        seekBar.setMax(((ActivityAddLoan)getActivity()).money);
-        seekBar.setProgress((int)(((ActivityAddLoan)getActivity()).money*0.5));
+        seekBar.setMax(parentMoney);
+        seekBar.setProgress((int)(parentMoney*0.5));
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
@@ -67,11 +73,15 @@ public class FragmentAddLoan extends BottomSheetDialogFragment {
         bt_lend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getContext(), ActivityLoan_v2.class);
-                intent.putExtra("name",name);
-                intent.putExtra("money",selectedMoney);
-                startActivity(intent);
-                getActivity().finish();
+                if(type == 1) {
+                    Intent intent = new Intent(getContext(), ActivityLoan_v2.class);
+                    intent.putExtra("name", name);
+                    intent.putExtra("money", selectedMoney);
+                    startActivity(intent);
+                    getActivity().finish();
+                }
+                else
+                    ((ActivityLoan_v2)getActivity()).tx_money.setText(tMoney.getText().toString());
             }
         });
 

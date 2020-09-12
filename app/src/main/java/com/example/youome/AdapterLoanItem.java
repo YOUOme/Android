@@ -63,7 +63,7 @@ public class AdapterLoanItem extends BaseAdapter {
         bt_lend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FragmentAddLoan faddlend = new FragmentAddLoan(getItem(para).getName());
+                FragmentAddLoan faddlend = new FragmentAddLoan(getItem(para).getName(),1);
                 faddlend.show(parentFm,faddlend.getTag());
             }
         });

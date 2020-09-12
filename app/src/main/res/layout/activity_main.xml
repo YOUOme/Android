@@ -78,6 +78,7 @@
         android:layout_marginBottom="56dp"
         android:text="Deep dive into FinTECH"
         android:textColor="@color/youome_lightblue"
+        android:fontFamily="@font/youome_main_font"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"

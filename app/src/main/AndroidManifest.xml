@@ -20,7 +20,7 @@
         <activity android:name=".ActivityTransfer" />
         <activity android:name=".ActivityChangeAccount" />
         <activity android:name=".ActivityIOU" />
-        <activity android:name=".ActivityLoan" />
+        <activity android:name=".zzz_ActivityLoan" />
         <activity android:name=".ActivityAddLoan" />
         <activity android:name=".ActivityAlarm" />
         <activity

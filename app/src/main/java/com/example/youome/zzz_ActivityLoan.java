@@ -25,7 +25,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
-public class ActivityLoan extends AppCompatActivity {
+public class zzz_ActivityLoan extends AppCompatActivity {
     TextView tName, tMoney, tAccount, tInterest,tDate;
     EditText et_interest;
     CalendarView cv;

@@ -12,7 +12,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginHorizontal="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,7 +25,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:layout_marginLeft="25dp"
             android:layout_weight="0"
             android:tint="@color/youome_subColor"
             app:srcCompat="@drawable/bt_left" />
@@ -33,11 +33,12 @@
             android:id="@+id/textView58"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
+            android:layout_gravity="center_vertical"
             android:layout_marginLeft="5dp"
             android:layout_weight="0"
             android:fontFamily="@font/youome_main_font"
             android:text="지인간 대출"
+            android:textColor="@color/youome_subColor"
             android:textSize="18dp" />
     </LinearLayout>
 
@@ -45,7 +46,7 @@
         android:id="@+id/linearLayout8"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="30dp"
         android:orientation="horizontal"
         android:layout_marginRight="20dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -55,7 +56,7 @@
 
         <EditText
             android:id="@+id/et_recent_search"
-            android:layout_width="304dp"
+            android:layout_width="315dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:fontFamily="@font/youome_main_font"
@@ -64,20 +65,21 @@
             android:hint="이름 혹은 전화번호 검색하기"
             android:inputType="textPersonName"
             android:paddingLeft="30dp"
-            android:paddingTop="15dp"
+            android:paddingTop="10dp"
             android:paddingBottom="10dp"
             android:text=""
             android:textColorHint="@color/youome_hintColor"
-            android:textSize="17dp" />
+            android:textSize="16dp" />
 
         <ImageView
             android:onClick="onRecentSearchClick"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginLeft="15dp"
+            android:layout_marginLeft="13dp"
             android:layout_weight="0"
+            android:tint="#000"
             android:background="@drawable/bt_style_lightgray3"
-            android:paddingHorizontal="17dp"
+            android:paddingHorizontal="13dp"
             android:paddingVertical="5dp"
             app:srcCompat="@drawable/search_icon" />
 
@@ -88,7 +90,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="27dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="45dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -103,6 +105,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="최근 거래"
+            android:textColor="@color/youome_subColor"
             android:fontFamily="@font/youome_main_font"
             android:textSize="25dp"
             android:textStyle="bold" />
@@ -112,6 +115,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:visibility="invisible"
             android:layout_marginRight="10dp"
             android:layout_weight="0"
             app:srcCompat="@drawable/bt_threedot" />
@@ -121,7 +125,7 @@
         android:id="@+id/recent_lend"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:layout_marginBottom="25dp"
         android:layout_marginHorizontal="20dp"
         app:layout_constraintBottom_toBottomOf="parent"

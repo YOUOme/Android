@@ -52,8 +52,8 @@
             android:hint="은행 혹은 계좌번호 검색하기"
             android:inputType="textPersonName"
             android:paddingLeft="30dp"
-            android:paddingTop="15dp"
-            android:paddingBottom="15dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
             android:text=""
             android:textColorHint="@color/youome_hintColor"
             android:textSize="17dp" />

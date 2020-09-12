@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 public class ActivitySignUpPassward extends AppCompatActivity {
     TextView[] tv;
-    TextView re,tx_mention;
+    TextView re,tx_mention,tx_password_type;
     ImageView[] iv;
     ImageView back;
     int num[],touchCount = 0,prossCount=0;
@@ -42,6 +42,7 @@ public class ActivitySignUpPassward extends AppCompatActivity {
         for(int i=0;i<10;i++) tv[i].setOnClickListener(new PasswordClickListener());
 
         tx_mention = (TextView)findViewById(R.id.tx_mention);
+        tx_password_type = (TextView)findViewById(R.id.tx_password_type);
         back = (ImageView)findViewById(R.id.bt_back_img);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,6 +63,7 @@ public class ActivitySignUpPassward extends AppCompatActivity {
                 touchCount = 0;
                 prossCount++;
                 tx_mention.setText("결제비밀번호를 한 번 더 입력해주세요.");
+                tx_password_type.setText("결제비밀번호 확인");
                 if(prossCount == 2){
                     render();
                     Intent intent = new Intent(getApplicationContext(),ActivityYOUOme.class);

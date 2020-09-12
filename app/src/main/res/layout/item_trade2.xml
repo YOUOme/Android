@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     android:background="@color/youome_background"
-    android:paddingVertical="16dp"
+    android:paddingVertical="10dp"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent">
@@ -23,7 +23,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_weight="1"
+            android:layout_marginLeft="5dp"
             android:text="[이름]"
+            android:textColor="@color/youome_subColor"
             android:fontFamily="@font/youome_main_font"
             android:textSize="22dp" />
 
@@ -32,8 +34,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_marginTop="2dp"
+            android:layout_marginLeft="5dp"
             android:text="[전화번호]"
+            android:textColor="@color/youome_subColor"
             android:fontFamily="@font/youome_main_font"/>
     </LinearLayout>
 
@@ -48,8 +51,10 @@
         <TextView
             android:id="@+id/bt_lend"
             android:gravity="right"
+            android:textColor="@color/youome_subColor"
             android:textSize="19dp"
             android:layout_gravity="center"
+            android:layout_marginRight="5dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/youome_main_font"
@@ -58,7 +63,8 @@
         <TextView
             android:id="@+id/good"
             android:gravity="right"
-            android:textColor="#666"
+            android:textColor="#bbb"
+            android:layout_marginRight="5dp"
             android:layout_gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
