@@ -64,6 +64,7 @@
             android:layout_marginLeft="15dp"
             android:layout_marginTop="20dp"
             android:layout_marginRight="15dp"
+            android:editable="false"
             android:background="@drawable/edit_style_lightgray"
             android:paddingTop="5dp"
             android:textColorHint="@color/youome_hintColor"
@@ -78,7 +79,9 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginBottom="10dp"
                 android:background="@null"
+                android:text="유오미"
                 android:hint="이름"
+                android:editable="false"
                 android:inputType="textPersonName"
                 android:maxLines="10"
                 android:privateImeOptions="defaultInputmode=korean"
@@ -93,6 +96,7 @@
             android:layout_marginLeft="15dp"
             android:layout_marginTop="20dp"
             android:layout_marginRight="15dp"
+            android:editable="false"
             android:background="@drawable/edit_style_lightgray"
             android:paddingTop="5dp"
             android:textColorHint="@color/youome_hintColor"
@@ -108,7 +112,9 @@
                 android:layout_marginBottom="10dp"
                 android:background="@null"
                 android:digits="0123456789-*"
+                android:editable="false"
                 android:hint="은행"
+                android:text="농협 | 000-0000-0000-00"
                 android:inputType="numberDecimal"
                 android:maxLines="10"
                 android:textColor="#000"
@@ -116,37 +122,19 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textinputlayout"
+        <TextView
+            android:id="@+id/bt_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="20dp"
             android:layout_marginRight="15dp"
             android:background="@drawable/edit_style_lightgray"
-            android:paddingTop="5dp"
-            android:textColorHint="@color/youome_hintColor"
-            app:hintAnimationEnabled="false"
-            app:hintEnabled="true"
-            app:hintTextAppearance="@style/youome_hint_Style"
-            app:prefixTextAppearance="@style/TextAppearance.AppCompat.Medium"
-            app:prefixTextColor="#000">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/et_phone"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginBottom="10dp"
-                android:background="@null"
-                android:digits="0123456789-"
-                android:ems="11"
-                android:hint="결제비밀번호"
-                android:inputType="numberDecimal"
-                android:textColor="#000"
-                android:textSize="20dp" />
-
-        </com.google.android.material.textfield.TextInputLayout>
+            android:padding="12dp"
+            android:text="  결제비밀번호"
+            android:textColor="@color/youome_hintColor"
+            android:textSize="19dp">
+        </TextView>
 
     </LinearLayout>
 

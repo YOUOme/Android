@@ -19,10 +19,11 @@ public class ActivitySignUp extends AppCompatActivity {
 
     TextInputEditText et_phone,et_name,et_id;
     TextInputLayout textInputLayout;
+    TextView password;
     boolean onetime = true;
 
-    //FragmentSignUp1Auth auth; // 본인인증 약관동의 -> 폐기예정
-    FragmentSignUp2Tele tele;
+    //FragmentSignUp1Auth auth;  // 본인인증 약관동의 -> 폐기예정
+    //FragmentSignUp2Tele tele;  // 통신사 설정 -> 폐기예정
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,8 +31,8 @@ public class ActivitySignUp extends AppCompatActivity {
         setContentView(R.layout.activity_signup);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        et_phone = (TextInputEditText)findViewById(R.id.et_phone);
-        et_phone.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+        //et_phone = (TextInputEditText)findViewById(R.id.et_phone);
+        /*et_phone.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
                 Intent intent = new Intent(getApplicationContext(), ActivityYOUOme.class);
@@ -51,17 +52,28 @@ public class ActivitySignUp extends AppCompatActivity {
                     onetime = false;
                 }
             }
-        });
+        });*/
 
-        textInputLayout = (TextInputLayout)findViewById(R.id.textinputlayout);
+        //textInputLayout = (TextInputLayout)findViewById(R.id.textinputlayout);
         et_name = (TextInputEditText)findViewById(R.id.et_name);
         et_id = (TextInputEditText)findViewById(R.id.et_inum);
-        et_id.addTextChangedListener(new PatternedTextWatcher("######-#******"));
+        //et_id.addTextChangedListener(new PatternedTextWatcher("######-#******"));
 
         //auth = new FragmentSignUp1Auth();
-        tele = new FragmentSignUp2Tele();
-        tele.setCancelable(false);
+        //tele = new FragmentSignUp2Tele();
+        //tele.setCancelable(false);
         //auth.setCancelable(false);
+
+        et_name.setText("박동한");
+        et_id.setText("우리 | 0000-000-000000");
+        password = (TextView)findViewById(R.id.bt_password);
+        password.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),ActivitySignUpPassward.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override

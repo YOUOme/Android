@@ -26,11 +26,10 @@
             android:ems="10"
             android:inputType="textPersonName"
             android:paddingLeft="10dp"
-            android:paddingTop="8dp"
-            android:paddingBottom="8dp"
+            android:paddingVertical="7dp"
             android:textColor="#000"
             android:textColorHint="@color/youome_hintColor"
-            android:textSize="17dp" />
+            android:textSize="16dp" />
 
         <ImageView
             android:id="@+id/bt_loan_search"

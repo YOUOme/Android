@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     android:background="#fff"
-    android:paddingVertical="14dp"
+    android:paddingVertical="9dp"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent">
@@ -19,7 +19,7 @@
         android:layout_marginRight="5dp"
         android:textColor="@color/youome_red"
         android:layout_gravity="center_vertical"
-        android:textSize="18dp"
+        android:textSize="16dp"
         android:text="빌린돈" />
 
     <TextView
@@ -29,7 +29,7 @@
         android:layout_weight="1"
         android:layout_gravity="center_vertical"
         android:textColor="#000"
-        android:textSize="23dp"
+        android:textSize="21dp"
         android:text="[이름]" />
 
     <LinearLayout
@@ -46,6 +46,7 @@
             android:layout_height="wrap_content"
             android:gravity="right"
             android:text="[기한]"
+            android:textSize="11dp"
             android:textColor="#000" />
 
         <TextView
@@ -54,6 +55,7 @@
             android:layout_height="wrap_content"
             android:gravity="right"
             android:text="[상환 받을 돈]"
+            android:textSize="11dp"
             android:textColor="#000" />
     </LinearLayout>
 

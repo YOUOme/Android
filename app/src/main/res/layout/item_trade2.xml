@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     android:background="@color/youome_background"
-    android:paddingVertical="20dp"
+    android:paddingVertical="16dp"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent">
@@ -24,7 +24,7 @@
             android:layout_gravity="center_vertical"
             android:layout_weight="1"
             android:text="[이름]"
-            android:textSize="23dp" />
+            android:textSize="22dp" />
 
         <TextView
             android:id="@+id/phone"
@@ -46,7 +46,7 @@
         <TextView
             android:id="@+id/bt_lend"
             android:gravity="right"
-            android:textSize="20dp"
+            android:textSize="19dp"
             android:layout_gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
