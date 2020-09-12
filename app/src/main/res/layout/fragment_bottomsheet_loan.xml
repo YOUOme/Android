@@ -51,6 +51,7 @@
                     android:layout_marginLeft="25dp"
                     android:textStyle="bold"
                     android:textSize="25dp"
+                    android:fontFamily="@font/youome_main_font"
                     android:textColor="@color/youome_subColor"
                     android:text="김오미" />
 
@@ -60,6 +61,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:textSize="25dp"
+                    android:fontFamily="@font/youome_main_font"
                     android:textColor="@color/youome_subColor"
                     android:text="에게 빌려주기" />
 
@@ -74,6 +76,7 @@
                 android:textSize="40dp"
                 android:layout_marginTop="25dp"
                 android:layout_marginBottom="25dp"
+                android:fontFamily="@font/youome_main_font"
                 android:text="500,000 원" />
 
             <SeekBar
@@ -96,6 +99,7 @@
                 android:gravity="center"
                 android:textSize="16dp"
                 android:layout_marginBottom="45dp"
+                android:fontFamily="@font/youome_main_font"
                 android:text="OMYPAY 잔액      1,000,000원" />
 
             <TextView
@@ -106,6 +110,7 @@
                 android:textSize="12dp"
                 android:gravity="center"
                 android:textColor="#ddd"
+                android:fontFamily="@font/youome_main_font"
                 android:text="빌려줄 금액을 설정하세요. 부족한 금액은 자동충전됩니다." />
 
             <Button
@@ -119,6 +124,7 @@
                 android:background="@drawable/style_lightgray1"
                 android:backgroundTint="@color/youome_lightblue"
                 android:textColor="#fff"
+                android:fontFamily="@font/youome_main_font"
                 android:text="확인" />
 
         </LinearLayout>

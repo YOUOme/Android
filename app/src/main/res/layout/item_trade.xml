@@ -20,6 +20,7 @@
         android:textColor="@color/youome_red"
         android:layout_gravity="center_vertical"
         android:textSize="16dp"
+        android:fontFamily="@font/youome_main_font"
         android:text="빌린돈" />
 
     <TextView
@@ -29,6 +30,7 @@
         android:layout_weight="1"
         android:layout_gravity="center_vertical"
         android:textColor="#000"
+        android:fontFamily="@font/youome_main_font"
         android:textSize="21dp"
         android:text="[이름]" />
 
@@ -46,6 +48,7 @@
             android:layout_height="wrap_content"
             android:gravity="right"
             android:text="[기한]"
+            android:fontFamily="@font/youome_main_font"
             android:textSize="11dp"
             android:textColor="#000" />
 
@@ -55,6 +58,7 @@
             android:layout_height="wrap_content"
             android:gravity="right"
             android:text="[상환 받을 돈]"
+            android:fontFamily="@font/youome_main_font"
             android:textSize="11dp"
             android:textColor="#000" />
     </LinearLayout>

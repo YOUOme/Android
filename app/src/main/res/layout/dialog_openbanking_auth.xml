@@ -43,6 +43,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_weight="1"
+                android:fontFamily="@font/youome_main_font"
                 android:text=" 본인인증 및 계좌등록"
                 android:textSize="17dp" />
         </LinearLayout>

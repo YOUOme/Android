@@ -15,6 +15,7 @@
         android:text="알림"
         android:textColor="#fff"
         android:textSize="20dp"
+        android:fontFamily="@font/youome_main_font"
         android:paddingRight="18dp"
         android:paddingBottom="12dp"
         android:paddingTop="12dp"
@@ -28,6 +29,7 @@
         android:layout_height="wrap_content"
         android:paddingBottom="10dp"
         android:text="OmyPAY 충전"
+        android:fontFamily="@font/youome_main_font"
         android:textColor="#fff"
         android:textSize="27dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -102,6 +104,7 @@
                 android:layout_weight="1"
                 android:paddingRight="100dp"
                 android:text="충전금액"
+                android:fontFamily="@font/youome_main_font"
                 android:textColor="#000"
                 android:textSize="17dp" />
 
@@ -111,6 +114,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_weight="1"
+                android:fontFamily="@font/youome_main_font"
                 android:text="농협 0000"
                 android:textColor="#000" />
 
@@ -121,6 +125,7 @@
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:text="변경"
+                android:fontFamily="@font/youome_main_font"
                 android:textColor="@color/youome_hintColor" />
 
         </LinearLayout>
@@ -141,6 +146,7 @@
                 android:textColorHint="#000"
                 android:text=""
                 android:maxLength="10"
+                android:fontFamily="@font/youome_main_font"
                 android:inputType="numberDecimal"
                 android:digits="0123456789.,"
                 android:textColor="#000"
@@ -150,6 +156,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="원"
+                android:fontFamily="@font/youome_main_font"
                 android:textColor="#000"
                 android:textSize="30dp" />
 
@@ -179,6 +186,7 @@
             android:backgroundTint="@color/youome_hintColor"
             android:paddingVertical="5dp"
             android:text="충전하기"
+            android:fontFamily="@font/youome_main_font"
             android:onClick="onChargeClick"
             android:textSize="17dp" />
     </LinearLayout>

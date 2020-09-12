@@ -48,6 +48,7 @@
             android:layout_weight="1"
             android:background="@drawable/edit_style_search"
             android:ems="10"
+            android:fontFamily="@font/youome_main_font"
             android:hint="은행 혹은 계좌번호 검색하기"
             android:inputType="textPersonName"
             android:paddingLeft="30dp"
@@ -89,6 +90,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="연동 계좌"
+            android:fontFamily="@font/youome_main_font"
             android:textSize="25dp"
             android:textStyle="bold" />
 
@@ -98,6 +100,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="0"
             android:textSize="25dp"
+            android:fontFamily="@font/youome_main_font"
             android:textStyle="bold"
             android:text="추가" />
     </LinearLayout>

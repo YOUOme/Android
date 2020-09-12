@@ -30,6 +30,7 @@
             android:textSize="25dp"
             android:gravity="center"
             android:textStyle="bold"
+            android:fontFamily="@font/youome_main_font"
             android:text="충전 실패" />
 
         <LinearLayout
@@ -45,6 +46,7 @@
                 android:layout_weight="1"
                 android:text="20,000"
                 android:textSize="25dp"
+                android:fontFamily="@font/youome_main_font"
                 android:textStyle="bold" />
 
             <TextView
@@ -53,6 +55,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="원"
+                android:fontFamily="@font/youome_main_font"
                 android:textSize="25dp" />
         </LinearLayout>
 
@@ -61,7 +64,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-
+            android:fontFamily="@font/youome_main_font"
             android:text="충전이 완료되었습니다."
             android:textSize="25dp" />
 
@@ -79,6 +82,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="OmyPay"
+                android:fontFamily="@font/youome_main_font"
                 android:textSize="25dp"
                 android:textStyle="bold" />
 
@@ -91,6 +95,7 @@
                 android:layout_weight="1"
                 android:text="67,870"
                 android:textSize="25dp"
+                android:fontFamily="@font/youome_main_font"
                 android:textStyle="bold" />
 
             <TextView
@@ -99,6 +104,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="원"
+                android:fontFamily="@font/youome_main_font"
                 android:textSize="25dp" />
         </LinearLayout>
 

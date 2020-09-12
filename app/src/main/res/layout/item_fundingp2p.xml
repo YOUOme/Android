@@ -34,6 +34,7 @@
                 android:gravity="center"
                 android:text="연 이자율"
                 android:textSize="14dp"
+                android:fontFamily="@font/youome_main_font"
                 android:layout_marginVertical="3dp"
                 android:textColor="#000" />
 
@@ -44,6 +45,7 @@
                 android:gravity="center"
                 android:textSize="17dp"
                 android:text="16 %"
+                android:fontFamily="@font/youome_main_font"
                 android:layout_marginVertical="3dp"
                 android:textColor="@color/youome_blue" />
         </LinearLayout>
@@ -68,6 +70,7 @@
                 android:gravity="center"
                 android:text="상환기간"
                 android:textSize="14dp"
+                android:fontFamily="@font/youome_main_font"
                 android:layout_marginVertical="3dp"
                 android:textColor="#000" />
 
@@ -78,6 +81,7 @@
                 android:gravity="center"
                 android:text="5개월"
                 android:textSize="17dp"
+                android:fontFamily="@font/youome_main_font"
                 android:layout_marginVertical="3dp"
                 android:textColor="@color/youome_blue" />
         </LinearLayout>
@@ -101,6 +105,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="#000"
                 android:gravity="center"
+                android:fontFamily="@font/youome_main_font"
                 android:textSize="14dp"
                 android:layout_marginVertical="3dp"
                 android:text="모집액" />
@@ -112,6 +117,7 @@
                 android:textColor="@color/youome_red"
                 android:gravity="center"
                 android:textSize="17dp"
+                android:fontFamily="@font/youome_main_font"
                 android:layout_marginVertical="3dp"
                 android:text="300,000원" />
         </LinearLayout>
@@ -126,6 +132,7 @@
         android:layout_weight="1"
         android:textSize="13dp"
         android:layout_marginVertical="2dp"
+        android:fontFamily="@font/youome_main_font"
         android:text="현재 100,000원 투자 완료"
         android:textColor="@color/youome_blue" />
 
@@ -139,5 +146,6 @@
         android:gravity="center"
         android:paddingVertical="5dp"
         android:text="자세히보기"
+        android:fontFamily="@font/youome_main_font"
         android:textSize="17dp" />
 </LinearLayout>

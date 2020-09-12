@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:text="알림"
+        android:fontFamily="@font/youome_main_font"
         android:textColor="#fff"
         android:textSize="20dp"
         android:paddingRight="18dp"
@@ -28,6 +29,7 @@
         android:layout_height="wrap_content"
         android:paddingBottom="10dp"
         android:text="OmyPAY 송금"
+        android:fontFamily="@font/youome_main_font"
         android:textColor="#fff"
         android:textSize="27dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -55,6 +57,7 @@
             android:layout_weight="1"
             android:textColor="#fff"
             android:layout_marginRight="50dp"
+            android:fontFamily="@font/youome_main_font"
             android:text="충전 후" />
 
         <TextView
@@ -63,6 +66,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textStyle="bold"
+            android:fontFamily="@font/youome_main_font"
             android:text="65,870 원" />
     </LinearLayout>
 
@@ -102,6 +106,7 @@
                 android:layout_weight="1"
                 android:paddingRight="100dp"
                 android:text="송금금액"
+                android:fontFamily="@font/youome_main_font"
                 android:textColor="#000"
                 android:textSize="17dp" />
 
@@ -111,6 +116,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_weight="1"
+                android:fontFamily="@font/youome_main_font"
                 android:text="농협 0000"
                 android:textColor="#000" />
 
@@ -121,6 +127,7 @@
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:text="변경"
+                android:fontFamily="@font/youome_main_font"
                 android:textColor="@color/youome_hintColor" />
 
         </LinearLayout>
@@ -139,6 +146,7 @@
                 android:layout_height="wrap_content"
                 android:textColorHint="#000"
                 android:hint="0"
+                android:fontFamily="@font/youome_main_font"
                 android:text=""
                 android:maxLength="10"
                 android:inputType="numberDecimal"
@@ -150,6 +158,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="원"
+                android:fontFamily="@font/youome_main_font"
                 android:textColor="#000"
                 android:textSize="30dp" />
 
@@ -179,6 +188,7 @@
             android:backgroundTint="@color/youome_hintColor"
             android:paddingVertical="5dp"
             android:text="송금하기"
+            android:fontFamily="@font/youome_main_font"
             android:onClick="onTranseferClick"
             android:textSize="17dp" />
     </LinearLayout>

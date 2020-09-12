@@ -27,8 +27,9 @@
                 android:layout_weight="1"
                 android:background="@color/youome_blue"
                 android:gravity="center"
-                android:paddingVertical="22dp"
+                android:paddingVertical="15dp"
                 android:text="2"
+                android:fontFamily="@font/youome_main_font"
                 android:textColor="#000"
                 android:textSize="19dp" />
 
@@ -40,8 +41,9 @@
                 android:layout_weight="1"
                 android:background="@color/youome_blue"
                 android:gravity="center"
-                android:paddingVertical="22dp"
+                android:paddingVertical="15dp"
                 android:text="4"
+                android:fontFamily="@font/youome_main_font"
                 android:textColor="#000"
                 android:textSize="19dp" />
 
@@ -53,8 +55,9 @@
                 android:layout_weight="1"
                 android:background="@color/youome_blue"
                 android:gravity="center"
-                android:paddingVertical="22dp"
+                android:paddingVertical="15dp"
                 android:text="8"
+                android:fontFamily="@font/youome_main_font"
                 android:textColor="#000"
                 android:textSize="19dp" />
         </TableRow>
@@ -71,8 +74,9 @@
                 android:layout_weight="1"
                 android:background="@color/youome_blue"
                 android:gravity="center"
-                android:paddingVertical="22dp"
+                android:paddingVertical="15dp"
                 android:text="9"
+                android:fontFamily="@font/youome_main_font"
                 android:textColor="#000"
                 android:textSize="19dp" />
 
@@ -84,8 +88,9 @@
                 android:layout_weight="1"
                 android:background="@color/youome_blue"
                 android:gravity="center"
-                android:paddingVertical="22dp"
+                android:paddingVertical="15dp"
                 android:text="3"
+                android:fontFamily="@font/youome_main_font"
                 android:textColor="#000"
                 android:textSize="19dp" />
 
@@ -97,8 +102,9 @@
                 android:layout_weight="1"
                 android:background="@color/youome_blue"
                 android:gravity="center"
-                android:paddingVertical="22dp"
+                android:paddingVertical="15dp"
                 android:text="5"
+                android:fontFamily="@font/youome_main_font"
                 android:textColor="#000"
                 android:textSize="19dp" />
         </TableRow>
@@ -116,8 +122,9 @@
                 android:background="@color/youome_blue"
                 android:gravity="center"
                 android:paddingHorizontal="20dp"
-                android:paddingVertical="22dp"
+                android:paddingVertical="15dp"
                 android:text="6"
+                android:fontFamily="@font/youome_main_font"
                 android:textColor="#000"
                 android:textSize="19dp" />
 
@@ -130,8 +137,9 @@
                 android:background="@color/youome_blue"
                 android:gravity="center"
                 android:paddingHorizontal="20dp"
-                android:paddingVertical="22dp"
+                android:paddingVertical="15dp"
                 android:text="1"
+                android:fontFamily="@font/youome_main_font"
                 android:textColor="#000"
                 android:textSize="19dp" />
 
@@ -144,8 +152,9 @@
                 android:background="@color/youome_blue"
                 android:gravity="center"
                 android:paddingHorizontal="20dp"
-                android:paddingVertical="22dp"
+                android:paddingVertical="15dp"
                 android:text="7"
+                android:fontFamily="@font/youome_main_font"
                 android:textColor="#000"
                 android:textSize="19dp" />
         </TableRow>
@@ -162,8 +171,9 @@
                 android:layout_weight="1"
                 android:background="@color/youome_blue"
                 android:gravity="center"
-                android:paddingVertical="22dp"
+                android:paddingVertical="15dp"
                 android:text="재배열"
+                android:fontFamily="@font/youome_main_font"
                 android:textColor="#000"
                 android:textSize="19dp" />
 
@@ -175,8 +185,9 @@
                 android:layout_weight="1"
                 android:background="@color/youome_blue"
                 android:gravity="center"
-                android:paddingVertical="22dp"
+                android:paddingVertical="15dp"
                 android:text="0"
+                android:fontFamily="@font/youome_main_font"
                 android:textColor="#000"
                 android:textSize="19dp" />
 
@@ -202,6 +213,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="156dp"
         android:text="OMYPAY"
+        android:fontFamily="@font/youome_main_font"
         android:textColor="#fff"
         android:textSize="33dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -214,6 +226,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="결제비밀번호등록"
+        android:fontFamily="@font/youome_main_font"
         android:textSize="20dp"
         android:textColor="@color/youome_blue"
         app:layout_constraintEnd_toEndOf="parent"
@@ -283,6 +296,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="18dp"
+        android:fontFamily="@font/youome_main_font"
         android:text="사용하실 결제비밀번호를 입력해주세요"
         android:layout_marginBottom="15dp"
         app:layout_constraintBottom_toTopOf="@+id/tableLayout"

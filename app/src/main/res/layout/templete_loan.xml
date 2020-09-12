@@ -27,6 +27,7 @@
             <ImageView
                 android:id="@+id/imageView8"
                 android:tint="#fff"
+                android:layout_gravity="center_vertical"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/bt_left" />
@@ -37,6 +38,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_weight="1"
+                android:fontFamily="@font/youome_main_font"
                 android:textColor="#fff"
                 android:textSize="17dp"
                 android:layout_gravity="center_vertical"
@@ -48,6 +50,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
                 android:textSize="17dp"
+                android:fontFamily="@font/youome_main_font"
                 android:textColor="@color/youome_blue"
                 android:layout_gravity="center_vertical"
                 android:text="빌려주기" />
@@ -67,6 +70,7 @@
                 android:layout_weight="1"
                 android:textSize="27dp"
                 android:textStyle="bold"
+                android:fontFamily="@font/youome_main_font"
                 android:textColor="#fff"
                 android:text="김오미" />
 
@@ -75,6 +79,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="27dp"
+                android:fontFamily="@font/youome_main_font"
                 android:textColor="#fff"
                 android:text="에게 빌려주기"/>
         </LinearLayout>
@@ -88,6 +93,7 @@
             android:scaleY="1.03"
             android:textSize="45dp"
             android:textColor="#fff"
+            android:fontFamily="@font/youome_main_font"
             android:text="500,000원" />
 
         <TextView
@@ -98,6 +104,7 @@
             android:layout_gravity="center"
             android:textColor="#ddd"
             android:textSize="13dp"
+            android:fontFamily="@font/youome_main_font"
             android:text="금액 변경을 원할 경우, 금액을 눌러 재설정해 주세요." />
 
     </LinearLayout>
@@ -134,6 +141,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="#000"
                 android:textSize="20dp"
+                android:fontFamily="@font/youome_main_font"
                 android:textStyle="bold"
                 android:text="+" />
 
@@ -152,6 +160,7 @@
                 android:textColor="#000"
                 android:textSize="20dp"
                 android:textStyle="bold"
+                android:fontFamily="@font/youome_main_font"
                 android:layout_height="wrap_content"
                 android:text="-" />
         </LinearLayout>
@@ -177,6 +186,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="상환방식"
+                    android:fontFamily="@font/youome_main_font"
                     android:textSize="15dp"
                     android:textColor="#000" />
 
@@ -185,6 +195,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="원금균등상환"
+                    android:fontFamily="@font/youome_main_font"
                     android:textSize="14dp"
                     android:textColor="@color/youome_blue" />
             </LinearLayout>
@@ -211,6 +222,7 @@
                     android:layout_weight="1"
                     android:textColor="#000"
                     android:textSize="15dp"
+                    android:fontFamily="@font/youome_main_font"
                     android:text="납부일자" />
 
                 <TextView
@@ -219,6 +231,7 @@
                     android:layout_height="wrap_content"
                     android:textColor="#000"
                     android:textSize="14dp"
+                    android:fontFamily="@font/youome_main_font"
                     android:text="매월 말일" />
 
                 <ImageView
@@ -251,9 +264,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:text="상한기한"
+                    android:fontFamily="@font/youome_main_font"
+                    android:layout_gravity="center_vertical"
                     android:textColor="#000"
-                    android:textSize="15dp"
-                    android:text="상한기한" />
+                    android:textSize="15dp" />
 
                 <TextView
                     android:id="@+id/bt_due_plus"
@@ -261,6 +276,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginHorizontal="5dp"
                     android:text="+"
+                    android:fontFamily="@font/youome_main_font"
                     android:textColor="#000"
                     android:textSize="20dp"
                     android:textStyle="bold" />
@@ -272,6 +288,7 @@
                     android:textColor="#000"
                     android:layout_gravity="center_vertical"
                     android:textSize="14dp"
+                    android:fontFamily="@font/youome_main_font"
                     android:text="2020.08.31." />
 
                 <TextView
@@ -279,6 +296,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="#000"
+                    android:fontFamily="@font/youome_main_font"
                     android:textSize="20dp"
                     android:textStyle="bold"
                     android:layout_marginHorizontal="5dp"
@@ -308,6 +326,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textColor="#444"
+                android:fontFamily="@font/youome_main_font"
                 android:text="상환방식은 변경할 수 없습니다. " />
 
             <TextView
@@ -317,6 +336,7 @@
                 android:layout_weight="1"
                 android:textColor="#444"
                 android:textStyle="bold"
+                android:fontFamily="@font/youome_main_font"
                 android:text="상환방식 상세보기" />
         </LinearLayout>
 

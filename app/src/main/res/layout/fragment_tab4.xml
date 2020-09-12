@@ -94,6 +94,7 @@
                     android:gravity="center"
                     android:paddingVertical="5dp"
                     android:text="펀딩추가"
+                    android:fontFamily="@font/youome_main_font"
                     android:textSize="17dp" />
             </LinearLayout>
 

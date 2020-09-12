@@ -87,6 +87,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
+                    android:fontFamily="@font/youome_main_font"
                     android:background="@drawable/style_lightgray1"
                     android:backgroundTint="@color/youome_red"
                     android:gravity="center"

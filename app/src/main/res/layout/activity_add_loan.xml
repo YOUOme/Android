@@ -10,8 +10,9 @@
     <LinearLayout
         android:id="@+id/linearLayout7"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:layout_marginTop="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,7 +23,7 @@
             android:id="@+id/imageView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
+            android:layout_gravity="center_vertical"
             android:layout_marginLeft="25dp"
             android:layout_weight="0"
             android:tint="@color/youome_subColor"
@@ -32,11 +33,12 @@
             android:id="@+id/textView58"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="0"
             android:layout_gravity="bottom"
-            android:textSize="18dp"
             android:layout_marginLeft="5dp"
-            android:text="지인간 대출" />
+            android:layout_weight="0"
+            android:fontFamily="@font/youome_main_font"
+            android:text="지인간 대출"
+            android:textSize="18dp" />
     </LinearLayout>
 
     <LinearLayout
@@ -56,6 +58,7 @@
             android:layout_width="304dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:fontFamily="@font/youome_main_font"
             android:background="@drawable/edit_style_search"
             android:ems="10"
             android:hint="이름 혹은 전화번호 검색하기"
@@ -100,6 +103,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="최근 거래"
+            android:fontFamily="@font/youome_main_font"
             android:textSize="25dp"
             android:textStyle="bold" />
 
