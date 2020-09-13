@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.TextView;
 
 public class ActivityLoan_v2 extends AppCompatActivity {
-    TextView bt_due_plus,bt_due_minus,tx_detail,templete_loan_title1,tx_money;
+    TextView bt_due_plus,bt_due_minus,tx_detail,templete_loan_title1,tx_money,bt_done;
     Intent parnetIntent;
     public int money;
 
@@ -38,6 +38,15 @@ public class ActivityLoan_v2 extends AppCompatActivity {
             public void onClick(View view) {
                 FragmentAddLoan faddlend = new FragmentAddLoan(parnetIntent.getStringExtra("name"),2);
                 faddlend.show(getSupportFragmentManager(),faddlend.getTag());
+            }
+        });
+
+        bt_done = (TextView)findViewById(R.id.bt_done);
+        bt_done.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),ActivityIOU.class);
+                startActivity(intent);
             }
         });
     }

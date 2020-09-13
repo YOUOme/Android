@@ -67,6 +67,7 @@
             android:paddingLeft="30dp"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
+            android:textColor="#000"
             android:text=""
             android:textColorHint="@color/youome_hintColor"
             android:textSize="16dp" />

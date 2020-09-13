@@ -1,5 +1,6 @@
 package com.example.youome.main;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
@@ -24,6 +25,10 @@ import android.widget.TextView;
 
 import com.example.youome.ActivitySignUp;
 import com.example.youome.R;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.iid.FirebaseInstanceId;
+import com.google.firebase.iid.InstanceIdResult;
 
 public class ActivityMainLogo extends AppCompatActivity {
 
@@ -43,6 +48,19 @@ public class ActivityMainLogo extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        FirebaseInstanceId.getInstance().getInstanceId().addOnCompleteListener(new OnCompleteListener<InstanceIdResult>() {
+            @Override
+            public void onComplete(@NonNull Task<InstanceIdResult> task) {
+                if(!task.isSuccessful()){
+
+                }
+                String token = task.getResult().getToken();
+            }
+        });
+
+        // 기기고유id
+        String regId = FirebaseInstanceId.getInstance().getToken();
     }
 
     private class MyWebViewClient extends WebViewClient {

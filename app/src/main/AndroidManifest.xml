@@ -12,7 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ActivitySignUpPassward"></activity>
+        <service
+            android:name=".ServiceFCM"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <activity android:name=".ActivitySignUpPassward" />
         <activity android:name=".ActivityO2OFunding" />
         <activity android:name=".ActivityP2PFunding" />
         <activity android:name=".ActivityLoan_v2" />

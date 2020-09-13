@@ -45,15 +45,15 @@
                 android:text="지인간 대출" />
 
             <TextView
-                android:id="@+id/tx_done"
+                android:id="@+id/bt_done"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
-                android:textSize="17dp"
-                android:fontFamily="@font/youome_main_font"
-                android:textColor="@color/youome_blue"
                 android:layout_gravity="center_vertical"
-                android:text="빌려주기" />
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/youome_main_font"
+                android:text="빌려주기"
+                android:textColor="@color/youome_blue"
+                android:textSize="17dp" />
         </LinearLayout>
 
         <LinearLayout

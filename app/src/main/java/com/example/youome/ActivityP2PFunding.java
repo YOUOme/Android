@@ -21,7 +21,7 @@ public class ActivityP2PFunding extends AppCompatActivity {
         title2 = (TextView)findViewById(R.id.templete_loan_title2);
         title2.setText(" 추가하기");
 
-        done = (TextView)findViewById(R.id.tx_done);
+        done = (TextView)findViewById(R.id.bt_done);
         done.setText("추가하기");
         done.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.youome_red));
 

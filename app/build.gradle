@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'  // firebase
 
 android {
     compileSdkVersion 29
@@ -27,6 +28,9 @@ dependencies {
     implementation 'com.szagurskii:patternedtextwatcher:0.5.0'              // PatternedTextWatcher
     implementation 'com.squareup.retrofit2:retrofit:2.4.0'                  // Retrofit(REST API)
     implementation 'com.squareup.retrofit2:converter-gson:2.4.0'            // Retrofit(JSON Parsing)
+    implementation 'com.google.firebase:firebase-analytics:17.5.0'          // Firebase
+    implementation 'com.google.firebase:firebase-core:17.0.0'               // Firebase core
+    implementation 'com.google.firebase:firebase-messaging:20.2.4'          // FCM
 
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     testImplementation 'junit:junit:4.12'

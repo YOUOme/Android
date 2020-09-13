@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     android:background="#fff"
-    android:paddingVertical="9dp"
+    android:paddingVertical="11dp"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent">
@@ -31,7 +31,7 @@
         android:layout_gravity="center_vertical"
         android:textColor="#000"
         android:fontFamily="@font/youome_main_font"
-        android:textSize="21dp"
+        android:textSize="23dp"
         android:text="[이름]" />
 
     <LinearLayout
@@ -49,7 +49,7 @@
             android:gravity="right"
             android:text="[기한]"
             android:fontFamily="@font/youome_main_font"
-            android:textSize="11dp"
+            android:textSize="13dp"
             android:textColor="#000" />
 
         <TextView
@@ -59,7 +59,7 @@
             android:gravity="right"
             android:text="[상환 받을 돈]"
             android:fontFamily="@font/youome_main_font"
-            android:textSize="11dp"
+            android:textSize="13dp"
             android:textColor="#000" />
     </LinearLayout>
 

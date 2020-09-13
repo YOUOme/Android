@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "440477974944",
+    "firebase_url": "https://youome-1e63b.firebaseio.com",
+    "project_id": "youome-1e63b",
+    "storage_bucket": "youome-1e63b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:440477974944:android:d997966d9f70504c9864c5",
+        "android_client_info": {
+          "package_name": "com.example.youome"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "440477974944-eadonaavrcr8gd1igsdos43udslbh345.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6lN7dMpMN-v0JUW8gSwXbC0VnyCfAKUw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "440477974944-eadonaavrcr8gd1igsdos43udslbh345.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
