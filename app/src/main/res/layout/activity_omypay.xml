@@ -27,17 +27,16 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingBottom="10dp"
-        android:text="OmyPAY 충전"
         android:fontFamily="@font/youome_main_font"
-        android:textColor="#fff"
+        android:text="OMYPAY"
+        android:textColor="@color/youome_blue"
         android:textSize="27dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.423"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.208" />
+        app:layout_constraintVertical_bias="0.175" />
 
     <LinearLayout
         android:id="@+id/linearLayout4"
@@ -74,13 +73,14 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="40dp"
         android:background="@drawable/bt_style_lightgray"
+        android:backgroundTint="#fff"
         android:orientation="vertical"
         android:padding="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
-        app:layout_constraintVertical_bias="0.055">
+        app:layout_constraintVertical_bias="0.120000005">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -100,11 +100,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:layout_margin="5dp"
+                android:layout_margin="3dp"
                 android:layout_weight="1"
+                android:fontFamily="@font/youome_main_font"
                 android:paddingRight="100dp"
                 android:text="충전금액"
-                android:fontFamily="@font/youome_main_font"
                 android:textColor="#000"
                 android:textSize="17dp" />
 
@@ -124,8 +124,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_weight="1"
-                android:text="변경"
                 android:fontFamily="@font/youome_main_font"
+                android:text="변경"
                 android:textColor="@color/youome_hintColor" />
 
         </LinearLayout>
@@ -133,7 +133,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="3dp"
+            android:layout_margin="2dp"
             android:background="@drawable/edit_style_lightgray"
             android:gravity="center"
             android:orientation="horizontal">
@@ -142,23 +142,23 @@
                 android:id="@+id/et_money"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:hint="0"
-                android:textColorHint="#000"
-                android:text=""
-                android:maxLength="10"
-                android:fontFamily="@font/youome_main_font"
-                android:inputType="numberDecimal"
                 android:digits="0123456789.,"
+                android:fontFamily="@font/youome_main_font"
+                android:hint="0"
+                android:inputType="numberDecimal"
+                android:maxLength="10"
+                android:text=""
                 android:textColor="#000"
-                android:textSize="30dp" />
+                android:textColorHint="#000"
+                android:textSize="28dp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="원"
                 android:fontFamily="@font/youome_main_font"
+                android:text="원"
                 android:textColor="#000"
-                android:textSize="30dp" />
+                android:textSize="28dp" />
 
         </LinearLayout>
 
@@ -183,13 +183,28 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="70dp"
             android:background="@drawable/bt_style_lightgray"
-            android:backgroundTint="@color/youome_hintColor"
+            android:backgroundTint="@color/youome_blue"
             android:paddingVertical="5dp"
             android:text="충전하기"
             android:fontFamily="@font/youome_main_font"
             android:onClick="onChargeClick"
             android:textSize="17dp" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView46"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/youome_main_font"
+        android:text="충전"
+        android:textColor="#fff"
+        android:textSize="27dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.174" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,12 +5,15 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
+
+import java.util.ArrayList;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class FragmentTab1Home extends Fragment {
     private TextView bt_omypay,tx_OmyPay,bt_loan;
@@ -22,7 +25,7 @@ public class FragmentTab1Home extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_myaccount, null);
+        View view = inflater.inflate(R.layout.fragment_tab1, null);
 
         bt_omypay = (TextView) view.findViewById(R.id.bt_omypay);
         bt_omypay.setOnClickListener(new View.OnClickListener() {
@@ -46,8 +49,22 @@ public class FragmentTab1Home extends Fragment {
         tx_OmyPay = (TextView) view.findViewById(R.id.tx_omypay);
         String s = null;
         try { s = String.format("%,d", myMoney); } catch (NumberFormatException e) { }
-        tx_OmyPay.setText(s);
+        tx_OmyPay.setText(s+" 원");
 
+
+        ArrayList<ItemTab2> list2 = new ArrayList<>();
+        list2.add(new ItemTab2(1,"김오미","20.07.29 수","10,000원/20,000원"));
+        list2.add(new ItemTab2(1,"이오미","20.08.30 일","100,000원/200,000원"));
+        list2.add(new ItemTab2(2,"박오미","20.09.01 화","10,000원/20,000원"));
+        list2.add(new ItemTab2(2,"윤오미","20.09.23 수","10,000원/20,000원"));
+        list2.add(new ItemTab2(2,"서오미","20.10.01 목","100,000원/20,000원"));
+
+        RecyclerView recyclerView2 = view.findViewById(R.id.recycler1);
+        recyclerView2.setLayoutManager(new LinearLayoutManager(getContext()));
+        recyclerView2.setHorizontalScrollBarEnabled(false);
+
+        AdapterTab2 adapter2 = new AdapterTab2(getContext(),list2,0,2);
+        recyclerView2.setAdapter(adapter2);
 
         return view;
     }
