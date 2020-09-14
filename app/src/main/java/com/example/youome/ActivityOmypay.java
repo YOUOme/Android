@@ -126,7 +126,8 @@ public class ActivityOmypay extends AppCompatActivity {
         fail = (TextView)dlgView.findViewById(R.id.fail_message);
 
         if(true){           //   REST API ( 등록 계좌 잔액 검증 부)
-            fail.setVisibility(View.GONE);
+            //fail.setVisibility(View.GONE);
+            fail.setText("충전");
             react.setText(et_money.getText());
             hide.setVisibility(View.VISIBLE);
             hide.setText("원");

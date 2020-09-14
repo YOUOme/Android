@@ -37,10 +37,11 @@ public class ServiceFCM extends FirebaseMessagingService {
             Uri defaultSoundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
             NotificationCompat.Builder notificationBuilder =
                     new NotificationCompat.Builder(this, channelId)
-                            .setSmallIcon(R.mipmap.ic_launcher)
+                            .setSmallIcon(R.mipmap.ic_youome_icon)
                             .setContentTitle(messageTitle)
                             .setContentText(messageBody)
-                            .setAutoCancel(true)
+                            .setAutoCancel(false)
+                            .setPriority(NotificationCompat.PRIORITY_HIGH)
                             .setSound(defaultSoundUri)
                             .setContentIntent(pendingIntent);
             NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
