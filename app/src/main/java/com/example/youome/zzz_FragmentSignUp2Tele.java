@@ -6,9 +6,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.inputmethod.InputMethodManager;
-import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.TextView;
 
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
@@ -17,7 +14,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.FragmentManager;
 
-public class FragmentSignUp2Tele extends BottomSheetDialogFragment {
+public class zzz_FragmentSignUp2Tele extends BottomSheetDialogFragment {
 
     TextView skt,lg,kt,skt_e,lg_e,kt_e;
 
@@ -40,7 +37,7 @@ public class FragmentSignUp2Tele extends BottomSheetDialogFragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        final View view = inflater.inflate(R.layout.fragment_signuptele, container, false);
+        final View view = inflater.inflate(R.layout.zzz_fragment_signuptele, container, false);
         TelecomClickListener tcl = new TelecomClickListener(this);
 
         skt = (TextView)view.findViewById(R.id.t_skt);
@@ -72,8 +69,8 @@ public class FragmentSignUp2Tele extends BottomSheetDialogFragment {
     }
 
     private class TelecomClickListener implements View.OnClickListener{
-        FragmentSignUp2Tele parent;
-        public TelecomClickListener(FragmentSignUp2Tele parent) {
+        zzz_FragmentSignUp2Tele parent;
+        public TelecomClickListener(zzz_FragmentSignUp2Tele parent) {
             this.parent = parent;
         }
 

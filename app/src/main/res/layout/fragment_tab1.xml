@@ -172,7 +172,7 @@
                     android:tint="#000" />
 
                 <TextView
-                    android:id="@+id/textView44"
+                    android:id="@+id/bt_lend"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -186,7 +186,7 @@
                     android:textStyle="bold" />
 
                 <ImageView
-                    android:id="@+id/imageView7"
+                    android:id="@+id/bt_lend2"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"

@@ -1,6 +1,5 @@
 package com.example.youome;
 
-import android.app.Dialog;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,13 +8,12 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
-import com.google.android.material.navigation.NavigationView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.FragmentManager;
 
-public class FragmentSignUp1Auth extends BottomSheetDialogFragment {
+public class zzz_FragmentSignUp1Auth extends BottomSheetDialogFragment {
 
     public CheckBox c_all,c1,c2,c3,c4;
     public int count = 0;
@@ -29,7 +27,7 @@ public class FragmentSignUp1Auth extends BottomSheetDialogFragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        final View view = inflater.inflate(R.layout.fragment_signupauth,container,false);
+        final View view = inflater.inflate(R.layout.zzz_fragment_signupauth,container,false);
         c_all = (CheckBox)view.findViewById(R.id.check_all);
         c1 = (CheckBox)view.findViewById(R.id.check_1);
         c2 = (CheckBox)view.findViewById(R.id.check_2);

@@ -1,22 +1,27 @@
 package com.example.youome;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.graphics.Paint;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.TextView;
 
 public class ActivityLoan_v2 extends AppCompatActivity {
-    TextView bt_due_plus,bt_due_minus,tx_detail,templete_loan_title1,tx_money,bt_done;
+    private TextView bt_due_plus,bt_due_minus,tx_detail,templete_loan_title1,bt_done;
+    public TextView tx_payment,tx_money;
     Intent parnetIntent;
     public int money;
 
+    FragmentBotPayment botPayment;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.templete_loan);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         parnetIntent = getIntent();
         bt_due_plus = (TextView)findViewById(R.id.bt_due_plus);
@@ -49,5 +54,12 @@ public class ActivityLoan_v2 extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        tx_payment = (TextView)findViewById(R.id.tx_payment);
+    }
+
+    public void onSelectPayment(View view){
+        FragmentBotPayment botPayment = new FragmentBotPayment();
+        botPayment.show(getSupportFragmentManager(),botPayment.getTag());
     }
 }

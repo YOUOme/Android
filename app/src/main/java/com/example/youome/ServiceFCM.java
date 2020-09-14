@@ -10,6 +10,7 @@ import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.IBinder;
+import android.util.Log;
 
 import com.example.youome.main.ActivityMainLogo;
 import com.google.firebase.messaging.FirebaseMessagingService;
@@ -27,10 +28,12 @@ public class ServiceFCM extends FirebaseMessagingService {
     @Override
     public void onMessageReceived(@NonNull RemoteMessage remoteMessage) {
         super.onMessageReceived(remoteMessage);
+        Log.d("dddd","1~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
         if (remoteMessage.getNotification() != null) {
+            Log.d("dddd","2~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
             String messageBody = remoteMessage.getNotification().getBody();
             String messageTitle = remoteMessage.getNotification().getTitle();
-            Intent intent = new Intent(this, ActivityMainLogo.class);
+            Intent intent = new Intent(this, ActivityDebtor.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_ONE_SHOT);
             String channelId = "Channel ID";

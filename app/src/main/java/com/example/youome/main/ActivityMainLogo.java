@@ -49,9 +49,10 @@ public class ActivityMainLogo extends AppCompatActivity {
             }
         });
 
-        FirebaseInstanceId.getInstance().getInstanceId().addOnCompleteListener(new OnCompleteListener<InstanceIdResult>() {
+        /*FirebaseInstanceId.getInstance().getInstanceId().addOnCompleteListener(new OnCompleteListener<InstanceIdResult>() {
             @Override
             public void onComplete(@NonNull Task<InstanceIdResult> task) {
+                Log.d("dddd", "onComplete Call");
                 if(!task.isSuccessful()){
 
                 }
@@ -60,7 +61,7 @@ public class ActivityMainLogo extends AppCompatActivity {
         });
 
         // 기기고유id
-        String regId = FirebaseInstanceId.getInstance().getToken();
+        String regId = FirebaseInstanceId.getInstance().getToken();*/
     }
 
     private class MyWebViewClient extends WebViewClient {

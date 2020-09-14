@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -16,7 +17,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class FragmentTab1Home extends Fragment {
-    private TextView bt_omypay,tx_OmyPay,bt_loan;
+    private TextView bt_omypay,tx_OmyPay,bt_loan,bt_lend1;
+    private ImageView bt_lend2;
     private int myMoney = 47870;        // db get
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -26,6 +28,14 @@ public class FragmentTab1Home extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_tab1, null);
+        bt_lend1 = (TextView)view.findViewById(R.id.bt_lend);
+        bt_lend1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getContext(), ActivityAddLoan.class);
+                startActivity(intent);
+            }
+        });
 
         bt_omypay = (TextView) view.findViewById(R.id.bt_omypay);
         bt_omypay.setOnClickListener(new View.OnClickListener() {
