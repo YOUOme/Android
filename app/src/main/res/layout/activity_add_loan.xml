@@ -11,9 +11,9 @@
         android:id="@+id/linearLayout7"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="25dp"
         android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -42,97 +42,42 @@
             android:textSize="18dp" />
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/linearLayout8"
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:orientation="horizontal"
-        android:layout_marginRight="20dp"
+        android:layout_marginTop="92dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout7">
+        app:layout_constraintTop_toTopOf="parent"
+        app:tabIndicatorColor="#fff"
+        app:tabSelectedTextColor="#fff"
+        app:tabTextAppearance="@style/YOUOme_TabText"
+        app:tabTextColor="#444">
 
-        <EditText
-            android:id="@+id/et_recent_search"
-            android:layout_width="315dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:fontFamily="@font/youome_main_font"
-            android:background="@drawable/edit_style_search"
-            android:ems="10"
-            android:hint="이름 혹은 전화번호 검색하기"
-            android:inputType="textPersonName"
-            android:paddingLeft="30dp"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:textColor="#000"
-            android:text=""
-            android:textColorHint="@color/youome_hintColor"
-            android:textSize="16dp" />
-
-        <ImageView
-            android:onClick="onRecentSearchClick"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="13dp"
-            android:layout_weight="0"
-            android:tint="#000"
-            android:background="@drawable/bt_style_lightgray3"
-            android:paddingHorizontal="13dp"
-            android:paddingVertical="5dp"
-            app:srcCompat="@drawable/search_icon" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout6"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="27dp"
-        android:layout_marginTop="45dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout8"
-        app:layout_constraintVertical_bias="0.0">
-
-        <TextView
-            android:id="@+id/tx_recent"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="최근 거래"
-            android:textColor="@color/youome_subColor"
-            android:fontFamily="@font/youome_main_font"
-            android:textSize="25dp"
-            android:textStyle="bold" />
-
-        <ImageView
-            android:id="@+id/imageView5"
+        <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:visibility="invisible"
-            android:layout_marginRight="10dp"
-            android:layout_weight="0"
-            app:srcCompat="@drawable/bt_threedot" />
-    </LinearLayout>
+            android:text="최근 거래" />
 
-    <ListView
-        android:id="@+id/recent_lend"
-        android:layout_width="match_parent"
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="연락처" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="25dp"
-        android:layout_marginHorizontal="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout6" />
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout">
+
+    </androidx.viewpager.widget.ViewPager>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

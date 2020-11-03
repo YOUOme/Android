@@ -1,9 +1,14 @@
 package com.example.youome;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentStatePagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.EditText;
@@ -12,18 +17,15 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.tabs.TabLayout;
+
 import java.util.ArrayList;
 
 public class ActivityAddLoan extends AppCompatActivity {
-    ListView recentLendListView;
-    AdapterLoanItem adapter;
-    EditText et_recent_search;
-    TextView tx_recent;
 
-    String myName;
+    private TabLayout tabLayout;
+    private ViewPager viewPager;
     int money = 40000; // 잔액을 전달받아야함.
-
-    ArrayList<AdapterLoanItem.ItemData> originalData;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,51 +33,58 @@ public class ActivityAddLoan extends AppCompatActivity {
         setContentView(R.layout.activity_add_loan);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        originalData = new ArrayList<AdapterLoanItem.ItemData>();
-        adapter = new AdapterLoanItem(getSupportFragmentManager());
-        //dummy data
-        adapter.addItem("김오미","010-1111-1111","유오미 A등급 | 나이스 3등급");
-        adapter.addItem("나오미","010-1111-1111","유오미 A등급 | 나이스 1등급");
-        adapter.addItem("박오미","010-1111-1111","유오미 C등급 | 나이스 5등급");
-        adapter.addItem("이오미","010-1111-1111","유오미 A등급 | 나이스 3등급");
-        adapter.addItem("조오미","010-1111-1111","유오미 A등급 | 나이스 3등급");
-        adapter.addItem("윤오미","010-1111-1111","유오미 A등급 | 나이스 3등급");
-        adapter.addItem("최오미","010-1111-1111","유오미 A등급 | 나이스 3등급");
-        adapter.addItem("고오미","010-1111-1111","유오미 A등급 | 나이스 3등급");
+        tabLayout = (TabLayout)findViewById(R.id.tabLayout);
+        //tabLayout.setHorizontalScrollBarEnabled(false);
+        //tabLayout.setVerticalScrollBarEnabled(false);
 
+        viewPager = (ViewPager)findViewById(R.id.pager);
+        viewPager.setHorizontalScrollBarEnabled(false);
 
-        recentLendListView = (ListView)findViewById(R.id.recent_lend);
-        recentLendListView.setAdapter(adapter);
+        AdapterYouomeLoanPage pageAdapter = new AdapterYouomeLoanPage(getSupportFragmentManager(),tabLayout.getTabCount());
 
-        et_recent_search = (EditText)findViewById(R.id.et_recent_search);
-        tx_recent = (TextView)findViewById(R.id.tx_recent);
+        viewPager.setAdapter(pageAdapter);
+        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
 
-        originalData.addAll(adapter.getArrayList());
+        /*tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener(){
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                viewPager.setCurrentItem(tab.getPosition(),false);
+            }// smoothScroll : disable swipe animation
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {}
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {}
+        });*/
+
     }
 
-    public void onRecentSearchClick(View view){
-        String searchText;
-        ArrayList<AdapterLoanItem.ItemData> searchedData = new ArrayList<AdapterLoanItem.ItemData>();
-        int length;
+    class AdapterYouomeLoanPage extends FragmentStatePagerAdapter {
 
-        if(!et_recent_search.getText().toString().isEmpty()) {
-            tx_recent.setText("검색 결과");
-            searchText = et_recent_search.getText().toString();
-            length = searchText.length();
+        private int tabCount;
+        public AdapterYouomeLoanPage(FragmentManager fm, int tabCount) {
+            super(fm);
+            this.tabCount = tabCount;
+        }
 
-            for(AdapterLoanItem.ItemData data : originalData){
-                if(searchText.equals(data.getName().substring(0,length)))
-                    searchedData.add(data);
+        @Override
+        public Fragment getItem(int position) {
+            switch (position){
+                case 0:
+                    ActivityAddLoanFragment1 Fragment1 = new ActivityAddLoanFragment1();
+                    return Fragment1;
+                case 1:
+                    ActivityAddLoanFragment2 Fragment2 = new ActivityAddLoanFragment2();
+                    return Fragment2;
+                default:
+                    return null;
             }
-
-            adapter.setArrayList(searchedData);
-            adapter.notifyDataSetChanged();
         }
-        else {
-            tx_recent.setText("최근 거래");
-            adapter.setArrayList(originalData);
-            adapter.notifyDataSetChanged();
+
+        @Override
+        public int getCount() {
+            return tabCount;
         }
     }
+
 
 }
