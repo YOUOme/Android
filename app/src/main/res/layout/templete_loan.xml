@@ -136,33 +136,33 @@
                 android:text="(연)이자율" />
 
             <TextView
-                android:id="@+id/textView62"
+                android:id="@+id/bt_plus"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/youome_main_font"
+                android:text="+"
                 android:textColor="#000"
                 android:textSize="20dp"
-                android:fontFamily="@font/youome_main_font"
-                android:textStyle="bold"
-                android:text="+" />
+                android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/textView63"
+                android:id="@+id/percent_interest"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#000"
-                android:textSize="15dp"
+                android:textSize="17dp"
                 android:layout_marginHorizontal="10dp"
                 android:text="10%" />
 
             <TextView
-                android:id="@+id/textView64"
+                android:id="@+id/bt_minus"
                 android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/youome_main_font"
+                android:text="-"
                 android:textColor="#000"
                 android:textSize="20dp"
-                android:textStyle="bold"
-                android:fontFamily="@font/youome_main_font"
-                android:layout_height="wrap_content"
-                android:text="-" />
+                android:textStyle="bold" />
         </LinearLayout>
 
         <LinearLayout

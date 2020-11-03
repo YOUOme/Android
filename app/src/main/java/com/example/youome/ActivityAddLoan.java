@@ -25,7 +25,7 @@ public class ActivityAddLoan extends AppCompatActivity {
 
     private TabLayout tabLayout;
     private ViewPager viewPager;
-    int money = 40000; // 잔액을 전달받아야함.
+    int money = 500000; // 잔액을 전달받아야함.
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

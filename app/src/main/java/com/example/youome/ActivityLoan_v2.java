@@ -12,8 +12,10 @@ import android.widget.TextView;
 
 public class ActivityLoan_v2 extends AppCompatActivity {
     private TextView bt_due_plus,bt_due_minus,tx_detail,templete_loan_title1,bt_done;
+    private TextView bt_interest_plus,bt_interest_minus,bt_calendar,tx_interest;
+    private int interest_rate = 10;
     public TextView tx_payment,tx_money;
-    Intent parnetIntent;
+    private Intent parnetIntent;
     public int money;
 
     FragmentBotPayment botPayment;
@@ -56,6 +58,29 @@ public class ActivityLoan_v2 extends AppCompatActivity {
         });
 
         tx_payment = (TextView)findViewById(R.id.tx_payment);
+
+
+        // ---- 이자율 ----
+        tx_interest = (TextView)findViewById(R.id.percent_interest);
+        bt_interest_plus = (TextView)findViewById(R.id.bt_plus);
+        bt_interest_plus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(interest_rate < 20)
+                    interest_rate++;
+                tx_interest.setText(interest_rate+"%");
+            }
+        });
+
+        bt_interest_minus = (TextView)findViewById(R.id.bt_minus);
+        bt_interest_minus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(interest_rate > 0)
+                    interest_rate--;
+                tx_interest.setText(interest_rate+"%");
+            }
+        });
     }
 
     public void onSelectPayment(View view){

@@ -47,7 +47,9 @@ public class FragmentAddLoan extends BottomSheetDialogFragment {
         if(type == 1) parentMoney = ((ActivityAddLoan)getActivity()).money;
         else parentMoney = ((ActivityLoan_v2)getActivity()).money;
 
-        selectedMoney = (int)(((ActivityAddLoan)getActivity()).money*0.5);
+        if(type == 1) selectedMoney = (int)(((ActivityAddLoan)getActivity()).money*0.5);
+        else selectedMoney = (int)(((ActivityLoan_v2)getActivity()).money*0.5);
+
         tMoney.setText( String.format("%,d",(int)(parentMoney*0.5))+" 원");
 
         seekBar = (SeekBar)view.findViewById(R.id.seekBar);
