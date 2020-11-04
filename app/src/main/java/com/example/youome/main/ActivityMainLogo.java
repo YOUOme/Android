@@ -109,8 +109,8 @@ public class ActivityMainLogo extends AppCompatActivity {
         webSettings.setSaveFormData(true);
 
         webView.addJavascriptInterface(new AndroidBridge(),"BRIDGE");
-        //webView.loadUrl("https://testapi.openbanking.or.kr/oauth/2.0/authorize?response_type=code&client_id=JfSpiq1QR1xFqZS3z1yhEL4E2PKYDDcou7DG85Tl&redirect_uri=https://220.70.46.145:8001/authResult&scope=login inquiry transfer&state=abcdefghijklmnopqrstuvwxyz123456&auth_type=0");
-        webView.loadUrl("http://220.70.46.145:8001/bridgeTest");
+        webView.loadUrl("https://testapi.openbanking.or.kr/oauth/2.0/authorize?response_type=code&client_id=JfSpiq1QR1xFqZS3z1yhEL4E2PKYDDcou7DG85Tl&redirect_uri=http://220.70.46.145:8001/authResult&scope=login inquiry transfer&state=abcdefghijklmnopqrstuvwxyz123456&auth_type=0");
+        //webView.loadUrl("http://220.70.46.145:8001/bridgeTest");
         webView.setWebViewClient(new MyWebViewClient());
         dlg.show();
     }

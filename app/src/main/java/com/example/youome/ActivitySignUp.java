@@ -64,8 +64,8 @@ public class ActivitySignUp extends AppCompatActivity {
         //tele.setCancelable(false);
         //auth.setCancelable(false);
 
-        et_name.setText("박동한");
-        et_id.setText("우리 | 0000-000-000000");
+        et_name.setText("김승현");
+        et_id.setText("신한 | 110-514-679760");
         password = (TextView)findViewById(R.id.bt_password);
         password.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -15,7 +15,7 @@ public class ActivityIOU extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_i_o_u);
 
-        bt_loan = (Button)findViewById(R.id.bt_loan);
+        bt_loan = (Button)findViewById(R.id.bt_sign);
         bt_loan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
