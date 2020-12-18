@@ -58,10 +58,11 @@ public class ActivityMainLogo extends AppCompatActivity {
                 }
                 String token = task.getResult().getToken();
             }
-        });
+        });*/
 
         // 기기고유id
-        String regId = FirebaseInstanceId.getInstance().getToken();*/
+        String regId = FirebaseInstanceId.getInstance().getToken();
+        Log.d("dddd",regId);
     }
 
     private class MyWebViewClient extends WebViewClient {
@@ -109,7 +110,7 @@ public class ActivityMainLogo extends AppCompatActivity {
         webSettings.setSaveFormData(true);
 
         webView.addJavascriptInterface(new AndroidBridge(),"BRIDGE");
-        webView.loadUrl("https://testapi.openbanking.or.kr/oauth/2.0/authorize?response_type=code&client_id=JfSpiq1QR1xFqZS3z1yhEL4E2PKYDDcou7DG85Tl&redirect_uri=http://220.70.46.145:8001/authResult&scope=login inquiry transfer&state=abcdefghijklmnopqrstuvwxyz123456&auth_type=0");
+        webView.loadUrl("https://testapi.openbanking.or.kr/oauth/2.0/authorize?auth_type=0&response_type=code&client_id=JfSpiq1QR1xFqZS3z1yhEL4E2PKYDDcou7DG85Tl&redirect_uri=http://220.70.46.145:8001/api/auth/openbank&state=abcdefghijklmnopqrstuvwxyz123456&scope=login inquiry transfer&client_info=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IlZzTjF4cHdWcmttS0tCai9RZUNJNG9kdlRKbz0iLCJpYXQiOjE2MDgzMTg0NjQsImV4cCI6MTYwODkyMzI2NCwiaXNzIjoieW91b21lLmNvbSIsInN1YiI6InVzZXJJbmZvIn0.tpI4uyUeZ1WDbjVsXIZtfuMH_0RmwD5jOXqJZGITfnY");
         //webView.loadUrl("http://220.70.46.145:8001/bridgeTest");
         webView.setWebViewClient(new MyWebViewClient());
         dlg.show();

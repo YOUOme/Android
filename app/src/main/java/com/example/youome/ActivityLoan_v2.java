@@ -54,6 +54,7 @@ public class ActivityLoan_v2 extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(),ActivityIOU.class);
                 startActivity(intent);
+                finish();
             }
         });
 

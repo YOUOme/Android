@@ -66,17 +66,26 @@ public class ActivitySignUpPassward extends AppCompatActivity {
                 tx_password_type.setText("결제비밀번호 확인");
                 if(prossCount == 2){
                     render();
-                    Intent intent = new Intent(getApplicationContext(),ActivityYOUOme.class);
-                    ProgressDialog progressDialog = new ProgressDialog(ActivitySignUpPassward.this);
+                    final Intent intent = new Intent(getApplicationContext(),ActivityYOUOme.class);
+                    final ProgressDialog progressDialog = new ProgressDialog(ActivitySignUpPassward.this);
                     progressDialog.setMessage("결제 비밀번호를 등록하는 중...");
                     progressDialog.setCancelable(false);
                     progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
                     progressDialog.show();
-                    try{
-                    Thread.sleep(2500);}catch (Exception e){}
+                    Thread thread = new Thread(){
+                        @Override
+                        public void run() {
+                            super.run();
+                            try{
+                                Thread.sleep(2500);}
+                            catch (Exception e){}
+                            startActivity(intent);
+                            progressDialog.dismiss();
+                            finish();
+                        }
+                    };
+                    thread.start();
 
-                    startActivity(intent);
-                    finish();
                 }
                 render();
             }

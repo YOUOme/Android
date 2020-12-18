@@ -13,7 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ActivityDebtor"></activity>
+        <activity android:name=".ActivityIOUtransfer"></activity>
+        <activity android:name=".ActivityDebtor" />
 
         <service
             android:name=".ServiceFCM"
