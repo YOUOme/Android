@@ -4,33 +4,82 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#00000000"
+    android:background="@drawable/castle_groom"
     tools:context=".ActivityDebtor">
 
     <LinearLayout
+        android:background="@drawable/gray_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
         android:background="@drawable/style_iou"
         android:backgroundTint="@color/youome_background"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginHorizontal="15dp"
-        android:layout_marginBottom="208dp"
+        android:layout_marginBottom="0dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+        app:layout_constraintBottom_toTopOf="@+id/debtor_button_layout">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/debtor_lender_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/youome_main_font"
+                android:textColor="#fff"
+                android:text="차오미" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25dp"
+                android:fontFamily="@font/youome_main_font"
+                android:textColor="#fff"
+                android:text="에게 빌리기"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/debtor_lend_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:scaleY="1.03"
+            android:textSize="45dp"
+            android:textColor="#fff"
+            android:fontFamily="@font/youome_main_font"
+            android:text="500,000원" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="30dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="10dp"
             android:background="@drawable/style_whitenstroke"
             android:orientation="horizontal"
             android:padding="20dp">
 
             <TextView
-                android:id="@+id/textView61"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -39,33 +88,13 @@
                 android:textSize="15dp" />
 
             <TextView
-                android:id="@+id/textView62"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/youome_main_font"
-                android:text="+"
-                android:textColor="#000"
-                android:textSize="20dp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/textView63"
+                android:id="@+id/debtor_interest"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10dp"
                 android:text="10%"
                 android:textColor="#000"
                 android:textSize="15dp" />
-
-            <TextView
-                android:id="@+id/textView64"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/youome_main_font"
-                android:text="-"
-                android:textColor="#000"
-                android:textSize="20dp"
-                android:textStyle="bold" />
         </LinearLayout>
 
         <LinearLayout
@@ -85,7 +114,6 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/textView65"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -95,18 +123,16 @@
                     android:textSize="15dp" />
 
                 <TextView
-                    android:id="@+id/textView66"
                     android:layout_width="wrap_content"
                     android:layout_height="27dp"
-                    android:layout_marginRight="5dp"
+                    android:layout_marginRight="15dp"
                     android:fontFamily="@font/youome_main_font"
                     android:text="원금균등상환"
-                    android:textColor="@color/youome_blue"
+                    android:textColor="@color/youome_red"
                     android:textSize="14dp" />
             </LinearLayout>
 
             <TextView
-                android:id="@+id/textView72"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginHorizontal="20dp"
@@ -121,7 +147,6 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/textView67"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -131,27 +156,16 @@
                     android:textSize="15dp" />
 
                 <TextView
-                    android:id="@+id/tx_payment"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
                     android:fontFamily="@font/youome_main_font"
                     android:text="매월 말일"
                     android:textColor="#000"
                     android:textSize="14dp" />
-
-                <ImageView
-                    android:id="@+id/bt_selectpayment"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginHorizontal="9dp"
-                    android:onClick="onSelectPayment"
-                    android:rotation="270"
-                    app:srcCompat="@drawable/ic_detail" />
             </LinearLayout>
 
             <TextView
-                android:id="@+id/textView71"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginHorizontal="20dp"
@@ -166,7 +180,6 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/textView69"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
@@ -177,49 +190,68 @@
                     android:textSize="15dp" />
 
                 <TextView
-                    android:id="@+id/bt_due_plus"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginHorizontal="5dp"
-                    android:fontFamily="@font/youome_main_font"
-                    android:text="+"
-                    android:textColor="#000"
-                    android:textSize="20dp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/templete_due_date"
+                    android:id="@+id/debtor_due_date"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
+                    android:layout_marginRight="15dp"
                     android:fontFamily="@font/youome_main_font"
                     android:text="2020.08.31."
                     android:textColor="#000"
                     android:textSize="14dp" />
-
-                <TextView
-                    android:id="@+id/bt_due_minus"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="5dp"
-                    android:fontFamily="@font/youome_main_font"
-                    android:text="-"
-                    android:textColor="#000"
-                    android:textSize="20dp"
-                    android:textStyle="bold" />
-
-                <ImageView
-                    android:id="@+id/bt_calander"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginHorizontal="9dp"
-                    android:rotation="270"
-                    app:srcCompat="@drawable/ic_detail" />
             </LinearLayout>
         </LinearLayout>
-
-
-
     </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/debtor_button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginBottom="30dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/bt_reject"
+            android:layout_width="295dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/reject_button" />
+
+        <Button
+            android:id="@+id/bt_check_iou"
+            android:layout_width="295dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:background="@drawable/check_iou_button" />
+
+        <TextView
+            android:id="@+id/debtor_transfer_alarm_warning1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/youome_main_font"
+            android:text="본인이 요청한 거래가 아닐 경우 거절하기를 눌러주세요."
+            android:textColor="#A0A7BA"
+            android:textSize="14dp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/debtor_transfer_alarm_warning2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/youome_main_font"
+            android:text="차용증 확인 후 동의시 자동으로 거래가 성립됩니다."
+            android:textColor="#A0A7BA"
+            android:textSize="14dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

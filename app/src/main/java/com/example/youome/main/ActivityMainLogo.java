@@ -23,6 +23,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.youome.ActivityDebtor;
+import com.example.youome.ActivityIOU;
 import com.example.youome.ActivitySignUp;
 import com.example.youome.R;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -38,6 +40,20 @@ public class ActivityMainLogo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+        Intent intent = getIntent();
+        Log.d("intent : ", intent.toString());
+        if(intent.getFlags() == 0x14400000 || intent.getFlags() == 0x14000000){
+            String notificationData = intent.getStringExtra("test");
+            if(notificationData != null)
+                Log.d("FCM_TEST", notificationData);
+
+            // ToDo - compass0
+            // 로그인 api를 통해서 로그인 한 후에
+            // Activity 전환(뒤로가기해도 이전 엑티비티로 가지 않고 앱이 꺼지도록 만들기.) 즉, 전환했을 때의 액티비티가 앱의 제일 처음 액티비티처럼 행동하도록.
+            intent = new Intent(getApplicationContext(), ActivityDebtor.class);
+            startActivity(intent);
+        }
 
         bt_login = (TextView)findViewById(R.id.kakao_login);
         touch = (TextView)findViewById(R.id.touchme);
