@@ -13,6 +13,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar"
         android:usesCleartextTraffic="true">
+
+        <activity android:name=".ActivityDebtorIOUTransfer"/>
+        <activity android:name="ActivityDebtorIOUAgreement"/>
+        <activity android:name=".ActivityDebtorIOUSignature"/>
+        <activity android:name=".ActivityDebtorIOU"/>
         <activity android:name=".ActivityIOUtransfer"></activity>
         <activity android:name=".ActivityDebtor" />
 

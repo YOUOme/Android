@@ -19,7 +19,7 @@ import androidx.recyclerview.widget.RecyclerView;
 public class FragmentTab1Home extends Fragment {
     private TextView bt_omypay,tx_OmyPay,bt_loan,bt_lend1;
     private ImageView bt_lend2;
-    private int myMoney = 47870;        // db get
+    private int myMoney = 500000;        // db get
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

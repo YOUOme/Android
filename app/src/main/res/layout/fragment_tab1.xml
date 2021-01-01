@@ -79,9 +79,9 @@
                 android:layout_marginLeft="15dp"
                 android:fontFamily="@font/youome_main_font"
                 android:gravity="center_vertical"
-                android:text="47,870 원"
+                android:text="500,000원"
                 android:textColor="#000"
-                android:textSize="21dp" />
+                android:textSize="19dp" />
 
             <TextView
                 android:id="@+id/bt_loan"
