@@ -1,4 +1,4 @@
-package com.example.youome;
+package com.example.youome.loanholder;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -7,25 +7,16 @@ import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
-import android.util.Log;
-import android.view.MotionEvent;
-import android.view.View;
 import android.view.WindowManager;
-import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
 
+import com.example.youome.R;
 import com.google.android.material.tabs.TabLayout;
-
-import java.util.ArrayList;
 
 public class ActivityAddLoan extends AppCompatActivity {
 
     private TabLayout tabLayout;
     private ViewPager viewPager;
-    int money = 500000; // 잔액을 전달받아야함.
+    public int money = 500000; // 잔액을 전달받아야함. ToDo 이전 액티비티로부터 번들로
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

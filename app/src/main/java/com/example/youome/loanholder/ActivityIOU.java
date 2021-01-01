@@ -1,4 +1,4 @@
-package com.example.youome;
+package com.example.youome.loanholder;
 
 import androidx.appcompat.app.AppCompatActivity;
 import retrofit2.Call;
@@ -11,8 +11,10 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
+import com.example.youome.NetworkAPI;
+import com.example.youome.NetworkRectrofitClient;
+import com.example.youome.R;
 import com.google.gson.annotations.SerializedName;
 
 public class ActivityIOU extends AppCompatActivity {
@@ -32,9 +34,7 @@ public class ActivityIOU extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-
-
-                final Intent intent = new Intent(getApplicationContext(),ActivityIOUtransfer.class);
+                final Intent intent = new Intent(getApplicationContext(), ActivityIOUtransfer.class);
                 final ProgressDialog progressDialog = new ProgressDialog(ActivityIOU.this);
                 progressDialog.setMessage("김오미님의 승인을 기다리는 중...");
                 progressDialog.setCancelable(false);
@@ -46,16 +46,17 @@ public class ActivityIOU extends AppCompatActivity {
                     public void run() {
                         super.run();
 
-                        try{
+                        // ToDo - block chain
+                        /*try{
                             startRequest(new ReqData("dkfkalsdfklfdskldfs134"));
                         }catch (Exception e){
                             Log.d("dddd","서버요청 오류");
-                        }
-
+                        }*/
 
                         try{
                                  Thread.sleep(5000);}
                         catch (Exception e){}
+
                         startActivity(intent);
                         progressDialog.dismiss();
                         finish();

@@ -8,11 +8,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.youome.main_signup.ActivitySignUp;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.FragmentManager;
+
+import com.example.youome.main_signup.ActivitySignUp;
 
 public class zzz_FragmentSignUp2Tele extends BottomSheetDialogFragment {
 

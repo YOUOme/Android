@@ -16,6 +16,8 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.youome.loanholder.ActivityAddLoan;
+
 public class FragmentTab1Home extends Fragment {
     private TextView bt_omypay,tx_OmyPay,bt_loan,bt_lend1;
     private ImageView bt_lend2;

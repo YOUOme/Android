@@ -14,12 +14,12 @@
         android:theme="@style/Theme.AppCompat.NoActionBar"
         android:usesCleartextTraffic="true">
 
-        <activity android:name=".ActivityDebtorIOUTransfer"/>
-        <activity android:name="ActivityDebtorIOUAgreement"/>
-        <activity android:name=".ActivityDebtorIOUSignature"/>
-        <activity android:name=".ActivityDebtorIOU"/>
-        <activity android:name=".ActivityIOUtransfer"></activity>
-        <activity android:name=".ActivityDebtor" />
+        <activity android:name=".debtor.ActivityDebtorIOUTransfer"/>
+        <activity android:name=".debtor.ActivityDebtorIOUAgreement"/>
+        <activity android:name=".debtor.ActivityDebtorIOUSignature"/>
+        <activity android:name=".debtor.ActivityDebtorIOU"/>
+        <activity android:name=".loanholder.ActivityIOUtransfer"></activity>
+        <activity android:name=".debtor.ActivityDebtor" />
 
         <service
             android:name=".ServiceFCM"
@@ -29,23 +29,23 @@
             </intent-filter>
         </service>
 
-        <activity android:name=".ActivitySignUpPassward" />
+        <activity android:name=".main_signup.ActivitySignUpPassward" />
         <activity android:name=".ActivityO2OFunding" />
         <activity android:name=".ActivityP2PFunding" />
-        <activity android:name=".ActivityLoan_v2" />
+        <activity android:name=".loanholder.ActivityLoan_v2" />
         <activity android:name=".ActivityAddAccount" />
         <activity android:name=".ActivityTransfer" />
         <activity android:name=".ActivityChangeAccount" />
-        <activity android:name=".ActivityIOU" />
+        <activity android:name=".loanholder.ActivityIOU" />
         <activity android:name=".zzz_ActivityLoan" />
-        <activity android:name=".ActivityAddLoan" />
+        <activity android:name=".loanholder.ActivityAddLoan" />
         <activity android:name=".ActivityAlarm" />
         <activity
             android:name=".ActivityOmypay"
             android:windowSoftInputMode="adjustResize" />
-        <activity android:name=".ActivitySignUp" />
+        <activity android:name=".main_signup.ActivitySignUp" />
         <activity android:name=".ActivityYOUOme" />
-        <activity android:name=".main.ActivityMainLogo">
+        <activity android:name=".main_signup.ActivityMainLogo">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

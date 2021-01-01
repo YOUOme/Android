@@ -1,6 +1,5 @@
-package com.example.youome.main;
+package com.example.youome.main_signup;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
@@ -11,7 +10,6 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Display;
-import android.view.Gravity;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -19,18 +17,12 @@ import android.webkit.JavascriptInterface;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.youome.ActivityDebtor;
-import com.example.youome.ActivityIOU;
-import com.example.youome.ActivitySignUp;
+import com.example.youome.debtor.ActivityDebtor;
 import com.example.youome.R;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.iid.FirebaseInstanceId;
-import com.google.firebase.iid.InstanceIdResult;
 
 public class ActivityMainLogo extends AppCompatActivity {
 
@@ -50,9 +42,9 @@ public class ActivityMainLogo extends AppCompatActivity {
 
             // ToDo - compass0
             // 로그인 api를 통해서 로그인 한 후에
-            // Activity 전환(뒤로가기해도 이전 엑티비티로 가지 않고 앱이 꺼지도록 만들기.) 즉, 전환했을 때의 액티비티가 앱의 제일 처음 액티비티처럼 행동하도록.
             intent = new Intent(getApplicationContext(), ActivityDebtor.class);
             startActivity(intent);
+            finish();
         }
 
         bt_login = (TextView)findViewById(R.id.kakao_login);

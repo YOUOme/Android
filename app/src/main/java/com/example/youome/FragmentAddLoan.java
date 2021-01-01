@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
+import com.example.youome.loanholder.ActivityAddLoan;
+import com.example.youome.loanholder.ActivityLoan_v2;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
 import androidx.annotation.NonNull;

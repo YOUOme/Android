@@ -1,14 +1,16 @@
-package com.example.youome;
+package com.example.youome.main_signup;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.youome.ActivityYOUOme;
+import com.example.youome.R;
 
 public class ActivitySignUpPassward extends AppCompatActivity {
     TextView[] tv;
@@ -66,7 +68,7 @@ public class ActivitySignUpPassward extends AppCompatActivity {
                 tx_password_type.setText("결제비밀번호 확인");
                 if(prossCount == 2){
                     render();
-                    final Intent intent = new Intent(getApplicationContext(),ActivityYOUOme.class);
+                    final Intent intent = new Intent(getApplicationContext(), ActivityYOUOme.class);
                     final ProgressDialog progressDialog = new ProgressDialog(ActivitySignUpPassward.this);
                     progressDialog.setMessage("결제 비밀번호를 등록하는 중...");
                     progressDialog.setCancelable(false);

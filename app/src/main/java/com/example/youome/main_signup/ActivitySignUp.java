@@ -1,24 +1,22 @@
-package com.example.youome;
+package com.example.youome.main_signup;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.KeyEvent;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.TextView;
 
+import com.example.youome.R;
 import com.google.android.material.textfield.TextInputEditText;
-import com.google.android.material.textfield.TextInputLayout;
 import com.google.gson.annotations.SerializedName;
-import com.szagurskii.patternedtextwatcher.PatternedTextWatcher;
+import com.google.android.material.textfield.TextInputLayout;
 
 public class ActivitySignUp extends AppCompatActivity {
 
     TextInputEditText et_phone,et_name,et_id;
-    TextInputLayout textInputLayout;
+    public TextInputLayout textInputLayout;
     TextView password;
     boolean onetime = true;
 
@@ -70,7 +68,7 @@ public class ActivitySignUp extends AppCompatActivity {
         password.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),ActivitySignUpPassward.class);
+                Intent intent = new Intent(getApplicationContext(), ActivitySignUpPassward.class);
                 startActivity(intent);
             }
         });

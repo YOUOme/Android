@@ -1,10 +1,12 @@
-package com.example.youome;
+package com.example.youome.loanholder;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import com.example.youome.R;
 
 public class ActivityIOUtransfer extends AppCompatActivity {
 

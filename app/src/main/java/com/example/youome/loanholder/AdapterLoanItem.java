@@ -1,4 +1,4 @@
-package com.example.youome;
+package com.example.youome.loanholder;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,6 +10,9 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import androidx.fragment.app.FragmentManager;
+
+import com.example.youome.FragmentAddLoan;
+import com.example.youome.R;
 
 public class AdapterLoanItem extends BaseAdapter {
     private ArrayList<ItemData> mItems = new ArrayList<>();

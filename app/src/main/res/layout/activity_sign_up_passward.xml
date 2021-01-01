@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/youome_background"
-    tools:context=".ActivitySignUpPassward">
+    tools:context=".main_signup.ActivitySignUpPassward">
 
     <TableLayout
         android:id="@+id/tableLayout"

@@ -1,7 +1,6 @@
-package com.example.youome;
+package com.example.youome.loanholder;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.graphics.Paint;
@@ -9,6 +8,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.TextView;
+
+import com.example.youome.FragmentAddLoan;
+import com.example.youome.FragmentBotPayment;
+import com.example.youome.R;
 
 public class ActivityLoan_v2 extends AppCompatActivity {
     private TextView bt_due_plus,bt_due_minus,tx_detail,templete_loan_title1,bt_done;
@@ -52,7 +55,7 @@ public class ActivityLoan_v2 extends AppCompatActivity {
         bt_done.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),ActivityIOU.class);
+                Intent intent = new Intent(getApplicationContext(), ActivityIOU.class);
                 startActivity(intent);
                 finish();
             }

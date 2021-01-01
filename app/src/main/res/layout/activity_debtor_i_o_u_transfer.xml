@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#fff"
-    tools:context=".ActivityDebtorIOUTransfer">
+    tools:context=".debtor.ActivityDebtorIOUTransfer">
 
     <LinearLayout
         android:id="@+id/linearLayout3"

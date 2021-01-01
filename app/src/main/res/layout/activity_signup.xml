@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/youome_background"
     android:id="@+id/signcontainer"
-    tools:context=".ActivitySignUp">
+    tools:context=".main_signup.ActivitySignUp">
 
     <LinearLayout
         android:id="@+id/linearLayout11"

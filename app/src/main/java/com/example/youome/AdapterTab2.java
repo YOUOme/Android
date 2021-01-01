@@ -15,6 +15,8 @@ import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.youome.loanholder.ActivityIOU;
+
 public class AdapterTab2 extends RecyclerView.Adapter<AdapterTab2.ViewHolder> {
 
     private ArrayList<ItemTab2> mData;
@@ -88,7 +90,7 @@ public class AdapterTab2 extends RecyclerView.Adapter<AdapterTab2.ViewHolder> {
         holder.bt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context,ActivityIOU.class);
+                Intent intent = new Intent(context, ActivityIOU.class);
                 intent.putExtra("mode",mode);
                 context.startActivity(intent);
             }

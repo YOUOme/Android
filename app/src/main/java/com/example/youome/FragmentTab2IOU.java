@@ -17,6 +17,8 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.youome.loanholder.ActivityAddLoan;
+
 public class FragmentTab2IOU extends Fragment{
     TextView bt_addlend;
     //ListView lendListView, completeLendListView;
