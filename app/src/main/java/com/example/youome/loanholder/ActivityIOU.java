@@ -35,7 +35,9 @@ public class ActivityIOU extends AppCompatActivity {
             public void onClick(View view) {
 
                 final Intent intent = new Intent(getApplicationContext(), ActivityIOUtransfer.class);
-                final ProgressDialog progressDialog = new ProgressDialog(ActivityIOU.this);
+                startActivity(intent);
+                finish();
+                /*final ProgressDialog progressDialog = new ProgressDialog(ActivityIOU.this);
                 progressDialog.setMessage("김오미님의 승인을 기다리는 중...");
                 progressDialog.setCancelable(false);
                 progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
@@ -47,11 +49,11 @@ public class ActivityIOU extends AppCompatActivity {
                         super.run();
 
                         // ToDo - block chain
-                        /*try{
+                        try{
                             startRequest(new ReqData("dkfkalsdfklfdskldfs134"));
                         }catch (Exception e){
                             Log.d("dddd","서버요청 오류");
-                        }*/
+                        }
 
                         try{
                                  Thread.sleep(5000);}
@@ -62,7 +64,7 @@ public class ActivityIOU extends AppCompatActivity {
                         finish();
                     }
                 };
-                thread.start();
+                thread.start();*/
             }
         });
     }
