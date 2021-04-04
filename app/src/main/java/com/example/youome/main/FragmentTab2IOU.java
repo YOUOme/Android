@@ -1,4 +1,4 @@
-package com.example.youome;
+package com.example.youome.main;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,6 +17,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.youome.R;
 import com.example.youome.loanholder.ActivityAddLoan;
 
 public class FragmentTab2IOU extends Fragment{

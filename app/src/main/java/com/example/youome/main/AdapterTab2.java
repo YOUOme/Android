@@ -1,4 +1,4 @@
-package com.example.youome;
+package com.example.youome.main;
 
 import android.content.Context;
 import android.content.Intent;
@@ -15,6 +15,7 @@ import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.youome.R;
 import com.example.youome.loanholder.ActivityIOU;
 
 public class AdapterTab2 extends RecyclerView.Adapter<AdapterTab2.ViewHolder> {

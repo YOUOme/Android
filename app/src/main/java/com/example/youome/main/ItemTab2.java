@@ -1,4 +1,4 @@
-package com.example.youome;
+package com.example.youome.main;
 
 public class ItemTab2 {
     private String name, date, money;

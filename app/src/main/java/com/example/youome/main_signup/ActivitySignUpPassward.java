@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.youome.ActivityYOUOme;
+import com.example.youome.main.ActivityYOUOme;
 import com.example.youome.R;
 
 public class ActivitySignUpPassward extends AppCompatActivity {

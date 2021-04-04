@@ -1,4 +1,4 @@
-package com.example.youome;
+package com.example.youome.main;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
@@ -10,6 +10,8 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.TextView;
 
+import com.example.youome.AdapterYouomePage;
+import com.example.youome.R;
 import com.google.android.material.tabs.TabLayout;
 
 public class ActivityYOUOme extends AppCompatActivity {

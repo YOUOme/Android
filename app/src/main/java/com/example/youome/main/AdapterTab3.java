@@ -1,13 +1,9 @@
-package com.example.youome;
+package com.example.youome.main;
 
 import android.content.Context;
-import android.content.Intent;
-import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -15,6 +11,8 @@ import java.util.ArrayList;
 import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.youome.R;
 
 public class AdapterTab3 extends RecyclerView.Adapter<AdapterTab3.ViewHolder> {
 

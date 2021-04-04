@@ -4,6 +4,11 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 
+import com.example.youome.main.FragmentTab1Home;
+import com.example.youome.main.FragmentTab2IOU;
+import com.example.youome.main.FragmentTab3P2P;
+import com.example.youome.main.FragmentTab4O2O;
+
 public class AdapterYouomePage extends FragmentStatePagerAdapter {
 
     private int tabCount;

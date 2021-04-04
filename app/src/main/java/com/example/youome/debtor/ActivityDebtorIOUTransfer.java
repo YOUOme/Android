@@ -7,7 +7,7 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.youome.ActivityYOUOme;
+import com.example.youome.main.ActivityYOUOme;
 import com.example.youome.R;
 
 public class ActivityDebtorIOUTransfer extends AppCompatActivity {

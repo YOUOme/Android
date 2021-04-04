@@ -44,7 +44,7 @@
             android:name=".ActivityOmypay"
             android:windowSoftInputMode="adjustResize" />
         <activity android:name=".main_signup.ActivitySignUp" />
-        <activity android:name=".ActivityYOUOme" />
+        <activity android:name=".main.ActivityYOUOme" />
         <activity android:name=".main_signup.ActivityMainLogo">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

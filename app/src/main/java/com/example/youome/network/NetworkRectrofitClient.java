@@ -1,4 +1,4 @@
-package com.example.youome;
+package com.example.youome.network;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
