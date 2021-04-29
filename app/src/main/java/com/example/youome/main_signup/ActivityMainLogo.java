@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Point;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -19,14 +20,27 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.youome.debtor.ActivityDebtor;
 import com.example.youome.R;
+import com.example.youome.network.NetworkAPI;
+import com.example.youome.network.NetworkRectrofitClient;
+import com.example.youome.network.RegisterPayload;
 import com.google.firebase.iid.FirebaseInstanceId;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class ActivityMainLogo extends AppCompatActivity {
 
-    TextView bt_login,touch;
+    private TextView bt_login,touch;
+
+    private NetworkAPI youmeapi;
+    private SharedPreferences sf;
+    private SharedPreferences.Editor editor;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -70,7 +84,10 @@ public class ActivityMainLogo extends AppCompatActivity {
 
         // 기기고유id
         String regId = FirebaseInstanceId.getInstance().getToken();
-        Log.d("dddd",regId);
+        //Log.d("dddd",regId);
+
+        youmeapi = NetworkRectrofitClient.getClient().create(NetworkAPI.class);
+        startRequest(new RegisterPayload.ReqData(regId));
     }
 
     private class MyWebViewClient extends WebViewClient {
@@ -131,5 +148,31 @@ public class ActivityMainLogo extends AppCompatActivity {
             Log.d("dddd","~~~~~~~~~~~~~~~~bridge!!!");
             startActivity(intent);
         }
+    }
+
+    private void startRequest(RegisterPayload.ReqData data){
+        youmeapi.callDataRegister(data).enqueue(new Callback<RegisterPayload.ResData>() {
+            @Override
+            public void onResponse(Call<RegisterPayload.ResData> call, Response<RegisterPayload.ResData> response) {
+                RegisterPayload.ResData result = response.body();
+
+                Log.d("dddd",result.getMessage()+", "+result.getYoume_token());
+
+                if(result.getMessage().equals("registered successfully")){
+                    sf = getSharedPreferences("access",MODE_PRIVATE);
+                    editor = sf.edit();
+                    editor.putString("token",result.getYoume_token());
+                    editor.commit();
+                    return;
+                }
+
+
+            }
+            @Override
+            public void onFailure(Call<RegisterPayload.ResData> call, Throwable t) {
+                t.printStackTrace();
+                Log.d("dddd","fail!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+            }
+        });
     }
 }

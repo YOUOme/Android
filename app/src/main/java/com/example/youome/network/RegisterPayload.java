@@ -3,7 +3,7 @@ package com.example.youome.network;
 import com.google.gson.annotations.SerializedName;
 
 public class RegisterPayload {
-    public class ReqData{
+    public static class ReqData{
         @SerializedName("id")
         String id;
 

@@ -69,7 +69,7 @@ public class ActivityIOU extends AppCompatActivity {
     }
 
     // Network call
-    private void startRequest(ReqData data) {
+    /*private void startRequest(ReqData data) {
         service.callData(data).enqueue(new Callback<ResData>() {
             @Override
             public void onResponse(Call<ResData> call, Response<ResData> response) {
@@ -79,7 +79,7 @@ public class ActivityIOU extends AppCompatActivity {
             @Override
             public void onFailure(Call<ResData> call, Throwable t) { t.printStackTrace(); }
         });
-    }
+    }*/
 
     public class ReqData{
         @SerializedName("receive_user_id")
